@@ -1,0 +1,38 @@
+﻿<header class="c-layout-header c-layout-header-default c-layout-header-default-mobile">
+  <div class="c-navbar">
+    <div class="container">
+      <!-- BEGIN: BRAND -->
+      <div class="c-navbar-wrapper clearfix">
+        <div class="c-brand c-pull-left">
+          <a href="index.html" class="c-logo">
+            <img src="~/Content/img/logo.png" alt="Misuka" width="60" class="c-desktop-logo">
+            <img src="~/Content/img/logo.png" alt="Misuka" width="35" class="c-desktop-logo-inverse">
+            <img src="~/Content/img/logo.png" alt="Misuka" width="35" class="c-mobile-logo">
+          </a>
+          <button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
+            <span class="c-line"></span>
+            <span class="c-line"></span>
+            <span class="c-line"></span>
+          </button>
+          @*<button class="c-search-toggler" type="button">
+            <i class="fa fa-search"></i>
+          </button>*@
+        </div>
+        <!-- END: BRAND -->
+        <!-- BEGIN: QUICK SEARCH -->
+        @*<form class="c-quick-search" action="#">
+          <input type="text" name="query" placeholder="Type to search..." value="" class="form-control" autocomplete="off">
+          <span class="c-theme-link">&times;</span>
+        </form>*@
+        <!-- END: QUICK SEARCH -->
+        <!-- BEGIN: HOR NAV -->
+        <!-- BEGIN: LAYOUT/HEADERS/MEGA-MENU -->
+        <!-- BEGIN: MEGA MENU -->
+        @Html.Partial("_Menu")
+        <!-- END: MEGA MENU -->
+        <!-- END: LAYOUT/HEADERS/MEGA-MENU -->
+        <!-- END: HOR NAV -->
+      </div>
+    </div>
+  </div>
+</header>
