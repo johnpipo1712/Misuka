@@ -7,8 +7,8 @@
     <ProjectGuid>{FF0743CE-55CB-4D03-92B9-5CCA54F96596}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Staff.Services</RootNamespace>
-    <AssemblyName>Staff.Services</AssemblyName>
+    <RootNamespace>Misuka.Services</RootNamespace>
+    <AssemblyName>Misuka.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>
