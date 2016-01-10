@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16535A88-5D42-473B-BED7-321EB223A978}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Misuka.Domain</RootNamespace>
+    <AssemblyName>Misuka.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel.4.5">
+      <HintPath>..\packages\Reference\Excel.4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contants\SettingsConstant.cs" />
+    <Compile Include="Context\MisukaDBContext.cs" />
+    <Compile Include="Entity\ContentMenu.cs" />
+    <Compile Include="Entity\ExchangeRate.cs" />
+    <Compile Include="Entity\Ordering.cs" />
+    <Compile Include="Entity\OrderingHistory.cs" />
+    <Compile Include="Entity\OrderingIDetail.cs" />
+    <Compile Include="Entity\Permission.cs" />
+    <Compile Include="Entity\Person.cs" />
+    <Compile Include="Entity\Role.cs" />
+    <Compile Include="Entity\RolePermission.cs" />
+    <Compile Include="Entity\RolePerson.cs" />
+    <Compile Include="Entity\Silder.cs" />
+    <Compile Include="Entity\TypeMember.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Entity\WebSiteLink.cs" />
+    <Compile Include="Enum\PermissionObjects.cs" />
+    <Compile Include="Enum\ProjectState.cs" />
+    <Compile Include="Enum\RegexExpression.cs" />
+    <Compile Include="ISecurityUtility.cs" />
+    <Compile Include="MVC\ActionFilter\AccessibleAuthFilterAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CustomMembershipProvider.cs" />
+    <Compile Include="Providers\SessionObject.cs" />
+    <Compile Include="HttpModules\BaseAuthenticationModule.cs" />
+    <Compile Include="HttpModules\PostAuthenticationModule.cs" />
+    <Compile Include="HttpModules\PreAuthenticationModule.cs" />
+    <Compile Include="Security\AuthenticationCookieManager.cs" />
+    <Compile Include="Security\BaseSessionObject.cs" />
+    <Compile Include="Security\IAuthenticationCookieManager.cs" />
+    <Compile Include="Security\ISessionObjectStorageStrategy.cs" />
+    <Compile Include="Security\PermissionUtils.cs" />
+    <Compile Include="Security\SessionObjectFactory.cs" />
+    <Compile Include="Security\SessionObjectStorageStrategy.cs" />
+    <Compile Include="Security\UserSession.cs" />
+    <Compile Include="Security\IUserSession.cs" />
+    <Compile Include="Security\SessionData.cs" />
+    <Compile Include="Utilities\Cryptography.cs" />
+    <Compile Include="Utilities\PhoneUtility.cs" />
+    <Compile Include="Utilities\SearchResult.cs" />
+    <Compile Include="Utilities\SecurityUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+    <Folder Include="obj\" />
+    <Folder Include="Resources\" />
+    <Folder Include="SearchCriteria\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Misuka.Infrastructure\Misuka.Infrastructure.csproj">
+      <Project>{b59a72fd-0782-4cff-91e4-84a9925c742b}</Project>
+      <Name>Misuka.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
