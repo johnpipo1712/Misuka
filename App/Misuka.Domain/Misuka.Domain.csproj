@@ -80,7 +80,7 @@
     <Compile Include="Entity\Role.cs" />
     <Compile Include="Entity\RolePermission.cs" />
     <Compile Include="Entity\RolePerson.cs" />
-    <Compile Include="Entity\Silder.cs" />
+    <Compile Include="Entity\Slider.cs" />
     <Compile Include="Entity\TypeMember.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Entity\WebSiteLink.cs" />
