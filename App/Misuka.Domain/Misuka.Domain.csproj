@@ -70,11 +70,25 @@
   <ItemGroup>
     <Compile Include="Contants\SettingsConstant.cs" />
     <Compile Include="Context\MisukaDBContext.cs" />
+    <Compile Include="DTO\ContentMenuDTO.cs" />
+    <Compile Include="DTO\ExchangeRateDTO.cs" />
+    <Compile Include="DTO\OrderingDetailDTO.cs" />
+    <Compile Include="DTO\OrderingDTO.cs" />
+    <Compile Include="DTO\OrderingHistoryDTO.cs" />
+    <Compile Include="DTO\PermissionDTO.cs" />
+    <Compile Include="DTO\PersonDTO.cs" />
+    <Compile Include="DTO\RoleDTO.cs" />
+    <Compile Include="DTO\RolePermissionDTO.cs" />
+    <Compile Include="DTO\RolePersonDTO.cs" />
+    <Compile Include="DTO\SliderDTO.cs" />
+    <Compile Include="DTO\TypeMemberDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="DTO\WebSiteLinkDTO.cs" />
     <Compile Include="Entity\ContentMenu.cs" />
     <Compile Include="Entity\ExchangeRate.cs" />
     <Compile Include="Entity\Ordering.cs" />
     <Compile Include="Entity\OrderingHistory.cs" />
-    <Compile Include="Entity\OrderingIDetail.cs" />
+    <Compile Include="Entity\OrderingDetail.cs" />
     <Compile Include="Entity\Permission.cs" />
     <Compile Include="Entity\Person.cs" />
     <Compile Include="Entity\Role.cs" />
@@ -85,7 +99,6 @@
     <Compile Include="Entity\User.cs" />
     <Compile Include="Entity\WebSiteLink.cs" />
     <Compile Include="Enum\PermissionObjects.cs" />
-    <Compile Include="Enum\ProjectState.cs" />
     <Compile Include="Enum\RegexExpression.cs" />
     <Compile Include="ISecurityUtility.cs" />
     <Compile Include="MVC\ActionFilter\AccessibleAuthFilterAttribute.cs" />
@@ -111,7 +124,6 @@
     <Compile Include="Utilities\SecurityUtility.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DTO\" />
     <Folder Include="obj\" />
     <Folder Include="Resources\" />
     <Folder Include="SearchCriteria\" />

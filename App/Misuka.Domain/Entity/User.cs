@@ -12,9 +12,10 @@ namespace Misuka.Domain.Entity
     public bool Locked { get; set; }
     public DateTime? CreationDate { get; set; }
     public DateTime? LastLoginTime { get; set; }
-    public  int FailedLoginTimes { get; set; }
+    public int FailedLoginTimes { get; set; }
     public string Domain { get; set; }
     public string CurrentLanguage { get; set; }
+    public int Type { get; set; }
     public virtual Person PersonInfo { get; set; }
   }
 

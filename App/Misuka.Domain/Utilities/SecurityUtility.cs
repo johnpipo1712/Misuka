@@ -232,11 +232,11 @@ namespace Misuka.Domain.Utilities
     {
       IRepositoryProvider repositoryProvider = new RepositoryProvider(new RepositoryFactories());
       var unitofWork = new UnitOfWork(new MisukaDBContext(), repositoryProvider);
-      //var user = unitofWork.RepositoryAsync<User>()
-      //   .Query(m => string.Compare(m.UserName, username, StringComparison.InvariantCultureIgnoreCase) == 0)
-      //   .Include(u => u.PersonInfo)
-      //   .Select()
-      //   .FirstOrDefault();
+      var user = unitofWork.RepositoryAsync<User>()
+         .Query(m => string.Compare(m.UserName, username, StringComparison.InvariantCultureIgnoreCase) == 0)
+         .Include(u => u.PersonInfo)
+         .Select()
+         .FirstOrDefault();
 
       return new User();
     }
@@ -244,14 +244,14 @@ namespace Misuka.Domain.Utilities
     {
       IRepositoryProvider repositoryProvider = new RepositoryProvider(new RepositoryFactories());
       var unitofWork = new UnitOfWork(new MisukaDBContext(), repositoryProvider);
-      //var user = unitofWork.RepositoryAsync<User>()
-      //   .Query(
-      //            m => string.Compare(m.UserName, username, StringComparison.InvariantCultureIgnoreCase) == 0 &&
-      //            string.Compare(m.Domain, domain, StringComparison.InvariantCultureIgnoreCase) == 0
-      //     )
-      //   .Include(u => u.PersonInfo)
-      //   .Select()
-      //   .FirstOrDefault();
+      var user = unitofWork.RepositoryAsync<User>()
+         .Query(
+                  m => string.Compare(m.UserName, username, StringComparison.InvariantCultureIgnoreCase) == 0 &&
+                  string.Compare(m.Domain, domain, StringComparison.InvariantCultureIgnoreCase) == 0
+           )
+         .Include(u => u.PersonInfo)
+         .Select()
+         .FirstOrDefault();
 
       return new User();
     }
