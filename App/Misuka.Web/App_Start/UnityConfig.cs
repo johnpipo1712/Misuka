@@ -37,16 +37,16 @@ namespace Misuka.Web.App_Start
         /// change the defaults), as Unity allows resolving a concrete type even if it was not previously registered.</remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
-         // container
-         //   .RegisterType<IDataContextAsync, MisukaDBContext>(new PerRequestLifetimeManager())
-         //   .RegisterType<IRepositoryProvider, RepositoryProvider>(
-         //     new PerRequestLifetimeManager(),
-         //     new InjectionConstructor(new object[] {new RepositoryFactories()})
-         //   )
-         //   .RegisterType<IUnitOfWorkAsync,UnitOfWork>(new PerRequestLifetimeManager());
-         // new ServiceRegister(container).Register();
-         //var ado = new ADOHelper();
-         //ADO.AdoHelper = ado;
+          container
+            .RegisterType<IDataContextAsync, MisukaDBContext>(new PerRequestLifetimeManager())
+            .RegisterType<IRepositoryProvider, RepositoryProvider>(
+              new PerRequestLifetimeManager(),
+              new InjectionConstructor(new object[] { new RepositoryFactories() })
+            )
+            .RegisterType<IUnitOfWorkAsync, UnitOfWork>(new PerRequestLifetimeManager());
+          new ServiceRegister(container).Register();
+          var ado = new ADOHelper();
+          ADO.AdoHelper = ado;
         }
     }
 }

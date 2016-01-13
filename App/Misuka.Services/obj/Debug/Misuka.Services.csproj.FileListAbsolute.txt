@@ -126,3 +126,5 @@ E:\Misuka\Misuka\App\Misuka.Services\bin\Debug\de\PdfSharp.Charting.resources.dl
 E:\Misuka\Misuka\App\Misuka.Services\obj\Debug\Misuka.Services.csprojResolveAssemblyReference.cache
 E:\Misuka\Misuka\App\Misuka.Services\obj\Debug\Misuka.Services.dll
 E:\Misuka\Misuka\App\Misuka.Services\obj\Debug\Misuka.Services.pdb
+E:\Misuka\Misuka\App\Misuka.Services\obj\Debug\Misuka.Services.Resources.ErrorMessage.resources
+E:\Misuka\Misuka\App\Misuka.Services\obj\Debug\Misuka.Services.csproj.GenerateResource.Cache

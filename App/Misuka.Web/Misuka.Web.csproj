@@ -228,6 +228,7 @@
     <Compile Include="Models\OrderingHistoryModel.cs" />
     <Compile Include="Models\OrderingModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
+    <Compile Include="Models\SliderModel.cs" />
     <Compile Include="Models\TypeMemberModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\WebSiteLinkModel.cs" />

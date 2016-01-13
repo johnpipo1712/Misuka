@@ -86,16 +86,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandServices\ContentMenuCommandService.cs" />
+    <Compile Include="CommandServices\ExchangeRateCommandService.cs" />
+    <Compile Include="CommandServices\IContentMenuCommandService.cs" />
+    <Compile Include="CommandServices\IExchangeRateCommandService.cs" />
+    <Compile Include="CommandServices\IOrderingCommandService.cs" />
+    <Compile Include="CommandServices\IOrderingDetailCommandService.cs" />
+    <Compile Include="CommandServices\IOrderingHistoryCommandService.cs" />
+    <Compile Include="CommandServices\IPersonCommandService.cs" />
+    <Compile Include="CommandServices\ISliderCommandService.cs" />
+    <Compile Include="CommandServices\ITypeMemberCommandService.cs" />
+    <Compile Include="CommandServices\IWebSiteLinkCommandService.cs" />
+    <Compile Include="CommandServices\OrderingCommandService.cs" />
+    <Compile Include="CommandServices\OrderingDetailCommandService.cs" />
+    <Compile Include="CommandServices\OrderingHistoryCommandService.cs" />
+    <Compile Include="CommandServices\PersonCommandService.cs" />
+    <Compile Include="CommandServices\SliderCommandService.cs" />
+    <Compile Include="CommandServices\TypeMemberCommandService.cs" />
+    <Compile Include="CommandServices\WebSiteLinkCommandService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportServices\ContentMenuReportService.cs" />
+    <Compile Include="ReportServices\ExchangeRateReportService.cs" />
+    <Compile Include="ReportServices\IContentMenuReportService.cs" />
+    <Compile Include="ReportServices\IExchangeRateReportService.cs" />
+    <Compile Include="ReportServices\IOrderingDetailReportService.cs" />
+    <Compile Include="ReportServices\IOrderingHistoryReportService.cs" />
+    <Compile Include="ReportServices\IOrderingReportService.cs" />
+    <Compile Include="ReportServices\IPersonReportService.cs" />
+    <Compile Include="ReportServices\ISliderReportService.cs" />
+    <Compile Include="ReportServices\ITypeMemberReportService.cs" />
+    <Compile Include="ReportServices\IWebSiteLinkReportService.cs" />
+    <Compile Include="ReportServices\OrderingDetailReportService.cs" />
+    <Compile Include="ReportServices\OrderingHistoryReportService.cs" />
+    <Compile Include="ReportServices\OrderingReportService.cs" />
+    <Compile Include="ReportServices\PersonReportService.cs" />
+    <Compile Include="ReportServices\SliderReportService.cs" />
+    <Compile Include="ReportServices\TypeMemberReportService.cs" />
+    <Compile Include="ReportServices\WebSiteLinkReportService.cs" />
+    <Compile Include="Resources\ErrorMessage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessage.resx</DependentUpon>
+    </Compile>
     <Compile Include="ServiceObjectMapper.cs" />
     <Compile Include="ServiceRegister.cs" />
+    <Compile Include="Services\ContentMenuService.cs" />
+    <Compile Include="Services\ExchangeRateService.cs" />
+    <Compile Include="Services\FileService.cs" />
+    <Compile Include="Services\IContentMenuService.cs" />
+    <Compile Include="Services\IExchangeRateService.cs" />
+    <Compile Include="Services\IFileService.cs" />
+    <Compile Include="Services\IOrderingDetailService.cs" />
+    <Compile Include="Services\IOrderingHistoryService.cs" />
+    <Compile Include="Services\IOrderingService.cs" />
+    <Compile Include="Services\IPermissionService.cs" />
+    <Compile Include="Services\IPersonService.cs" />
+    <Compile Include="Services\IRolePermissionService.cs" />
+    <Compile Include="Services\IRoleService.cs" />
+    <Compile Include="Services\ISliderService.cs" />
+    <Compile Include="Services\ITypeMemberService.cs" />
+    <Compile Include="Services\IWebSiteLinkService.cs" />
+    <Compile Include="Services\OrderingDetailService.cs" />
+    <Compile Include="Services\OrderingHistoryService.cs" />
+    <Compile Include="Services\OrderingService.cs" />
+    <Compile Include="Services\PermissionService.cs" />
+    <Compile Include="Services\PersonService.cs" />
+    <Compile Include="Services\RolePermissionService.cs" />
+    <Compile Include="Services\RoleService.cs" />
+    <Compile Include="Services\SliderService.cs" />
+    <Compile Include="Services\TypeMemberService.cs" />
+    <Compile Include="Services\WebSiteLinkService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
-    <Folder Include="CommandServices\" />
-    <Folder Include="ReportServices\" />
-    <Folder Include="Resources\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Misuka.Domain\Misuka.Domain.csproj">
@@ -106,6 +169,12 @@
       <Project>{b59a72fd-0782-4cff-91e4-84a9925c742b}</Project>
       <Name>Misuka.Infrastructure</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ErrorMessage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

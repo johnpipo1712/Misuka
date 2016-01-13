@@ -8,19 +8,20 @@ using System.Threading.Tasks;
 namespace Misuka.Domain.Entity
 {
 
-     public class Slider : Misuka.Infrastructure.EntityFramework.Entity
-  
-    {
-        public Guid SliderId { get; set; }
+  public class Slider : Misuka.Infrastructure.EntityFramework.Entity
 
-        public string ImageURL { get; set; }
+  {
+    public Guid SliderId { get; set; }
 
-        public string Name { get; set; }
+    public string ImageURL { get; set; }
 
-        public string Description { get; set; }
+    public string Name { get; set; }
 
-        public int? Type { get; set; }
-    }
+    public string Description { get; set; }
+
+    public int? Type { get; set; }
+  }
+
   public class SliderMap : EntityTypeConfiguration<Slider>
   {
     public SliderMap()
