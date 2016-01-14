@@ -19,7 +19,6 @@ namespace Misuka.Web
         Mapper.CreateMap<ExchangeRateDTO, ExchangeRateModel>();
         Mapper.CreateMap<OrderingDTO, OrderingModel>();
         Mapper.CreateMap<OrderingDetailDTO, OrderingDetailModel>();
-        Mapper.CreateMap<OrderingHistoryDTO, OrderingHistoryModel>();
         Mapper.CreateMap<SliderDTO, SliderModel>();
         Mapper.CreateMap<TypeMemberDTO, TypeMemberModel>();
         Mapper.CreateMap<WebSiteLinkDTO, WebSiteLinkModel>();

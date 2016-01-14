@@ -221,17 +221,74 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ContentMenuController.cs" />
+    <Compile Include="Controllers\ExchangeRateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderingController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
+    <Compile Include="Controllers\TypeMemberController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\WebSiteLinkController.cs" />
     <Compile Include="Models\ContentMenuModel.cs" />
     <Compile Include="Models\ExchangeRateModel.cs" />
     <Compile Include="Models\OrderingDetailModel.cs" />
-    <Compile Include="Models\OrderingHistoryModel.cs" />
     <Compile Include="Models\OrderingModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\SliderModel.cs" />
     <Compile Include="Models\TypeMemberModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\WebSiteLinkModel.cs" />
+    <Compile Include="Resources\Common.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ContentMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ExchangeRate.Designer.cs">
+      <DependentUpon>ExchangeRate.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\OrderingDetail.Designer.cs">
+      <DependentUpon>OrderingDetail.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Order.Designer.cs">
+      <DependentUpon>Order.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\TypeMember.Designer.cs">
+      <DependentUpon>TypeMember.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Slider.Designer.cs">
+      <DependentUpon>Slider.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\User.Designer.cs">
+      <DependentUpon>User.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Person.Designer.cs">
+      <DependentUpon>Person.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\WebSiteLink.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebSiteLink.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="App_GlobalResources\MVC.sitemap.designer.cs">
       <DependentUpon>MVC.sitemap.resx</DependentUpon>
@@ -2194,6 +2251,46 @@
     <Content Include="Content\frontend\sass\_mixins.scss" />
     <Content Include="Content\frontend\sass\_settings.scss" />
     <Content Include="Content\img\manifest.json" />
+    <EmbeddedResource Include="Resources\Common.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ContentMenu.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ExchangeRate.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExchangeRate.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OrderingDetail.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrderingDetail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Order.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Order.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TypeMember.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TypeMember.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Slider.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Slider.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\User.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>User.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Person.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Person.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WebSiteLink.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WebSiteLink.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\build-config.js" />
@@ -2568,6 +2665,15 @@
     <Content Include="Scripts\magnific-popup\magnific-popup.css" />
     <Content Include="Scripts\magnific-popup\magnific-popup.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\page\ContentMemu\contentmenu.js" />
+    <Content Include="Scripts\page\ExchangeRate\exchangerate.js" />
+    <Content Include="Scripts\page\Home\home.js" />
+    <Content Include="Scripts\page\Ordering\ordering.js" />
+    <Content Include="Scripts\page\Person\person.js" />
+    <Content Include="Scripts\page\Slider\slider.js" />
+    <Content Include="Scripts\page\TypeMember\typemember.js" />
+    <Content Include="Scripts\page\User\user.js" />
+    <Content Include="Scripts\page\WebSiteLink\websitelink.js" />
     <Content Include="Scripts\plugins\bootbox\bootbox.js" />
     <Content Include="Scripts\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Scripts\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
@@ -2816,7 +2922,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\frontend\sass\components\content\persons\" />
-    <Folder Include="Resources\" />
+    <Folder Include="Views\ContentMenu\" />
+    <Folder Include="Views\ExchangeRate\" />
+    <Folder Include="Views\Ordering\" />
+    <Folder Include="Views\Person\" />
+    <Folder Include="Views\Slider\" />
+    <Folder Include="Views\TypeMember\" />
+    <Folder Include="Views\User\" />
+    <Folder Include="Views\WebSiteLink\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

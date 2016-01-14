@@ -98,6 +98,7 @@
     <Compile Include="Entity\TypeMember.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Entity\WebSiteLink.cs" />
+    <Compile Include="Enum\StatusOrderingEnum.cs" />
     <Compile Include="Enum\PermissionObjects.cs" />
     <Compile Include="Enum\RegexExpression.cs" />
     <Compile Include="ISecurityUtility.cs" />
@@ -108,6 +109,11 @@
     <Compile Include="HttpModules\BaseAuthenticationModule.cs" />
     <Compile Include="HttpModules\PostAuthenticationModule.cs" />
     <Compile Include="HttpModules\PreAuthenticationModule.cs" />
+    <Compile Include="Resources\StatusOrderingEnum.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatusOrderingEnum.resx</DependentUpon>
+    </Compile>
     <Compile Include="Security\AuthenticationCookieManager.cs" />
     <Compile Include="Security\BaseSessionObject.cs" />
     <Compile Include="Security\IAuthenticationCookieManager.cs" />
@@ -125,7 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\" />
-    <Folder Include="Resources\" />
     <Folder Include="SearchCriteria\" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +138,12 @@
       <Project>{b59a72fd-0782-4cff-91e4-84a9925c742b}</Project>
       <Name>Misuka.Infrastructure</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\StatusOrderingEnum.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StatusOrderingEnum.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

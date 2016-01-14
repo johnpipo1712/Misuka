@@ -419,3 +419,13 @@ E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.App_GlobalResources.MVC.sit
 E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.csproj.GenerateResource.Cache
 E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.dll
 E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.pdb
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.Common.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.ContentMenu.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.ExchangeRate.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.OrderingDetail.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.Order.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.TypeMember.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.Slider.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.User.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.Person.resources
+E:\Misuka\Misuka\App\Misuka.Web\obj\Debug\Misuka.Web.Resources.WebSiteLink.resources

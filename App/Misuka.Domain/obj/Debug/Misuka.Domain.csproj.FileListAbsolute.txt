@@ -82,3 +82,5 @@ E:\Misuka\Misuka\App\Misuka.Domain\bin\Debug\en\Misuka.Infrastructure.resources.
 E:\Misuka\Misuka\App\Misuka.Domain\obj\Debug\Misuka.Domain.csprojResolveAssemblyReference.cache
 E:\Misuka\Misuka\App\Misuka.Domain\obj\Debug\Misuka.Domain.dll
 E:\Misuka\Misuka\App\Misuka.Domain\obj\Debug\Misuka.Domain.pdb
+E:\Misuka\Misuka\App\Misuka.Domain\obj\Debug\Misuka.Domain.Resources.StatusOrderingEnum.resources
+E:\Misuka\Misuka\App\Misuka.Domain\obj\Debug\Misuka.Domain.csproj.GenerateResource.Cache

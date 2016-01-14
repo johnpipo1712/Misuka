@@ -6,9 +6,6 @@ namespace Misuka.Domain.Entity
   public class Person : Misuka.Infrastructure.EntityFramework.Entity
   {
     public Guid PersonId { get; set; }
-    public string FullName { get; set; }
-    public string MiddleName { get; set; }
-    public string LastName { get; set; }
     public string SocialSecurityNo { get; set; }
     public string EmployeeNo { get; set; }
     public string Email { get; set; }

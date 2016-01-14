@@ -10,20 +10,8 @@ namespace Misuka.Domain.DTO
   public class PersonDTO
   {
     public Guid PersonId { get; set; }
-    public string FirstName { get; set; }
-    public string MiddleName { get; set; }
-    public string LastName { get; set; }
-    private string _name;
-    public string Name
-    {
-      get
-      {
-        var name = string.Format("{0} {1} {2}", FirstName ?? string.Empty, MiddleName ?? string.Empty, LastName ?? string.Empty);
-        name = name.Replace("  ", " ");
-        return name;
-      }
-      set { _name = value; }
-    }
+    public string FullName { get; set; }
+  
     public string SocialSecurityNo { get; set; }
     public string EmployeeNo { get; set; }
     public string Email { get; set; }
