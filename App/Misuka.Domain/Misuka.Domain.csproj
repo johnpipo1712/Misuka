@@ -114,6 +114,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StatusOrderingEnum.resx</DependentUpon>
     </Compile>
+    <Compile Include="SearchCriteria\ContentMenuSearchCriteria.cs" />
+    <Compile Include="SearchCriteria\ExchangeRateSearchCriteria.cs" />
+    <Compile Include="SearchCriteria\OrderingSearchCriteria.cs" />
+    <Compile Include="SearchCriteria\PersonSearchCriteria.cs" />
+    <Compile Include="SearchCriteria\SliderSearchCriteria.cs" />
+    <Compile Include="SearchCriteria\TypeMemberSearchCriteria.cs" />
+    <Compile Include="SearchCriteria\WebSiteLinkSearchCriteria.cs" />
     <Compile Include="Security\AuthenticationCookieManager.cs" />
     <Compile Include="Security\BaseSessionObject.cs" />
     <Compile Include="Security\IAuthenticationCookieManager.cs" />
@@ -131,7 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\" />
-    <Folder Include="SearchCriteria\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Misuka.Infrastructure\Misuka.Infrastructure.csproj">

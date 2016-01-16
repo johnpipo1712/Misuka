@@ -10,7 +10,7 @@ namespace Misuka.Web.Controllers
     {
         //
         // GET: /User/
-        public ActionResult Index()
+        public ActionResult Login()
         {
             return View();
         }

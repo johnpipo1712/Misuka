@@ -2909,9 +2909,13 @@
     <Content Include="Views\Shared\_ModelRegister.cshtml" />
     <Content Include="Views\Shared\_ModelForgotPassword.cshtml" />
     <Content Include="Views\Shared\Admin\_Layout.cshtml" />
-    <Content Include="Views\Shared\Admin\_Header.cshtml" />
+    <Content Include="Views\Shared\Admin\_Menu.cshtml" />
     <Content Include="Views\Shared\Admin\_Footer.cshtml" />
     <Content Include="Views\Shared\Admin\_MenuLeft.cshtml" />
+    <Content Include="Views\ContentMenu\Index.cshtml" />
+    <Content Include="Views\Shared\Admin\_MenuTop.cshtml" />
+    <Content Include="Views\Shared\Admin\_LoginLayout.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2922,13 +2926,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\frontend\sass\components\content\persons\" />
-    <Folder Include="Views\ContentMenu\" />
     <Folder Include="Views\ExchangeRate\" />
     <Folder Include="Views\Ordering\" />
     <Folder Include="Views\Person\" />
     <Folder Include="Views\Slider\" />
     <Folder Include="Views\TypeMember\" />
-    <Folder Include="Views\User\" />
     <Folder Include="Views\WebSiteLink\" />
   </ItemGroup>
   <ItemGroup>

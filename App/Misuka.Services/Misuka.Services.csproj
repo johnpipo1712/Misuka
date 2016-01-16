@@ -135,7 +135,9 @@
     <Compile Include="CommandServices\WebSiteLinks\EditWebSiteLinkCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportServices\ContentMenuReportService.cs" />
+    <Compile Include="ReportServices\ContentMenus\GetContentMenuDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\ExchangeRateReportService.cs" />
+    <Compile Include="ReportServices\ExchangeRates\GetExchangeRateDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\IContentMenuReportService.cs" />
     <Compile Include="ReportServices\IExchangeRateReportService.cs" />
     <Compile Include="ReportServices\IOrderingDetailReportService.cs" />
@@ -148,10 +150,15 @@
     <Compile Include="ReportServices\OrderingDetailReportService.cs" />
     <Compile Include="ReportServices\OrderingHistoryReportService.cs" />
     <Compile Include="ReportServices\OrderingReportService.cs" />
+    <Compile Include="ReportServices\Orderings\GetOrderingDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\PersonReportService.cs" />
+    <Compile Include="ReportServices\Persons\GetPersonDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\SliderReportService.cs" />
+    <Compile Include="ReportServices\Sliders\GetSliderDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\TypeMemberReportService.cs" />
+    <Compile Include="ReportServices\TypeMembers\GetTypeMemberDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\WebSiteLinkReportService.cs" />
+    <Compile Include="ReportServices\WebSiteLinks\GetWebSiteLinkDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="Resources\ErrorMessage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

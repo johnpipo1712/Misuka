@@ -1,0 +1,23 @@
+﻿@{
+  Layout = "~/Views/Shared/Admin/_LoginLayout.cshtml";
+}
+<div>
+  <div>
+
+    <h1 class="logo-name">MI+</h1>
+
+  </div>
+  <h3>Welcome to Misuka</h3>
+  
+  <form class="m-t" role="form" action="~/ContentMenu">
+    <div class="form-group">
+      <input class="form-control" placeholder="Username" required="">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="Password" required="">
+    </div>
+    <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+    @*<a href="#"><small>Forgot password?</small></a>*@
+    
+  </form>
+</div>
