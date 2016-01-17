@@ -23,7 +23,13 @@
 
   <link href="~/Content/admin/css/animate.css" rel="stylesheet">
   <link href="~/Content/admin/css/style.css" rel="stylesheet">
+  <link href="~/Content/css/bootbox/bootbox.css" rel="stylesheet" type="text/css" />
+  <link href="~/Scripts/plugins/pnotify/pnotify.custom.css" rel="stylesheet" type="text/css" />
+  <link href="~/Scripts/plugins/waitMe/waitMe.css" rel="stylesheet" type="text/css" />
+  <link href="~/Scripts/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+  <script src="~/Scripts/utils/common.js" type="text/javascript"></script>
 
+  @RenderSection("Css", false);
 </head>
 
 <body class="gray-bg">
@@ -33,11 +39,17 @@
   </div>
 
   <!-- Mainly scripts -->
-  <script src="js/jquery-2.1.1.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="~/Content/admin/js/jquery-2.1.1.js"></script>
+  <script src="~/Content/admin/js/bootstrap.min.js"></script>
 
-
-
-
+  <script scr="~/Scripts/magnific-popup/magnific-popup.js" type="text/javascript"></script>
+  <script scr="~/Scripts/plugins/pnotify/pnotify.custom.js" type="text/javascript"></script>
+  <script scr="~/Scripts/plugins/waitMe/waitMe.js" type="text/javascript"></script>
+  <script scr="~/Scripts/plugins/bootbox/bootbox.js" type="text/javascript"></script>
+  <script scr="~/Scripts/ckeditor/ckeditor.js" type="text/javascript"></script>
+  <script src="~/Scripts/utils/common.js" type="text/javascript"></script>
+  <script src="~/Scripts/language/date-en-US.js" type="text/javascript"></script>
+  <script src="~/Scripts/language/texts.en-US.js" type="text/javascript"></script>
+  @RenderSection("Scripts", false);
 </body>
 </html>

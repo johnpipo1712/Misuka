@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using AutoMapper;
 using Misuka.Domain.DTO;
+using Misuka.Domain.SearchCriteria;
 using Misuka.Domain.Security;
+using Misuka.Domain.Utilities;
 using Misuka.Infrastructure.Data;
+using Misuka.Services.ReportServices.Sliders;
 using Misuka.Services.Services;
 
 namespace Misuka.Services.ReportServices
@@ -35,6 +38,10 @@ namespace Misuka.Services.ReportServices
       var sliders = _sliderService.Queryable().ToList();
       return sliders.Select(Mapper.Map<Domain.Entity.Slider, SliderDTO>).ToList();
     
+    }
+    public SearchResult<SliderDTO> Search(SliderSearchCriteria searchCriteria, int pageSize, int pageIndex)
+    {
+      return _executor.Execute(new GetSliderDTOBySearchCriteriaDbCommand(searchCriteria,pageIndex,pageSize));
     }
   }
 }

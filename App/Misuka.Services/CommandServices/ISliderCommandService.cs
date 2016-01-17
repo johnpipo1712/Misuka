@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Misuka.Services.CommandServices.Sliders;
 
 namespace Misuka.Services.CommandServices
 {
   public interface ISliderCommandService
   {
-    void EditSlider(Sliders.EditSliderCommand updateCommand);
+    void EditSlider(EditSliderCommand command);
 
-    object AddSlider(Sliders.AddSliderCommand createCommand);
+    Guid AddSlider(AddSliderCommand command);
 
-    void DeleteSlider(Sliders.DeleteSliderCommand deleteSliderCommand);
+    void DeleteSlider(DeleteSliderCommand command);
   }
 }

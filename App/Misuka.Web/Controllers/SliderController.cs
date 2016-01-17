@@ -7,6 +7,7 @@ using System.Web.MVC;
 using AutoMapper;
 using Lib.Web.Mvc.JQuery.JqGrid;
 using Misuka.Domain.DTO;
+using Misuka.Domain.SearchCriteria;
 using Misuka.Infrastructure.Utilities;
 using Misuka.Services.CommandServices;
 using Misuka.Services.CommandServices.Sliders;
@@ -34,7 +35,8 @@ namespace Misuka.Web.Controllers
       [AcceptVerbs(HttpVerbs.Get)]
       public ActionResult GetSliders(JqGridRequest request, string keyword)
       {
-        var result = _SliderReportService.Search(keyword, request.RecordsCount, request.PageIndex);
+        var searchCriteria = new SliderSearchCriteria();
+        var result = _SliderReportService.Search(searchCriteria, request.RecordsCount, request.PageIndex);
         var jsonData = new
         {
           total = (result.Count + request.RecordsCount - 1) / request.RecordsCount,
@@ -99,12 +101,12 @@ namespace Misuka.Web.Controllers
       {
         if (model.SliderId == Guid.Empty)
         {
-          var createCommand = new AddSliderCommand(model.Code,model.Name, model.Description,model.Phone,model.TaxCode,model.Email,0);
+          var createCommand = new AddSliderCommand(model.Name,model.Description,model.ImageURL);
           model.SliderId = _SliderCommandService.AddSlider(createCommand);
         }
         else
         {
-          var updateCommand = new EditSliderCommand(model.SliderId,model.Code, model.Name, model.Description,model.Phone,model.TaxCode,model.Email,0);
+          var updateCommand = new EditSliderCommand(model.SliderId, model.Name, model.Description, model.ImageURL);
           _SliderCommandService.EditSlider(updateCommand);
         }
       }

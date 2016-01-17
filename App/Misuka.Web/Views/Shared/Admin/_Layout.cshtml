@@ -19,14 +19,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="~/Content/img/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/favicon-16x16.png">
+  @Styles.Render("~/Content/css")
   <link href="~/Content/admin/css/bootstrap.min.css" rel="stylesheet">
   <link href="~/Content/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="~/Content/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
-  <link href="~/Content/css/plugins/jqGrid/ui.jqgrid.css" rel="stylesheet">
   <link href="~/Content/admin/css/animate.css" rel="stylesheet">
   <link href="~/Content/admin/css/style.css" rel="stylesheet">
 
+
+  @RenderSection("CSS", false)
 </head>
+
 
 <body class="pace-done">
   <div class="pace  pace-inactive">
@@ -48,29 +50,38 @@
         </div>
       </div>
       <div class="wrapper wrapper-content animated fadeInRight">
-        @RenderBody()
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ibox">
+              <div class="ibox-content">
+                @RenderBody()
+              </div>
+            </div>
+          </div>
+        </div>
+     
       </div>
       @Html.Partial("Admin/_Footer")
     </div>
   </div>
 
   <!-- Mainly scripts -->
-  <script src="/Content/admin/js/jquery-2.1.1.js"></script>
-  <script src="/Content/admin/js/bootstrap.min.js"></script>
-  <script src="/Content/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-  <script src="/Content/admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="~/Scripts/jquery-1.11.1.js"></script>
+  @Scripts.Render("~/bundles/jquery-common")
+  <script src="~/Content/admin/js/bootstrap.min.js"></script>
+  <script src="~/Content/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+  <script src="~/Content/admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
   
-  <script src="js/plugins/peity/jquery.peity.min.js"></script>
+  <script src="~/Content/admin/js/plugins/peity/jquery.peity.min.js"></script>
 
-  <script src="js/plugins/jqGrid/i18n/grid.locale-en.js"></script>
-  <script src="js/plugins/jqGrid/jquery.jqGrid.min.js"></script>
+  <script src="~/Content/admin/js/plugins/jqGrid/i18n/grid.locale-en.js"></script>
+  <script src="~/Content/admin/js/plugins/jqGrid/jquery.jqGrid.min.js"></script>
   <!-- Custom and plugin javascript -->
-  <script src="/Content/admin/js/inspinia.js"></script>
-  <script src="/Content/admin/js/plugins/pace/pace.min.js"></script>
+  <script src="~/Content/admin/js/inspinia.js"></script>
+  <script src="~/Content/admin/js/plugins/pace/pace.min.js"></script>
+  <script src="~/Scripts/language/date-en-US.js" type="text/javascript"></script>
+  <script src="~/Scripts/language/texts.en-US.js" type="text/javascript"></script>
 
-  <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
-
-
-
+  @RenderSection("Scripts",false)
 </body>
 </html>

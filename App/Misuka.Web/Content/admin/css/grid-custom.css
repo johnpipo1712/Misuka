@@ -1,0 +1,126 @@
+.ui-jqgrid tr.jqgrow td {
+  border-bottom-color: inherit;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-weight: normal;
+  height: 30px;
+  overflow: hidden;
+  padding: 0 5px;
+  white-space: pre;
+}
+
+.ui-jqgrid tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.ui-jqgrid tr:nth-child(odd):hover {
+	background: #dadada url("jquery-ui/images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #212121;
+}
+
+.ui-jqgrid tr.ui-widget-content.jqgrow.ui-row-ltr.odd-row {
+  background: #f9f9f9;
+}
+
+.ui-jqgrid tr.ui-widget-content.jqgrow.ui-row-ltr.odd-row:hover {
+    background: #dadada url("jquery-ui/images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #212121;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+  border-top-right-radius: 0px;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+  border-top-left-radius: 0px;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+  border-bottom-right-radius: 0px;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+  border-bottom-left-radius: 0px;
+}
+
+.ui-jqgrid {
+}
+
+  .ui-jqgrid tr.jqgrow td {
+    white-space: normal !important;
+  }
+
+  .ui-jqgrid .ui-jqgrid-btable {
+    table-layout: fixed;
+  }
+
+  .ui-jqgrid .ui-jqgrid-htable {
+    table-layout: fixed;
+  }
+
+  .ui-jqgrid tr.jqgrow td a {
+    color: #000000;
+  }
+
+  .ui-jqgrid tr.jqgrow td select {
+    width: 100%;
+  }
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  background: url("jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png") repeat-x scroll 50% 50% #fbf9ee !important;
+  border: 1px solid #D9D9D6;
+  color: #363636;
+}
+
+.ui-widget-content .system-type {
+  background: none repeat scroll 0 0 #D6D6C1 !important;
+}
+
+tr.system-type > td > div > div.ui-inline-del {
+  display: none !important;
+}
+
+.ui-jqgrid .ui-pg-input,
+.ui-jqgrid .ui-pg-selbox {
+  height: 20px !important;
+  font-size: 12px;
+  text-align: center;
+  width: auto;
+}
+
+.ui-jqgrid .ui-pg-selbox {
+  padding-top: 0px;
+}
+
+
+.ui-jqgrid tr.footrow td {
+  padding: 5px;
+}
+
+.ui-jqgrid tr.footrow {
+  border: solid 1px #fff;
+   
+}
+@media screen and (max-width: 768px) {
+     .ui-jqgrid .ui-jqgrid-htable,
+    .ui-jqgrid .ui-jqgrid-btable {
+        table-layout: fixed;
+        width: auto!important;
+    }
+    .ui-jqgrid{
+        width: 100% !important;
+    }
+    .ui-jqgrid div {
+         width: auto!important;
+    }
+    .ui-jqgrid .ui-jqgrid-hdiv {
+        width: auto!important;
+    }
+    .ui-jqgrid .ui-jqgrid-bdiv {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
+   

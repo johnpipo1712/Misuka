@@ -23,7 +23,40 @@ namespace Misuka.Web
       bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                   "~/Scripts/modernizr-*"));
 
-      bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+      bundles.Add(new ScriptBundle("~/bundles/jquery-base").Include("~/Scripts/jquery-1.11.1.js"));
+
+      bundles.Add(new ScriptBundle("~/bundles/jquery-common").Include(
+        "~/Scripts/plugins/bootbox/bootbox.js"
+        , "~/Scripts/jquery.nicescroll.min.js"
+        , "~/Scripts/jquery.unobtrusive-ajax.min.js"
+        , "~/Scripts/jquery.validate.js"
+        , "~/Scripts/jquery.validate.unobtrusive.min.js"
+        , "~/Scripts/jquery.mask.js"
+        , "~/Scripts/jquery.tmpl.min.js"
+        , "~/Scripts/jqGrid.common.js"
+        , "~/Scripts/jqueryFixes.js"
+        , "~/Scripts/jquery.jqGrid.src.js"
+        , "~/Scripts/utils/common.js"
+        , "~/Scripts/buzz/buzz.js"
+        , "~/Scripts/buzz/buzz.min.js"
+        , "~/Scripts/ckeditor/ckeditor.js"
+        , "~/Scripts/magnific-popup/magnific-popup.js"
+        , "~/Scripts/plugins/pnotify/pnotify.custom.js"
+        , "~/Scripts/plugins/waitMe/waitMe.js"
+        , "~/Scripts/bootstrap-datepicker/js/bootstrap-datepicker.js"
+         ,"~/Scripts/jquery-ui.js"
+        , "~/Scripts/utils/dialog.js"));
+
+      //Styles
+      bundles.Add(new StyleBundle("~/Content/css").Include(
+        "~/Content/css/bootbox/bootbox.css",
+        "~/Content/css/common.css",
+        "~/Scripts/plugins/pnotify/pnotify.custom.css",
+        "~/Scripts/plugins/waitMe/waitMe.css",
+        "~/Content/css/jquery-ui/jquery-ui.css",
+        "~/Scripts/plugins/magnific-popup/magnific-popup.css",
+        "~/Content/css/jqgrid/jquery-ui-jqgrid.css",
+        "~/Content/css/grid-custom.css"));
 
       bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                   "~/Content/themes/base/jquery.ui.core.css",
