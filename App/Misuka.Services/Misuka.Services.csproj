@@ -91,7 +91,7 @@
     <Compile Include="CommandServices\ContentMenus\DeleteContentMenuCommand.cs" />
     <Compile Include="CommandServices\ContentMenus\EditContentMenuCommand.cs" />
     <Compile Include="CommandServices\ExchangeRateCommandService.cs" />
-    <Compile Include="CommandServices\ExchangeRates\AddExchangeRateCommnand.cs" />
+    <Compile Include="CommandServices\ExchangeRates\AddExchangeRateCommand.cs" />
     <Compile Include="CommandServices\ExchangeRates\DeleteExchangeRateCommand.cs" />
     <Compile Include="CommandServices\ExchangeRates\EditExchangeRateCommand.cs" />
     <Compile Include="CommandServices\IContentMenuCommandService.cs" />
@@ -117,7 +117,9 @@
     <Compile Include="CommandServices\Persons\AddPersonCommand.cs" />
     <Compile Include="CommandServices\Persons\AddUserCommand.cs" />
     <Compile Include="CommandServices\Persons\ChangePasswordCommand.cs" />
+    <Compile Include="CommandServices\Persons\DeletePersonCommand.cs" />
     <Compile Include="CommandServices\Persons\EditInfomationPersonCommand.cs" />
+    <Compile Include="CommandServices\Persons\EditPersonCommand.cs" />
     <Compile Include="CommandServices\Persons\EditStatusPersonCommand.cs" />
     <Compile Include="CommandServices\Persons\EditTypeMemberPersonCommand.cs" />
     <Compile Include="CommandServices\Persons\ForgotPasswordCommand.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="CommandServices\Sliders\EditSliderCommand.cs" />
     <Compile Include="CommandServices\TypeMemberCommandService.cs" />
     <Compile Include="CommandServices\TypeMembers\AddTypeMemberCommand.cs" />
+    <Compile Include="CommandServices\TypeMembers\DeleteTypeMemberCommand.cs" />
     <Compile Include="CommandServices\TypeMembers\EditTypeMemberCommand.cs" />
     <Compile Include="CommandServices\WebSiteLinkCommandService.cs" />
     <Compile Include="CommandServices\WebSiteLinks\AddWebSiteLinkCommand.cs" />

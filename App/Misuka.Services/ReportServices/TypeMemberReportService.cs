@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using AutoMapper;
 using Misuka.Domain.DTO;
+using Misuka.Domain.SearchCriteria;
 using Misuka.Domain.Security;
+using Misuka.Domain.Utilities;
 using Misuka.Infrastructure.Data;
+using Misuka.Services.ReportServices.TypeMembers;
 using Misuka.Services.Services;
 
 namespace Misuka.Services.ReportServices
@@ -35,6 +38,11 @@ namespace Misuka.Services.ReportServices
       var typeMembers = _typeMemberService.Queryable().ToList();
       return typeMembers.Select(Mapper.Map<Domain.Entity.TypeMember, TypeMemberDTO>).ToList();
     
+    }
+
+    public SearchResult<TypeMemberDTO> Search(TypeMemberSearchCriteria searchCriteria, int pageSize, int pageIndex)
+    {
+      return _executor.Execute(new GetTypeMemberDTOBySearchCriteriaDbCommand(searchCriteria, pageIndex, pageSize));
     }
   }
 }

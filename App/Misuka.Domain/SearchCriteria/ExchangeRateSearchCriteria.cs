@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Misuka.Services.CommandServices.ExchangeRates
+namespace Misuka.Domain.SearchCriteria
 {
-  public class AddExchangeRateCommnand
+  public class ExchangeRateSearchCriteria
   {
+    public string Keyword { get; set; }
 
   }
 }

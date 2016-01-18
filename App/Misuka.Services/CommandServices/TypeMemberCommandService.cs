@@ -5,6 +5,7 @@ using System.Text;
 using Misuka.Domain.Security;
 using Misuka.Infrastructure.Data;
 using Misuka.Infrastructure.EntityFramework.UnitOfWork;
+using Misuka.Services.CommandServices.TypeMembers;
 using Misuka.Services.Services;
 
 namespace Misuka.Services.CommandServices
@@ -21,6 +22,21 @@ namespace Misuka.Services.CommandServices
       _unitOfWork = unitOfWork;
       _executor = executor;
       _userSession = new UserSession();
+    }
+
+    public void DeleteTypeMember(DeleteTypeMemberCommand command)
+    {
+      throw new NotImplementedException();
+    }
+
+    public void EditTypeMember(EditTypeMemberCommand command)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Guid AddTypeMember(AddTypeMemberCommand command)
+    {
+      throw new NotImplementedException();
     }
   }
 }

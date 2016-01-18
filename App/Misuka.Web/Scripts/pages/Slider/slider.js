@@ -101,14 +101,13 @@
           { key: true, hidden: true, name: 'SliderId', index: 'SliderId', editable: false },
           {
             name: 'ImageUrl', cellattr: function () { return ' title=""'; }, formatter: function (cellvalue, options, rowObject) {
-              var html = '<img src="' + rowObject.FileVirtualPath + '" class="edit_command"/>';
-             return html;
-
+                var html = '<img src="' + rowObject.ImageURL + '" class="edit_command"/>';
+                return html;
             },
             align: 'left', width: 60, fixed: true
           },
           { name: 'Name', index: 'Name', editable: false },
-          { name: 'Description', index: 'Phone', editable: false },
+          { name: 'Description', index: 'Description', editable: false },
            {
              name: 'Link', cellattr: function () { return ' title=""'; }, formatter: function (cellvalue, options, rowObject) {
                var html = '<a data-toggle="tooltip" data-placement="left" title="Edit" href="/Slider/Edit?id=' + options.rowId + '"><img src="/Content/img/common/grid/edit_command.gif" class="edit_command"/></a>';

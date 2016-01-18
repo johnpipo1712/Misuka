@@ -2574,7 +2574,7 @@
       <LastGenOutput>Person.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\WebSiteLink.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>WebSiteLink.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Content Include="Scripts\grid.locale-en.js" />
@@ -2582,6 +2582,14 @@
     <Content Include="Scripts\jquery-1.11.1.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Views\ContentMenu\App_LocalResources\Edit.cshtml.resx" />
+    <Content Include="Views\ContentMenu\App_LocalResources\Index.cshtml.resx" />
+    <Content Include="Views\ExchangeRate\App_LocalResources\Edit.cshtml.resx" />
+    <Content Include="Views\ExchangeRate\App_LocalResources\Index.cshtml.resx" />
+    <Content Include="Views\TypeMember\App_LocalResources\Edit.cshtml.resx" />
+    <Content Include="Views\TypeMember\App_LocalResources\Index.cshtml.resx" />
+    <Content Include="Views\WebSiteLink\App_LocalResources\Edit.cshtml.resx" />
+    <Content Include="Views\WebSiteLink\App_LocalResources\Index.cshtml.resx" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -3242,6 +3250,13 @@
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\Slider\Edit.cshtml" />
     <Content Include="Views\Slider\Index.cshtml" />
+    <Content Include="Views\ContentMenu\Edit.cshtml" />
+    <Content Include="Views\ExchangeRate\Edit.cshtml" />
+    <Content Include="Views\ExchangeRate\Index.cshtml" />
+    <Content Include="Views\TypeMember\Edit.cshtml" />
+    <Content Include="Views\TypeMember\Index.cshtml" />
+    <Content Include="Views\WebSiteLink\Edit.cshtml" />
+    <Content Include="Views\WebSiteLink\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3253,11 +3268,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\font-awesome\fonts\" />
     <Folder Include="Content\frontend\sass\components\content\persons\" />
-    <Folder Include="Views\ExchangeRate\" />
     <Folder Include="Views\Ordering\" />
     <Folder Include="Views\Person\" />
-    <Folder Include="Views\TypeMember\" />
-    <Folder Include="Views\WebSiteLink\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

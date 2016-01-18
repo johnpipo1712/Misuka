@@ -1,0 +1,32 @@
+﻿@using Misuka.Infrastructure.MVC
+@{
+    ViewBag.Title = this.LocalResources("PageTitle");
+    Layout = "~/Views/Shared/Admin/_Layout.cshtml";
+}
+
+
+        <div class="row">
+            <div class="col-xs-12 margin-top-10">
+              <table id="TypeMemberGrid"></table>
+                <div id="pager"></div>
+            </div>
+        </div>
+
+    <div class="row margin-top-10 clearfix no-border">
+      <div class=" col-xs-12">
+        <button class="btn btn-primary btn-sm pull-left" onclick="TypeMemberClient.OnAddNew()"><i class="fa fa-plus"></i>@Misuka.Web.Resources.Common.Add</button>
+        <button class="btn btn-primary btn-sm pull-left" onclick="TypeMemberClient.OnDelete('@Misuka.Web.Resources.Common.DeleteComfirmMessage')"><i class="fa fa-remove"></i>@Misuka.Web.Resources.Common.Delete</button>
+      </div>
+    </div>
+@section Scripts
+{
+<script src="@Url.Content("~/Scripts/pages/TypeMember/typemember.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        var colNames = ['TypeMemberId', '@Misuka.Web.Resources.TypeMember.Name', '@Misuka.Web.Resources.TypeMember.ScoresFrom', '@Misuka.Web.Resources.TypeMember.ScoresTo', '@Misuka.Web.Resources.TypeMember.PercentDownPayment', ' '];
+        $(document).ready(function () {
+            TypeMemberClient.Init();
+        });
+
+    </script>
+}
+

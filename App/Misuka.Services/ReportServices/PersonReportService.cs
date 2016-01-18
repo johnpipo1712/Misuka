@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using AutoMapper;
 using Misuka.Domain.DTO;
+using Misuka.Domain.SearchCriteria;
 using Misuka.Domain.Security;
+using Misuka.Domain.Utilities;
 using Misuka.Infrastructure.Data;
+using Misuka.Services.ReportServices.Persons;
 using Misuka.Services.Services;
 
 namespace Misuka.Services.ReportServices
@@ -35,6 +38,11 @@ namespace Misuka.Services.ReportServices
       var persons = _personService.Queryable().ToList();
       return persons.Select(Mapper.Map<Domain.Entity.Person, PersonDTO>).ToList();
     
+    }
+
+    public SearchResult<PersonDTO> Search(PersonSearchCriteria searchCriteria, int pageSize, int pageIndex)
+    {
+      return _executor.Execute(new GetPersonDTOBySearchCriteriaDbCommand(searchCriteria, pageIndex, pageSize));
     }
   }
 }

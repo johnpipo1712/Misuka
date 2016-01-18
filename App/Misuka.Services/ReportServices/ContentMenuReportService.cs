@@ -5,8 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Misuka.Domain.DTO;
+using Misuka.Domain.SearchCriteria;
 using Misuka.Domain.Security;
+using Misuka.Domain.Utilities;
 using Misuka.Infrastructure.Data;
+using Misuka.Services.ReportServices.ContentMenus;
 using Misuka.Services.Services;
 
 namespace Misuka.Services.ReportServices
@@ -36,6 +39,11 @@ namespace Misuka.Services.ReportServices
       var contentMenus = _contentMenuService.Queryable().ToList();
       return contentMenus.Select(Mapper.Map<Domain.Entity.ContentMenu, ContentMenuDTO>).ToList();
     
+    }
+
+    public SearchResult<ContentMenuDTO> Search(ContentMenuSearchCriteria searchCriteria, int pageSize, int pageIndex)
+    {
+      return _executor.Execute(new GetContentMenuDTOBySearchCriteriaDbCommand(searchCriteria, pageIndex, pageSize));
     }
   }
 }

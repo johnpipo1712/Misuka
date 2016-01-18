@@ -5,6 +5,7 @@ using System.Text;
 using Misuka.Domain.Security;
 using Misuka.Infrastructure.Data;
 using Misuka.Infrastructure.EntityFramework.UnitOfWork;
+using Misuka.Services.CommandServices.WebSiteLinks;
 using Misuka.Services.Services;
 
 namespace Misuka.Services.CommandServices
@@ -21,6 +22,21 @@ namespace Misuka.Services.CommandServices
       _unitOfWork = unitOfWork;
       _executor = executor;
       _userSession = new UserSession();
+    }
+
+    public void DeleteWebSiteLink(DeleteWebSiteLinkCommand command)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Guid AddWebSiteLink(AddWebSiteLinkCommand command)
+    {
+      throw new NotImplementedException();
+    }
+
+    public void EditWebSiteLink(EditWebSiteLinkCommand command)
+    {
+      throw new NotImplementedException();
     }
   }
 }

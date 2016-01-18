@@ -5,6 +5,7 @@ using System.Text;
 using Misuka.Domain.Security;
 using Misuka.Infrastructure.Data;
 using Misuka.Infrastructure.EntityFramework.UnitOfWork;
+using Misuka.Services.CommandServices.Persons;
 using Misuka.Services.Services;
 
 namespace Misuka.Services.CommandServices
@@ -21,6 +22,16 @@ namespace Misuka.Services.CommandServices
       _unitOfWork = unitOfWork;
       _executor = executor;
       _userSession = new UserSession();
+    }
+
+    public Guid AddPerson(AddPersonCommand command)
+    {
+      throw new NotImplementedException();
+    }
+
+    public void DeletePerson(DeletePersonCommand command)
+    {
+      throw new NotImplementedException();
     }
   }
 }

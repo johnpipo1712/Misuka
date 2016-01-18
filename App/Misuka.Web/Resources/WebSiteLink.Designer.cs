@@ -22,7 +22,7 @@ namespace Misuka.Web.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class WebSiteLink {
+    public class WebSiteLink {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Misuka.Web.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Misuka.Web.Resources.WebSiteLink", typeof(WebSiteLink).Assembly);
@@ -51,7 +51,7 @@ namespace Misuka.Web.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Misuka.Web.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Người tạo.
         /// </summary>
-        internal static string CreatedBy {
+        public static string CreatedBy {
             get {
                 return ResourceManager.GetString("CreatedBy", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Misuka.Web.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Ngày tạo.
         /// </summary>
-        internal static string CreatedDate {
+        public static string CreatedDate {
             get {
                 return ResourceManager.GetString("CreatedDate", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Misuka.Web.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Link hình ảnh.
         /// </summary>
-        internal static string ImageUrl {
+        public static string ImageUrl {
             get {
                 return ResourceManager.GetString("ImageUrl", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Misuka.Web.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Link.
         /// </summary>
-        internal static string Link {
+        public static string Link {
             get {
                 return ResourceManager.GetString("Link", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Misuka.Web.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tên.
         /// </summary>
-        internal static string Name {
+        public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Misuka.Web.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
-        internal static string WebSiteLinkId {
+        public static string WebSiteLinkId {
             get {
                 return ResourceManager.GetString("WebSiteLinkId", resourceCulture);
             }

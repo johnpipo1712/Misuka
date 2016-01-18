@@ -18,13 +18,13 @@ namespace Misuka.Web.Controllers
 {
     public class SliderController  : Controller
     {
-      private readonly ISliderReportService _SliderReportService;
-      private readonly ISliderCommandService _SliderCommandService;
+      private readonly ISliderReportService _sliderReportService;
+      private readonly ISliderCommandService _sliderCommandService;
       
-      public SliderController(ISliderCommandService SliderCommandService, ISliderReportService SliderReportService)
+      public SliderController(ISliderCommandService sliderCommandService, ISliderReportService sliderReportService)
       {
-        _SliderReportService = SliderReportService;
-        _SliderCommandService = SliderCommandService;
+        _sliderReportService = sliderReportService;
+        _sliderCommandService = sliderCommandService;
       }
       //
       // GET: /Slider/
@@ -36,7 +36,7 @@ namespace Misuka.Web.Controllers
       public ActionResult GetSliders(JqGridRequest request, string keyword)
       {
         var searchCriteria = new SliderSearchCriteria();
-        var result = _SliderReportService.Search(searchCriteria, request.RecordsCount, request.PageIndex);
+        var result = _sliderReportService.Search(searchCriteria, request.RecordsCount, request.PageIndex);
         var jsonData = new
         {
           total = (result.Count + request.RecordsCount - 1) / request.RecordsCount,
@@ -52,7 +52,7 @@ namespace Misuka.Web.Controllers
       {
         var Slider = new SliderModel();
         if (id != null)
-          Slider = Mapper.Map<SliderDTO, SliderModel>(_SliderReportService.GetById((Guid)id));
+          Slider = Mapper.Map<SliderDTO, SliderModel>(_sliderReportService.GetById((Guid)id));
         return View("Edit", Slider);
       }
 
@@ -71,7 +71,7 @@ namespace Misuka.Web.Controllers
         }
         catch (Exception ex)
         {
-          ModelState.AddModelError("Edit_Slider", ex.Message);
+          ModelState.AddModelError("Edit_slider", ex.Message);
         }
         return ModelState.JsonValidation();
       }
@@ -86,7 +86,7 @@ namespace Misuka.Web.Controllers
 
         if (selectedIds.Count > 0)
         {
-          _SliderCommandService.DeleteSlider(new DeleteSliderCommand(selectedIds));
+          _sliderCommandService.DeleteSlider(new DeleteSliderCommand(selectedIds));
           return ModelState.JsonValidation(new { Success = true });
         }
 
@@ -102,12 +102,12 @@ namespace Misuka.Web.Controllers
         if (model.SliderId == Guid.Empty)
         {
           var createCommand = new AddSliderCommand(model.Name,model.Description,model.ImageURL);
-          model.SliderId = _SliderCommandService.AddSlider(createCommand);
+          model.SliderId = _sliderCommandService.AddSlider(createCommand);
         }
         else
         {
           var updateCommand = new EditSliderCommand(model.SliderId, model.Name, model.Description, model.ImageURL);
-          _SliderCommandService.EditSlider(updateCommand);
+          _sliderCommandService.EditSlider(updateCommand);
         }
       }
 

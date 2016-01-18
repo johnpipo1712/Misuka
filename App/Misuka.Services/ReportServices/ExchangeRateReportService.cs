@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using AutoMapper;
 using Misuka.Domain.DTO;
+using Misuka.Domain.SearchCriteria;
 using Misuka.Domain.Security;
+using Misuka.Domain.Utilities;
 using Misuka.Infrastructure.Data;
+using Misuka.Services.ReportServices.ExchangeRates;
 using Misuka.Services.Services;
 
 namespace Misuka.Services.ReportServices
@@ -35,6 +38,11 @@ namespace Misuka.Services.ReportServices
       var exchangeRates = _exchangeRateService.Queryable().ToList();
       return exchangeRates.Select(Mapper.Map<Domain.Entity.ExchangeRate, ExchangeRateDTO>).ToList();
     
+    }
+
+    public SearchResult<ExchangeRateDTO> Search(ExchangeRateSearchCriteria searchCriteria, int pageSize, int pageIndex)
+    {
+      return _executor.Execute(new GetExchangeRateDTOBySearchCriteriaDbCommand(searchCriteria, pageIndex, pageSize));
     }
   }
 }

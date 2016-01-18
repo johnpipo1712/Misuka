@@ -7,5 +7,10 @@ namespace Misuka.Services.CommandServices
 {
   public interface IContentMenuCommandService
   {
+    void DeleteContentMenu(ContentMenus.DeleteContentMenuCommand command);
+
+    Guid AddContentMenu(ContentMenus.AddContentMenuCommand command);
+
+    void EditContentMenu(ContentMenus.EditContentMenuCommand command);
   }
 }
