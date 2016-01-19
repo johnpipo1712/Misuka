@@ -7,12 +7,12 @@ namespace Misuka.Services.CommandServices.ExchangeRates
 {
   public class DeleteExchangeRateCommand
   {
-    private IList<Guid> selectedIds;
+    public IList<Guid> SelectedIds { get; set; }
 
     public DeleteExchangeRateCommand(IList<Guid> selectedIds)
     {
       // TODO: Complete member initialization
-      this.selectedIds = selectedIds;
+      SelectedIds = selectedIds;
     }
   }
 }

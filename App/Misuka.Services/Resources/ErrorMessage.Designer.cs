@@ -61,196 +61,7 @@ namespace Misuka.Services.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total of transfer days and sell days must be equal to the remaining days..
-        /// </summary>
-        public static string AutoTransfer {
-            get {
-                return ResourceManager.GetString("AutoTransfer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete approved/rejected leave request..
-        /// </summary>
-        public static string CannotDeleteLeave {
-            get {
-                return ResourceManager.GetString("CannotDeleteLeave", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete holiday leave request.
-        /// </summary>
-        public static string CannotDeleteLeaveHoliday {
-            get {
-                return ResourceManager.GetString("CannotDeleteLeaveHoliday", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete the default leave type..
-        /// </summary>
-        public static string CannotDeleteLeaveType {
-            get {
-                return ResourceManager.GetString("CannotDeleteLeaveType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete default News Feed type..
-        /// </summary>
-        public static string CannotDeleteNewsType {
-            get {
-                return ResourceManager.GetString("CannotDeleteNewsType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete News Feed type which is referenced by some other data..
-        /// </summary>
-        public static string CannotDeleteNewsTypeUsing {
-            get {
-                return ResourceManager.GetString("CannotDeleteNewsTypeUsing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete group that is referenced by some other data.
-        /// </summary>
-        public static string CannotGroup {
-            get {
-                return ResourceManager.GetString("CannotGroup", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete leave type, that is referenced by some other data.
-        /// </summary>
-        public static string CannotLeaveType {
-            get {
-                return ResourceManager.GetString("CannotLeaveType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete person, that is referenced by some other data.
-        /// </summary>
-        public static string CannotPerson {
-            get {
-                return ResourceManager.GetString("CannotPerson", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete role, that is referenced by some other data.
-        /// </summary>
-        public static string CannotRole {
-            get {
-                return ResourceManager.GetString("CannotRole", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot delete skill that is referenced by some other data.
-        /// </summary>
-        public static string CannotSkill {
-            get {
-                return ResourceManager.GetString("CannotSkill", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You cannot edit annual leave information for the past years..
-        /// </summary>
-        public static string EditTransfer {
-            get {
-                return ResourceManager.GetString("EditTransfer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total of transfer days and sell days must be equal to the remaining days..
-        /// </summary>
-        public static string EditTransferDays {
-            get {
-                return ResourceManager.GetString("EditTransferDays", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to To date must be equal or greater than from date..
-        /// </summary>
-        public static string ErrorDateFromTo {
-            get {
-                return ResourceManager.GetString("ErrorDateFromTo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot set company off days on non working day..
-        /// </summary>
-        public static string ErrorDateSuAndSa {
-            get {
-                return ResourceManager.GetString("ErrorDateSuAndSa", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You cannot submit leave requests on Sunday/Saturday or holidays..
-        /// </summary>
-        public static string ErrorDateSuAndSaAndHoliday {
-            get {
-                return ResourceManager.GetString("ErrorDateSuAndSaAndHoliday", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Already exists leave request in the same time range. Please check your input day..
-        /// </summary>
-        public static string ErrorHolidayByLeaveRequest {
-            get {
-                return ResourceManager.GetString("ErrorHolidayByLeaveRequest", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Number of {0} is invalid..
-        /// </summary>
-        public static string ErrorLeaveDays {
-            get {
-                return ResourceManager.GetString("ErrorLeaveDays", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total of days for next year must be equal or less than {0} days..
-        /// </summary>
-        public static string ErrorLeaveTranferTotalDay {
-            get {
-                return ResourceManager.GetString("ErrorLeaveTranferTotalDay", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Purchase request total amount &gt; 0.
-        /// </summary>
-        public static string ErrorTotalAmount {
-            get {
-                return ResourceManager.GetString("ErrorTotalAmount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please you ok/cancel all purchase detail waiting..
-        /// </summary>
-        public static string ErrorWaitingPurchaseDetail {
-            get {
-                return ResourceManager.GetString("ErrorWaitingPurchaseDetail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} is in use. Please enter a new {0}..
+        ///   Looks up a localized string similar to {0} đã có sử dụng.Vui lòng nhập mới {0}..
         /// </summary>
         public static string Exists {
             get {
@@ -259,79 +70,16 @@ namespace Misuka.Services.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File upload size &lt;= 5MB.
+        ///   Looks up a localized string similar to Đã tồn tại khoảng số điểm của loại khách hàng trong hệ thống. Vui lòng nhập lại khoảng số điểm.
         /// </summary>
-        public static string FileStremTooBig {
+        public static string IsNotTypemMember {
             get {
-                return ResourceManager.GetString("FileStremTooBig", resourceCulture);
+                return ResourceManager.GetString("IsNotTypemMember", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Already exists room booking in the same time range. Please try to choose another room..
-        /// </summary>
-        public static string IsNotBooking {
-            get {
-                return ResourceManager.GetString("IsNotBooking", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Already exists holidays in the same time range. Please check your input day..
-        /// </summary>
-        public static string IsNotHoliday {
-            get {
-                return ResourceManager.GetString("IsNotHoliday", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Already exists leave request in the same time range. Please check your input time..
-        /// </summary>
-        public static string IsNotLeave {
-            get {
-                return ResourceManager.GetString("IsNotLeave", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You cannot remove {0} since {0} have using..
-        /// </summary>
-        public static string IsNotRemove {
-            get {
-                return ResourceManager.GetString("IsNotRemove", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You cannot remove {0}, who is &apos;adminstrator&apos; user..
-        /// </summary>
-        public static string IsNotRemoveAdmin {
-            get {
-                return ResourceManager.GetString("IsNotRemoveAdmin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Already exists sprints in the same time range. Please check your input day..
-        /// </summary>
-        public static string IsNotSprint {
-            get {
-                return ResourceManager.GetString("IsNotSprint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} canot be empty.
-        /// </summary>
-        public static string IsNULL {
-            get {
-                return ResourceManager.GetString("IsNULL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please enter a valid password. Password must be equal or greater than 5 characters..
+        ///   Looks up a localized string similar to Mật khẩu không hợp lệ.
         /// </summary>
         public static string IsPassword {
             get {
@@ -340,7 +88,7 @@ namespace Misuka.Services.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} is required..
+        ///   Looks up a localized string similar to {0} vui lòng không để trống..
         /// </summary>
         public static string IsRequired {
             get {
@@ -349,70 +97,7 @@ namespace Misuka.Services.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please leave day &gt; 0.
-        /// </summary>
-        public static string IsRequiredLeavedays {
-            get {
-                return ResourceManager.GetString("IsRequiredLeavedays", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please enter a valid username. Username  must be equal or greater than 5 characters..
-        /// </summary>
-        public static string IsUsername {
-            get {
-                return ResourceManager.GetString("IsUsername", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There are some leave requests which are waiting for approval. Please approve/reject them first..
-        /// </summary>
-        public static string LeaveWatting {
-            get {
-                return ResourceManager.GetString("LeaveWatting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You cannot approve leaves without anuual leave data..
-        /// </summary>
-        public static string NotAnnualLeaveApprove {
-            get {
-                return ResourceManager.GetString("NotAnnualLeaveApprove", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You cannot submit leave requests beacause you don&apos;t have annual leave in year.
-        /// </summary>
-        public static string NotAnnualLeaveRequest {
-            get {
-                return ResourceManager.GetString("NotAnnualLeaveRequest", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There are no valid working days between &apos;{0}&apos; and &apos;{1}&apos; to register hours..
-        /// </summary>
-        public static string NotHavingWorkingDay {
-            get {
-                return ResourceManager.GetString("NotHavingWorkingDay", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your remaining days is not allowed to register transfer/sell..
-        /// </summary>
-        public static string NotRemainDay {
-            get {
-                return ResourceManager.GetString("NotRemainDay", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You don&apos;t have permission on this function..
+        ///   Looks up a localized string similar to Bạn không có quyền truy cập..
         /// </summary>
         public static string PERMISSION_DENIED {
             get {

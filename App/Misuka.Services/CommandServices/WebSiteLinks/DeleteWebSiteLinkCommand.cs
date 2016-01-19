@@ -7,12 +7,12 @@ namespace Misuka.Services.CommandServices.WebSiteLinks
 {
   public class DeleteWebSiteLinkCommand
   {
-    private IList<Guid> selectedIds;
+    public IList<Guid> SelectedIds { get; set; }
 
     public DeleteWebSiteLinkCommand(IList<Guid> selectedIds)
     {
       // TODO: Complete member initialization
-      this.selectedIds = selectedIds;
+      SelectedIds = selectedIds;
     }
   }
 }

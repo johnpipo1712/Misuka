@@ -11,10 +11,10 @@ namespace Misuka.Web.Models
 
     public string Name { get; set; }
 
-    public long? ScoresTo { get; set; }
+    public long ScoresTo { get; set; }
 
-    public long? ScoresFrom { get; set; }
+    public long ScoresFrom { get; set; }
 
-    public double? PercentDownPayment { get; set; }
+    public double PercentDownPayment { get; set; }
   }
 }

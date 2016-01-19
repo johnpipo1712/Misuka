@@ -117,124 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AutoTransfer" xml:space="preserve">
-    <value>Total of transfer days and sell days must be equal to the remaining days.</value>
-  </data>
-  <data name="CannotDeleteLeave" xml:space="preserve">
-    <value>Cannot delete approved/rejected leave request.</value>
-  </data>
-  <data name="CannotDeleteLeaveHoliday" xml:space="preserve">
-    <value>Cannot delete holiday leave request</value>
-  </data>
-  <data name="CannotDeleteLeaveType" xml:space="preserve">
-    <value>Cannot delete the default leave type.</value>
-  </data>
-  <data name="CannotDeleteNewsType" xml:space="preserve">
-    <value>Cannot delete default News Feed type.</value>
-  </data>
-  <data name="CannotDeleteNewsTypeUsing" xml:space="preserve">
-    <value>Cannot delete News Feed type which is referenced by some other data.</value>
-  </data>
-  <data name="CannotGroup" xml:space="preserve">
-    <value>Cannot delete group that is referenced by some other data</value>
-  </data>
-  <data name="CannotLeaveType" xml:space="preserve">
-    <value>Cannot delete leave type, that is referenced by some other data</value>
-  </data>
-  <data name="CannotPerson" xml:space="preserve">
-    <value>Cannot delete person, that is referenced by some other data</value>
-  </data>
-  <data name="CannotRole" xml:space="preserve">
-    <value>Cannot delete role, that is referenced by some other data</value>
-  </data>
-  <data name="CannotSkill" xml:space="preserve">
-    <value>Cannot delete skill that is referenced by some other data</value>
-  </data>
-  <data name="EditTransfer" xml:space="preserve">
-    <value>You cannot edit annual leave information for the past years.</value>
-  </data>
-  <data name="EditTransferDays" xml:space="preserve">
-    <value>Total of transfer days and sell days must be equal to the remaining days.</value>
-  </data>
-  <data name="ErrorDateFromTo" xml:space="preserve">
-    <value>To date must be equal or greater than from date.</value>
-  </data>
-  <data name="ErrorDateSuAndSa" xml:space="preserve">
-    <value>Cannot set company off days on non working day.</value>
-  </data>
-  <data name="ErrorDateSuAndSaAndHoliday" xml:space="preserve">
-    <value>You cannot submit leave requests on Sunday/Saturday or holidays.</value>
-  </data>
-  <data name="ErrorHolidayByLeaveRequest" xml:space="preserve">
-    <value>Already exists leave request in the same time range. Please check your input day.</value>
-  </data>
-  <data name="ErrorLeaveDays" xml:space="preserve">
-    <value>Number of {0} is invalid.</value>
-  </data>
-  <data name="ErrorLeaveTranferTotalDay" xml:space="preserve">
-    <value>Total of days for next year must be equal or less than {0} days.</value>
-  </data>
-  <data name="ErrorTotalAmount" xml:space="preserve">
-    <value>Purchase request total amount &gt; 0</value>
-  </data>
-  <data name="ErrorWaitingPurchaseDetail" xml:space="preserve">
-    <value>Please you ok/cancel all purchase detail waiting.</value>
-  </data>
   <data name="Exists" xml:space="preserve">
-    <value>{0} is in use. Please enter a new {0}.</value>
-  </data>
-  <data name="FileStremTooBig" xml:space="preserve">
-    <value>File upload size &lt;= 5MB</value>
-  </data>
-  <data name="IsNotBooking" xml:space="preserve">
-    <value>Already exists room booking in the same time range. Please try to choose another room.</value>
-  </data>
-  <data name="IsNotHoliday" xml:space="preserve">
-    <value>Already exists holidays in the same time range. Please check your input day.</value>
-  </data>
-  <data name="IsNotLeave" xml:space="preserve">
-    <value>Already exists leave request in the same time range. Please check your input time.</value>
-  </data>
-  <data name="IsNotRemove" xml:space="preserve">
-    <value>You cannot remove {0} since {0} have using.</value>
-  </data>
-  <data name="IsNotRemoveAdmin" xml:space="preserve">
-    <value>You cannot remove {0}, who is 'adminstrator' user.</value>
-  </data>
-  <data name="IsNotSprint" xml:space="preserve">
-    <value>Already exists sprints in the same time range. Please check your input day.</value>
-  </data>
-  <data name="IsNULL" xml:space="preserve">
-    <value>{0} canot be empty</value>
+    <value>{0} đã có sử dụng.Vui lòng nhập mới {0}.</value>
   </data>
   <data name="IsPassword" xml:space="preserve">
-    <value>Please enter a valid password. Password must be equal or greater than 5 characters.</value>
+    <value>Mật khẩu không hợp lệ</value>
   </data>
   <data name="IsRequired" xml:space="preserve">
-    <value>{0} is required.</value>
-  </data>
-  <data name="IsRequiredLeavedays" xml:space="preserve">
-    <value>Please leave day &gt; 0</value>
-  </data>
-  <data name="IsUsername" xml:space="preserve">
-    <value>Please enter a valid username. Username  must be equal or greater than 5 characters.</value>
-  </data>
-  <data name="LeaveWatting" xml:space="preserve">
-    <value>There are some leave requests which are waiting for approval. Please approve/reject them first.</value>
-  </data>
-  <data name="NotAnnualLeaveApprove" xml:space="preserve">
-    <value>You cannot approve leaves without anuual leave data.</value>
-  </data>
-  <data name="NotAnnualLeaveRequest" xml:space="preserve">
-    <value>You cannot submit leave requests beacause you don't have annual leave in year</value>
-  </data>
-  <data name="NotHavingWorkingDay" xml:space="preserve">
-    <value>There are no valid working days between '{0}' and '{1}' to register hours.</value>
-  </data>
-  <data name="NotRemainDay" xml:space="preserve">
-    <value>Your remaining days is not allowed to register transfer/sell.</value>
+    <value>{0} vui lòng không để trống.</value>
   </data>
   <data name="PERMISSION_DENIED" xml:space="preserve">
-    <value>You don't have permission on this function.</value>
+    <value>Bạn không có quyền truy cập.</value>
+  </data>
+  <data name="IsNotTypemMember" xml:space="preserve">
+    <value>Đã tồn tại khoảng số điểm của loại khách hàng trong hệ thống. Vui lòng nhập lại khoảng số điểm</value>
   </data>
 </root>

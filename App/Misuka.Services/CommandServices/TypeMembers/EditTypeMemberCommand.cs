@@ -7,20 +7,20 @@ namespace Misuka.Services.CommandServices.TypeMembers
 {
   public class EditTypeMemberCommand
   {
-    private Guid guid;
-    private string p;
-    private long? nullable1;
-    private long? nullable2;
-    private double? nullable3;
+    public Guid TypeMemberId { get; set; }
+    public string Name { get; set; }
+    public long ScoresFrom { get; set; }
+    public long ScoresTo { get; set; }
+    public Double PercentDownPayment { get; set; }
 
-    public EditTypeMemberCommand(Guid guid, string p, long? nullable1, long? nullable2, double? nullable3)
+    public EditTypeMemberCommand(Guid typeMemberId, string name, long scoresFrom, long scoresTo, Double percentDownPayment)
     {
       // TODO: Complete member initialization
-      this.guid = guid;
-      this.p = p;
-      this.nullable1 = nullable1;
-      this.nullable2 = nullable2;
-      this.nullable3 = nullable3;
+      TypeMemberId = typeMemberId;
+      Name = name;
+      ScoresFrom = scoresFrom;
+      ScoresTo = scoresTo;
+      PercentDownPayment = percentDownPayment;
     }
   }
 }

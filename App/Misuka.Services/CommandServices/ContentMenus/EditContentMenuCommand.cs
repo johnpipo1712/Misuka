@@ -7,22 +7,22 @@ namespace Misuka.Services.CommandServices.ContentMenus
 {
   public class EditContentMenuCommand
   {
-    private Guid guid;
-    private string p1;
-    private string p2;
-    private string p3;
-    private string p4;
-    private string p5;
+    public Guid ContentMenuId { get; set; }
+    public string Title { get; set; }
+    public string Image { get; set; }
+    public string MetaKeywork { get; set; }
+    public string MetaDescription { get; set; }
+    public string Description { get; set; }
 
-    public EditContentMenuCommand(Guid guid, string p1, string p2, string p3, string p4, string p5)
+    public EditContentMenuCommand(Guid contentMenuId, string title, string image, string metaKeywork, string metaDescription, string description)
     {
       // TODO: Complete member initialization
-      this.guid = guid;
-      this.p1 = p1;
-      this.p2 = p2;
-      this.p3 = p3;
-      this.p4 = p4;
-      this.p5 = p5;
+      ContentMenuId = contentMenuId;
+      Title = title;
+      Image = image;
+      MetaKeywork = metaKeywork;
+      MetaDescription = metaDescription;
+      Description = description;
     }
   }
 }

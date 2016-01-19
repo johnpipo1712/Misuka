@@ -7,18 +7,18 @@ namespace Misuka.Services.CommandServices.WebSiteLinks
 {
   public class EditWebSiteLinkCommand
   {
-    private Guid guid;
-    private string p1;
-    private string p2;
-    private string p3;
+    public Guid WebSiteLinkId { get; set; }
+    public string Name { get; set; }
+    public string Link { get; set; }
+    public string ImageUrl { get; set; }
 
-    public EditWebSiteLinkCommand(Guid guid, string p1, string p2, string p3)
+    public EditWebSiteLinkCommand(Guid webSiteLinkId, string name, string link, string imageUrl)
     {
       // TODO: Complete member initialization
-      this.guid = guid;
-      this.p1 = p1;
-      this.p2 = p2;
-      this.p3 = p3;
+      WebSiteLinkId = webSiteLinkId;
+      Name = name;
+      Link = link;
+      ImageUrl = imageUrl;
     }
   }
 }

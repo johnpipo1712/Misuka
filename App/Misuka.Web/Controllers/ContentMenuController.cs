@@ -81,12 +81,12 @@ namespace Misuka.Web.Controllers
       {
         if (model.ContentMenuId == Guid.Empty)
         {
-          var createCommand = new AddContentMenuCommand(model.Title,model.Image,model.MetaKeywork,model.MetaKeywork,model.Description);
+          var createCommand = new AddContentMenuCommand(model.Title,model.Image,model.MetaKeywork,model.MetaDescription,model.Description);
           model.ContentMenuId = _contentMenuCommandService.AddContentMenu(createCommand);
         }
         else
         {
-          var updateCommand = new EditContentMenuCommand(model.ContentMenuId, model.Title, model.Image, model.MetaKeywork, model.MetaKeywork, model.Description);
+          var updateCommand = new EditContentMenuCommand(model.ContentMenuId, model.Title, model.Image, model.MetaKeywork, model.MetaDescription, model.Description);
           _contentMenuCommandService.EditContentMenu(updateCommand);
         }
       }

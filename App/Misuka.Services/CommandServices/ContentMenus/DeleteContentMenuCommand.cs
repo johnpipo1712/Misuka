@@ -7,12 +7,12 @@ namespace Misuka.Services.CommandServices.ContentMenus
 {
   public class DeleteContentMenuCommand
   {
-    private IList<Guid> selectedIds;
+    public IList<Guid> SelectedIds { get; set; }
 
     public DeleteContentMenuCommand(IList<Guid> selectedIds)
     {
       // TODO: Complete member initialization
-      this.selectedIds = selectedIds;
+      SelectedIds = selectedIds;
     }
   }
 }

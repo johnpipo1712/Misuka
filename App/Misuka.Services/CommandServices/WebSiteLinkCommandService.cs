@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Misuka.Domain.Entity;
 using Misuka.Domain.Security;
 using Misuka.Infrastructure.Data;
 using Misuka.Infrastructure.EntityFramework.UnitOfWork;
@@ -26,17 +27,38 @@ namespace Misuka.Services.CommandServices
 
     public void DeleteWebSiteLink(DeleteWebSiteLinkCommand command)
     {
-      throw new NotImplementedException();
+      foreach (var item in command.SelectedIds)
+      {
+        _webSiteLinkService.Delete(item);
+        _unitOfWork.SaveChanges();
+      }
     }
 
     public Guid AddWebSiteLink(AddWebSiteLinkCommand command)
     {
-      throw new NotImplementedException();
+      var webSiteLink = new WebSiteLink()
+      {
+        CreatedBy = _userSession.UserId,
+        CreatedByName = _userSession.FullName,
+        CreatedDate = DateTime.Now,
+        ImageUrl = command.ImageUrl,
+        Link = command.Link,
+        Name = command.Name,
+        WebSiteLinkId = Guid.NewGuid()
+      };
+      _webSiteLinkService.Insert(webSiteLink);
+      _unitOfWork.SaveChanges();
+      return webSiteLink.WebSiteLinkId;
     }
 
     public void EditWebSiteLink(EditWebSiteLinkCommand command)
     {
-      throw new NotImplementedException();
+      var webSiteLink = _webSiteLinkService.Find(command.WebSiteLinkId);
+      webSiteLink.Name = command.Name;
+      webSiteLink.Link = command.Link;
+      webSiteLink.ImageUrl = command.ImageUrl;
+      _webSiteLinkService.Update(webSiteLink);
+      _unitOfWork.SaveChanges();
     }
   }
 }

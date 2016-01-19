@@ -8,16 +8,14 @@ namespace Misuka.Services.CommandServices.WebSiteLinks
 {
   public class AddWebSiteLinkCommand
   {
-    private string p1;
-    private string p2;
-    private string p3;
-
-    public AddWebSiteLinkCommand(string p1, string p2, string p3)
+    public string Name { get; set; }
+    public string Link { get; set; }
+    public string ImageUrl { get; set; }
+    public AddWebSiteLinkCommand(string name, string link, string imageUrl)
     {
-      // TODO: Complete member initialization
-      this.p1 = p1;
-      this.p2 = p2;
-      this.p3 = p3;
+      Name = name;
+      Link = link;
+      ImageUrl = imageUrl;
     }
   }
 }

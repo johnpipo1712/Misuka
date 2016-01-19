@@ -7,16 +7,16 @@ namespace Misuka.Services.CommandServices.ExchangeRates
 {
   public class EditExchangeRateCommand
   {
-    private Guid guid;
-    private string p;
-    private decimal? nullable;
+    public Guid ExchangeRateId { get; set; }
+    public string Name { get; set; }
+    public Decimal Price { get; set; }
 
-    public EditExchangeRateCommand(Guid guid, string p, decimal? nullable)
+    public EditExchangeRateCommand(Guid exchangeRateId, string name, Decimal price)
     {
       // TODO: Complete member initialization
-      this.guid = guid;
-      this.p = p;
-      this.nullable = nullable;
+      ExchangeRateId = exchangeRateId;
+      Name = name;
+      Price = price;
     }
   }
 }

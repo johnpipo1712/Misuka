@@ -8,15 +8,15 @@ namespace Misuka.Services.CommandServices.ExchangeRates
 {
   public class AddExchangeRateCommand
   {
-    private string p;
-    private decimal? nullable;
+    public string Name { get; set; }
+    public Decimal Price { get; set; }
 
-    public AddExchangeRateCommand(string p, decimal? nullable)
+    public AddExchangeRateCommand(string name, Decimal price)
     {
       // TODO: Complete member initialization
-      this.p = p;
-      this.nullable = nullable;
-    }
+      Name = name;
+      Price = price;
 
+    }
   }
 }

@@ -8,11 +8,11 @@ namespace Misuka.Services.CommandServices.TypeMembers
 {
   public class DeleteTypeMemberCommand
   {
-    private IList<Guid> selectedIds;
+    public IList<Guid> SelectedIds { get; set; }
 
     public DeleteTypeMemberCommand(IList<Guid> selectedIds)
     {
-     this.selectedIds = selectedIds;
+      SelectedIds = selectedIds;
     }
   }
 }

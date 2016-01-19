@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Misuka.Domain.Entity;
 using Misuka.Domain.Security;
 using Misuka.Infrastructure.Data;
 using Misuka.Infrastructure.EntityFramework.UnitOfWork;
@@ -26,17 +27,33 @@ namespace Misuka.Services.CommandServices
 
     public void DeleteExchangeRate(DeleteExchangeRateCommand command)
     {
-      throw new NotImplementedException();
+      foreach (var item in command.SelectedIds)
+      {
+        _exchangeRateService.Delete(item);
+        _unitOfWork.SaveChanges();
+      }
     }
 
     public Guid AddExchangeRate(AddExchangeRateCommand command)
     {
-      throw new NotImplementedException();
+      var exchangeRate = new ExchangeRate()
+      {
+        ExchangeRateId = Guid.NewGuid(),
+        Price = command.Price,
+        Name = command.Name
+      };
+      _exchangeRateService.Insert(exchangeRate);
+      _unitOfWork.SaveChanges();
+      return exchangeRate.ExchangeRateId;
     }
 
     public void EditExchangeRate(EditExchangeRateCommand command)
     {
-      throw new NotImplementedException();
+      var exchangeRate = _exchangeRateService.Find(command.ExchangeRateId);
+      exchangeRate.Name = command.Name;
+      exchangeRate.Price = command.Price;
+      _exchangeRateService.Update(exchangeRate);
+      _unitOfWork.SaveChanges();
     }
   }
 }

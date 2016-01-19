@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Misuka.Domain.Entity;
 using Misuka.Domain.Security;
 using Misuka.Infrastructure.Data;
 using Misuka.Infrastructure.EntityFramework.UnitOfWork;
@@ -27,17 +28,39 @@ namespace Misuka.Services.CommandServices
 
     public void DeleteContentMenu(DeleteContentMenuCommand command)
     {
-      throw new NotImplementedException();
+      foreach (var item in command.SelectedIds)
+      {
+        _contentMenuService.Delete(item);
+        _unitOfWork.SaveChanges();
+      }
     }
 
     public Guid AddContentMenu(AddContentMenuCommand command)
     {
-      throw new NotImplementedException();
+      var contentMenu = new ContentMenu()
+      {
+        ContentMenuId = Guid.NewGuid(),
+        Description = command.Description,
+        Image = command.Image,
+        Title = command.Title,
+        MetaDescription = command.MetaDescription,
+        MetaKeywork = command.MetaKeywork
+      };
+      _contentMenuService.Insert(contentMenu);
+      _unitOfWork.SaveChanges();
+      return contentMenu.ContentMenuId;
     }
 
     public void EditContentMenu(EditContentMenuCommand command)
     {
-      throw new NotImplementedException();
+      var contentMenu = _contentMenuService.Find(command.ContentMenuId);
+      contentMenu.Description = command.Description;
+      contentMenu.Image = command.Image;
+      contentMenu.MetaDescription = command.MetaDescription;
+      contentMenu.MetaKeywork = command.MetaKeywork;
+      contentMenu.Title = command.Title;
+      _contentMenuService.Update(contentMenu);
+      _unitOfWork.SaveChanges();
     }
   }
 }
