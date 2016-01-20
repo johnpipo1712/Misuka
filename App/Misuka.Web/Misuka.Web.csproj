@@ -232,9 +232,11 @@
     <Compile Include="Controllers\WebSiteLinkController.cs" />
     <Compile Include="Models\ContentMenuModel.cs" />
     <Compile Include="Models\ExchangeRateModel.cs" />
+    <Compile Include="Models\LogOnModel.cs" />
     <Compile Include="Models\OrderingDetailModel.cs" />
     <Compile Include="Models\OrderingModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\SliderModel.cs" />
     <Compile Include="Models\TypeMemberModel.cs" />
     <Compile Include="Models\UserModel.cs" />

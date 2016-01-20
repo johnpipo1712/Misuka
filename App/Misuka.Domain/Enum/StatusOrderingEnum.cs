@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Misuka.Domain.Enum
 {
-  class StatusOrderingEnum
+  public enum StatusOrderingEnum
   {
   }
 }

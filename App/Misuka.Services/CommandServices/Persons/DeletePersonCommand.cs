@@ -8,12 +8,12 @@ namespace Misuka.Services.CommandServices.Persons
 {
   public class DeletePersonCommand
   {
-    private IList<Guid> selectedIds;
+    public IList<Guid> SelectedIds { get; set; }
 
     public DeletePersonCommand(IList<Guid> selectedIds)
     {
       // TODO: Complete member initialization
-      this.selectedIds = selectedIds;
+      SelectedIds = selectedIds;
     }
   }
 }

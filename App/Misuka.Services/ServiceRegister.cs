@@ -81,6 +81,8 @@ namespace Misuka.Services
         .RegisterType<IWebSiteLinkCommandService, WebSiteLinkCommandService>()
         .RegisterType<IRepositoryAsync<WebSiteLink>, Repository<WebSiteLink>>();
 
+
+      _container.RegisterType<IKeyGenerationReportService, KeyGenerationReportService>();
       _container.RegisterType<IUserSession, UserSession>();
       _container.RegisterType<IFileService, FileService>();
       _container.RegisterType<ICommandExecutor, CommandExecutor>();

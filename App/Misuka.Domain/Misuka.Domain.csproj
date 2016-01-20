@@ -72,6 +72,7 @@
     <Compile Include="Context\MisukaDBContext.cs" />
     <Compile Include="DTO\ContentMenuDTO.cs" />
     <Compile Include="DTO\ExchangeRateDTO.cs" />
+    <Compile Include="DTO\KeyGenerationDTO.cs" />
     <Compile Include="DTO\OrderingDetailDTO.cs" />
     <Compile Include="DTO\OrderingDTO.cs" />
     <Compile Include="DTO\OrderingHistoryDTO.cs" />
@@ -98,9 +99,11 @@
     <Compile Include="Entity\TypeMember.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Entity\WebSiteLink.cs" />
+    <Compile Include="Enum\KeyTypeObjects.cs" />
     <Compile Include="Enum\StatusOrderingEnum.cs" />
     <Compile Include="Enum\PermissionObjects.cs" />
     <Compile Include="Enum\RegexExpression.cs" />
+    <Compile Include="Enum\TypeUserEnum.cs" />
     <Compile Include="ISecurityUtility.cs" />
     <Compile Include="MVC\ActionFilter\AccessibleAuthFilterAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

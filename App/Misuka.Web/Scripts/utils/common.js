@@ -40,11 +40,11 @@ function SetActiveMenu(action, controller) {
     case 'setting':
     case 'person':
     case 'logging':
-      $("#nav-Staff").show();
+      $("#nav-Misuka").show();
       break;
       
-    case 'Staff':
-      $("#nav-Staff").show();
+    case 'Misuka':
+      $("#nav-Misuka").show();
       
       break;
   }

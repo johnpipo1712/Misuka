@@ -28,7 +28,9 @@ namespace Misuka.Domain
     bool IsMemberOfRole(Guid userId, Guid roleId);
     User GetUserByUsername(string userName);
     void UpdateUserInformation(User loggingUser);
-
+    User GetUserByUsernameAndType(string userName, int type);
     IList<int> GetPermissions(Guid userId);
+
+    User GetUserByUsername(string username, int type);
   }
 }

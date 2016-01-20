@@ -14,5 +14,7 @@ namespace Misuka.Services.ReportServices
     List<PersonDTO> GetAll();
 
     SearchResult<PersonDTO> Search(PersonSearchCriteria searchCriteria, int pageSize, int pageIndex);
+
+    PersonDTO GetUserByUserName(string userName);
   }
 }

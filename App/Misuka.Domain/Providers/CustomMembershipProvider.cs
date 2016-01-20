@@ -15,6 +15,7 @@ namespace Misuka.Domain.Providers
   public class CustomMembershipProvider : MembershipProvider
   {
     private SecurityUtility _securityUtility;
+    private static SecurityUtility _securityUtilityStatic;
     private readonly int _maxInvalidPasswordAttempts;
     private readonly string _providerName;
     private readonly bool _requiresUniqueEmail;
@@ -425,16 +426,51 @@ namespace Misuka.Domain.Providers
         return _securityUtility ?? (_securityUtility = new SecurityUtility());
       }
     }
+    static protected ISecurityUtility SecurityUtilityStatic
+    {
+      get
+      {
+        return _securityUtilityStatic ?? (_securityUtilityStatic = new SecurityUtility());
+      }
+    }
+    public static  bool ValidateUser(string username, string password,int type)
+    {
+      password = password.Trim();
+      var user = SecurityUtilityStatic.GetUserByUsername(username, type);
+      if (user != null)
+      {
+        ////  if (!user.Active || user.AccountLocked)
+        //if (user.Locked)
+        //  return false;
 
+        if (SecurityUtilityStatic.IsPasswordEqual(password, user.Password, user.Salt))
+        {
+          //Stored valid logged user to session
+          new UserSession(user);
+          user.LastLoginTime = DateTime.Now;
+          user.FailedLoginTimes = 0;
+          SecurityUtilityStatic.UpdateUserInformation(user);
+          return true;
+        }
+
+        user.LastLoginTime = DateTime.Now;
+        user.FailedLoginTimes++;
+
+
+        SecurityUtilityStatic.UpdateUserInformation(user);
+      }
+
+      return false;
+    }
     public override bool ValidateUser(string username, string password)
     {
       password = password.Trim();
       var user = SecurityUtility.GetUserByUsername(username);
       if (user != null)
       {
-        //  if (!user.Active || user.AccountLocked)
-        if (user.Locked)
-          return false;
+        ////  if (!user.Active || user.AccountLocked)
+        //if (user.Locked)
+        //  return false;
 
         if (SecurityUtility.IsPasswordEqual(password, user.Password, user.Salt))
         {
@@ -449,13 +485,7 @@ namespace Misuka.Domain.Providers
         user.LastLoginTime = DateTime.Now;
         user.FailedLoginTimes++;
 
-        if (user.FailedLoginTimes >= MaxInvalidPasswordAttempts)
-        {
-          user.Locked = true;
-          SecurityUtility.UpdateUserInformation(user);
-          return false;
-        }
-
+       
         SecurityUtility.UpdateUserInformation(user);
       }
 

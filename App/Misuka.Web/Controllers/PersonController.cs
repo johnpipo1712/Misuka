@@ -77,24 +77,6 @@ namespace Misuka.Web.Controllers
       }
 
 
-      [HttpPost]
-      public ActionResult DeletePersons(string ids)
-      {
-
-        ThrowError.WebResourceNotFound(string.IsNullOrEmpty(ids));
-        var selectedIds = StringUtilities.ParseCommaSeparatedStringToList<Guid>(ids);
-
-        if (selectedIds.Count > 0)
-        {
-          _personCommandService.DeletePerson(new DeletePersonCommand(selectedIds));
-          return ModelState.JsonValidation(new { Success = true });
-        }
-
-        ModelState.AddModelError("DeletePersons", "Input parameters are invalid.");
-
-        return ModelState.JsonValidation();
-
-      }
       #region Save
 
       private void Save(PersonModel model)

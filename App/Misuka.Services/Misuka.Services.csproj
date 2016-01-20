@@ -114,14 +114,10 @@
     <Compile Include="CommandServices\Orderings\EditOrderingCommand.cs" />
     <Compile Include="CommandServices\Orderings\EditStatusOrderingCommand.cs" />
     <Compile Include="CommandServices\PersonCommandService.cs" />
-    <Compile Include="CommandServices\Persons\AddPersonCommand.cs" />
-    <Compile Include="CommandServices\Persons\AddUserCommand.cs" />
+    <Compile Include="CommandServices\Persons\RegisterCommand.cs" />
     <Compile Include="CommandServices\Persons\ChangePasswordCommand.cs" />
     <Compile Include="CommandServices\Persons\DeletePersonCommand.cs" />
     <Compile Include="CommandServices\Persons\EditInfomationPersonCommand.cs" />
-    <Compile Include="CommandServices\Persons\EditPersonCommand.cs" />
-    <Compile Include="CommandServices\Persons\EditStatusPersonCommand.cs" />
-    <Compile Include="CommandServices\Persons\EditTypeMemberPersonCommand.cs" />
     <Compile Include="CommandServices\Persons\ForgotPasswordCommand.cs" />
     <Compile Include="CommandServices\Persons\ResetPasswordCommand.cs" />
     <Compile Include="CommandServices\SliderCommandService.cs" />
@@ -143,6 +139,7 @@
     <Compile Include="ReportServices\ExchangeRates\GetExchangeRateDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\IContentMenuReportService.cs" />
     <Compile Include="ReportServices\IExchangeRateReportService.cs" />
+    <Compile Include="ReportServices\IKeyGenerationReportService.cs" />
     <Compile Include="ReportServices\IOrderingDetailReportService.cs" />
     <Compile Include="ReportServices\IOrderingHistoryReportService.cs" />
     <Compile Include="ReportServices\IOrderingReportService.cs" />
@@ -150,6 +147,8 @@
     <Compile Include="ReportServices\ISliderReportService.cs" />
     <Compile Include="ReportServices\ITypeMemberReportService.cs" />
     <Compile Include="ReportServices\IWebSiteLinkReportService.cs" />
+    <Compile Include="ReportServices\KeyCurrent\GetCodeDbCommandService.cs" />
+    <Compile Include="ReportServices\KeyGenerationReportService.cs" />
     <Compile Include="ReportServices\OrderingDetailReportService.cs" />
     <Compile Include="ReportServices\OrderingHistoryReportService.cs" />
     <Compile Include="ReportServices\OrderingReportService.cs" />

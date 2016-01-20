@@ -248,7 +248,7 @@
      .vertical-map {
          display: none;
      }
-     .Staff-content > div {
+     .Misuka-content > div {
          margin-bottom: 10px;
      }
      .setup-table #floor-content .floor-table > div .capacity{
@@ -259,42 +259,42 @@
          background-color: #ffffff;
          border: solid 2px red;
     }
-     .Staff-content .ui-widget-header,
-     .Staff-content .ui-widget-content {
+     .Misuka-content .ui-widget-header,
+     .Misuka-content .ui-widget-content {
          background-color: transparent;
          background-image: none;
          border: none;
          padding: 0;
          margin: 0;
      }
-     .Staff-content .ui-tabs-panel {
+     .Misuka-content .ui-tabs-panel {
          float: none;
          overflow: hidden;
      }
-     .Staff-content .ui-tabs .ui-tabs-nav li {
+     .Misuka-content .ui-tabs .ui-tabs-nav li {
          border-radius: 5px 5px 0 0;
          background-color: #ffffff;
          background-image: none;
          border-color: #cccccc;
      }
-     .Staff-content .ui-tabs .ui-tabs-nav li.ui-state-active {
+     .Misuka-content .ui-tabs .ui-tabs-nav li.ui-state-active {
          background-color: #f1f1f1;
      }
-     .Staff-content .ui-tabs .ui-tabs-nav li.cancelled-tab  strong {
+     .Misuka-content .ui-tabs .ui-tabs-nav li.cancelled-tab  strong {
          padding: 2px 8px 2px 7px;
          background-color: #cb0000;
          color: #ffffff;
          border-radius: 50%;
          text-align: center
      }
-     .Staff-content .ui-tabs .ui-tabs-nav li.checkedout-tab  strong {
+     .Misuka-content .ui-tabs .ui-tabs-nav li.checkedout-tab  strong {
          padding: 2px 8px 2px 7px;
          background-color: #39b549;
          color: #ffffff;
          border-radius: 50%;
          text-align: center
      }
-     .Staff-content .ui-tabs .ui-tabs-nav li strong:empty {
+     .Misuka-content .ui-tabs .ui-tabs-nav li strong:empty {
          display: none;
      }
      .tooltipster-content .btn {
@@ -350,7 +350,7 @@
             width: 16.6%;
             font-size: 9px;
         } 
-        .Staff-content .ui-tabs .ui-tabs-nav li a {
+        .Misuka-content .ui-tabs .ui-tabs-nav li a {
             font-size: 8px;
         }
      }

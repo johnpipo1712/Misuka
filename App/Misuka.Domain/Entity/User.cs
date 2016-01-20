@@ -16,7 +16,6 @@ namespace Misuka.Domain.Entity
     public string Domain { get; set; }
     public string CurrentLanguage { get; set; }
     public int Type { get; set; }
-    public virtual Person PersonInfo { get; set; }
   }
 
 

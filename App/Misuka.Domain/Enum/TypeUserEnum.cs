@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Misuka.Services.CommandServices.Persons
+namespace Misuka.Domain.Enum
 {
-  public class AddPersonCommand
+  public enum TypeUserEnum
   {
+    Member = 1,
+    Admin = 2
   }
 }

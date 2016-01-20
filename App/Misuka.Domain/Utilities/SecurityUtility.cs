@@ -228,13 +228,37 @@ namespace Misuka.Domain.Utilities
 
     }
 
+    private User GetUserWithoutDomain(string username,int type)
+    {
+      IRepositoryProvider repositoryProvider = new RepositoryProvider(new RepositoryFactories());
+      var unitofWork = new UnitOfWork(new MisukaDBContext(), repositoryProvider);
+      var user = unitofWork.RepositoryAsync<User>()
+         .Query(m => string.Compare(m.UserName, username, StringComparison.InvariantCultureIgnoreCase) == 0 && m.Type == type)
+         .Select()
+         .FirstOrDefault();
+
+      return new User();
+    }
+    private User GetUserWithDomain(string username, string domain, int type)
+    {
+      IRepositoryProvider repositoryProvider = new RepositoryProvider(new RepositoryFactories());
+      var unitofWork = new UnitOfWork(new MisukaDBContext(), repositoryProvider);
+      var user = unitofWork.RepositoryAsync<User>()
+         .Query(
+                  m => string.Compare(m.UserName, username, StringComparison.InvariantCultureIgnoreCase) == 0 &&
+                  string.Compare(m.Domain, domain, StringComparison.InvariantCultureIgnoreCase) == 0 && m.Type == type
+           )
+         .Select()
+         .FirstOrDefault();
+
+      return new User();
+    }
     private User GetUserWithoutDomain(string username)
     {
       IRepositoryProvider repositoryProvider = new RepositoryProvider(new RepositoryFactories());
       var unitofWork = new UnitOfWork(new MisukaDBContext(), repositoryProvider);
       var user = unitofWork.RepositoryAsync<User>()
          .Query(m => string.Compare(m.UserName, username, StringComparison.InvariantCultureIgnoreCase) == 0)
-         .Include(u => u.PersonInfo)
          .Select()
          .FirstOrDefault();
 
@@ -249,7 +273,6 @@ namespace Misuka.Domain.Utilities
                   m => string.Compare(m.UserName, username, StringComparison.InvariantCultureIgnoreCase) == 0 &&
                   string.Compare(m.Domain, domain, StringComparison.InvariantCultureIgnoreCase) == 0
            )
-         .Include(u => u.PersonInfo)
          .Select()
          .FirstOrDefault();
 
@@ -262,6 +285,18 @@ namespace Misuka.Domain.Utilities
       var unitofWork = new UnitOfWork(new MisukaDBContext(), repositoryProvider);
       unitofWork.RepositoryAsync<User>().Update(loggingUser);
       unitofWork.SaveChanges();
+    }
+
+    public User GetUserByUsernameAndType(string userName, int type)
+    {
+      bool containDomain = UsernameContainsDomain(userName);
+      if (!containDomain) return GetUserWithoutDomain(userName,type);
+      else
+      {
+        var domain = ExtractDomain(userName);
+        var normalUsername = ExtractUsername(userName);
+        return GetUserWithDomain(normalUsername, domain, type);
+      };
     }
 
     public IList<int> GetPermissions(Guid userId)
@@ -282,6 +317,16 @@ namespace Misuka.Domain.Utilities
       return permissions;
     }
 
-   
+    public User GetUserByUsername(string username, int type)
+    {
+      bool containDomain = UsernameContainsDomain(username);
+      if (!containDomain) return GetUserWithoutDomain(username, type);
+      else
+      {
+        var domain = ExtractDomain(username);
+        var normalUsername = ExtractUsername(username);
+        return GetUserWithDomain(normalUsername, domain, type);
+      }
+    }
   }
 }
