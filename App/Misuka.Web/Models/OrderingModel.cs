@@ -49,6 +49,8 @@ namespace Misuka.Web.Models
 
     public decimal? TotalDownPayment { get; set; }
 
+    public bool? IsDownPayment { get; set; }
+
     public bool? IsPaid { get; set; }
 
     public bool? IsPayAtHome { get; set; }
@@ -72,5 +74,9 @@ namespace Misuka.Web.Models
     public DateTime? VndOfDate { get; set; }
 
     public DateTime? CompleteDate { get; set; }
+
+    public int Status { get; set; }
+
+    public int StatusName { get; set; }
   }
 }

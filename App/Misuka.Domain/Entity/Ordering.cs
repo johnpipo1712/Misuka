@@ -54,6 +54,8 @@ namespace Misuka.Domain.Entity
 
     public bool? IsPaid { get; set; }
 
+    public bool? IsDownPayment { get; set; }
+
     public bool? IsPayAtHome { get; set; }
 
     public bool? IsDelivered { get; set; }
@@ -75,6 +77,13 @@ namespace Misuka.Domain.Entity
     public DateTime? VndOfDate { get; set; }
 
     public DateTime? CompleteDate { get; set; }
+
+    public int Status { get; set; }
+
+    public  double? TransportFee { get; set; }
+
+    public decimal? WeightFee { get; set; }
+
   }
   public class OrderingMap : EntityTypeConfiguration<Ordering>
   {

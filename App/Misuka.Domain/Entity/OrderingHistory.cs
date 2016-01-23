@@ -21,6 +21,8 @@ namespace Misuka.Domain.Entity
     public string ActionByNane { get; set; }
 
     public DateTime? ActionDate { get; set; }
+
+    public int Status { get; set; }
   }
   public class OrderingHistoryMap : EntityTypeConfiguration<OrderingHistory>
   {

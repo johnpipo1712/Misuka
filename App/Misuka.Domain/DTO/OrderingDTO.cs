@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Misuka.Domain.Enum;
+using Misuka.Infrastructure.Utilities;
 
 namespace Misuka.Domain.DTO
 {
@@ -50,6 +52,8 @@ namespace Misuka.Domain.DTO
 
     public decimal? TotalDownPayment { get; set; }
 
+    public bool? IsDownPayment { get; set; }
+
     public bool? IsPaid { get; set; }
 
     public bool? IsPayAtHome { get; set; }
@@ -73,5 +77,19 @@ namespace Misuka.Domain.DTO
     public DateTime? VndOfDate { get; set; }
 
     public DateTime? CompleteDate { get; set; }
+
+    public int Status { get; set; }
+
+    public double? TransportFee { get; set; }
+
+    public decimal? WeightFee { get; set; }
+
+    public string StatusName
+    {
+      get
+      {
+        return EnumUtilities.GetTextOfSelectedItem<StatusOrderingEnum>(Status);
+      }
+    }
   }
 }

@@ -19,5 +19,7 @@ namespace Misuka.Domain.DTO
     public string ActionByNane { get; set; }
 
     public DateTime? ActionDate { get; set; }
+
+    public int Status { get; set; }
   }
 }

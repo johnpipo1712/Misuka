@@ -150,7 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\StatusOrderingEnum.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StatusOrderingEnum.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
