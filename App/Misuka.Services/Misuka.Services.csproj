@@ -157,6 +157,7 @@
     <Compile Include="ReportServices\OrderingHistoryReportService.cs" />
     <Compile Include="ReportServices\OrderingReportService.cs" />
     <Compile Include="ReportServices\Orderings\GetOrderingDTOBySearchCriteriaDbCommand.cs" />
+    <Compile Include="ReportServices\Orderings\GetOrderingRetailOrdersDTOSearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\PersonReportService.cs" />
     <Compile Include="ReportServices\Persons\GetPersonDTOBySearchCriteriaDbCommand.cs" />
     <Compile Include="ReportServices\SliderReportService.cs" />

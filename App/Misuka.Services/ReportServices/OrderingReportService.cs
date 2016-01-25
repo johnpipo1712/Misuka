@@ -44,6 +44,12 @@ namespace Misuka.Services.ReportServices
     {
       return _executor.Execute(new GetOrderingDTOBySearchCriteriaDbCommand(searchCriteria, pageIndex, pageSize));
     }
+
+    public SearchResult<OrderingDTO> OrderingRetailOrders(OrderingSearchCriteria searchCriteria, int pageSize, int pageIndex)
+    {
+      return _executor.Execute(new GetOrderingRetailOrdersDTOSearchCriteriaDbCommand(searchCriteria, pageIndex, pageSize));
+ 
+    }
   }
 }
 

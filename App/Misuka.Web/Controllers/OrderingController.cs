@@ -36,7 +36,7 @@ namespace Misuka.Web.Controllers
       public ActionResult GetOrderings(JqGridRequest request, string keyword)
       {
         var searchCriteria = new OrderingSearchCriteria();
-        var result = _sliderReportService.Search(searchCriteria, request.RecordsCount, request.PageIndex);
+        var result = _sliderReportService.OrderingRetailOrders(searchCriteria, request.RecordsCount, request.PageIndex);
         var jsonData = new
         {
           total = (result.Count + request.RecordsCount - 1) / request.RecordsCount,

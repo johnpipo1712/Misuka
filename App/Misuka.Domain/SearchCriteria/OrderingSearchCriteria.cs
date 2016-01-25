@@ -9,6 +9,12 @@ namespace Misuka.Domain.SearchCriteria
     public class OrderingSearchCriteria
     {
        public string Keyword { get; set; }
-  
+       public Guid? PersonId { get; set; }
+       public int? Status { get; set; }
+       public DateTime? FromDate { get; set; }
+       public DateTime? ToDate { get; set; }
+
+
+       public object IsDownPayment { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace Misuka.Services.ReportServices
     List<OrderingDTO> GetAll();
 
     SearchResult<OrderingDTO> Search(OrderingSearchCriteria searchCriteria, int pageSize, int pageIndex);
+    SearchResult<OrderingDTO> OrderingRetailOrders(OrderingSearchCriteria searchCriteria, int pageSize, int pageIndex);
   }
 }
 
