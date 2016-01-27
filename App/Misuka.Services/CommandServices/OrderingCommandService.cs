@@ -43,7 +43,30 @@ namespace Misuka.Services.CommandServices
         PersonId = command.PersonId,
         CreatedDate = DateTime.Now,
         Status = (int)StatusOrderingEnum.New,
-        OrderingCode = orderCode
+        OrderingCode = orderCode,
+        IsDelivered = false,
+        IsDeposit = false,
+        IsPaid = false,
+        IsDownPayment = false,
+        IsPayAtHome = false,
+        NoteApproved = "",
+        NoteCustomer = "",
+        CreatedByName = "",
+        CreatedBy = command.PersonId,
+        Type = 0,
+        TotalAmount = 0,
+        TotalCount = 0,
+        TotalCustomFees = 0,
+        TotalDomesticCharges = 0,
+        TotalDownPayment = 0,
+        TotalQuantity = 0,
+        TotalPrice = 0,
+        TotalShipAbroad = 0,
+        TotalShipInternal = 0,
+        TotalVat = 0,
+        TotalWage = 0,
+        TransportFee = 0,
+        WeightFee = 0
       };
       _orderingService.Insert(ordering);
       _unitOfWork.SaveChanges();
@@ -98,17 +121,18 @@ namespace Misuka.Services.CommandServices
     public void EditStatusDownPayment(EditStatusDownPaymentCommand command)
     {
       var order = _orderingService.Find(command.OrderingId);
-      order.IsDownPayment = command.IsDownPayment;
-      if (command.IsDownPayment)
+      order.IsDownPayment = order.IsDownPayment != true;
+      if (order.IsDownPayment == false)
       {
         order.TotalDownPayment = 0;
       }
       else
       {
-        order.TotalDownPayment = 0; 
+        _executor.Execute(new UpdateTotalOrderDownPaymentDbCommand(command.OrderingId));
       }
       _orderingService.Update(order);
       _unitOfWork.SaveChanges();
+
     }
     public void EditStatusReject(EditStatusRejectCommand command)
     {

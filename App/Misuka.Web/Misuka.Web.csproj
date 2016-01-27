@@ -3218,8 +3218,6 @@
     <Content Include="Scripts\plugins\slimScroll\slimScroll.jquery.json" />
     <Content Include="Scripts\plugins\dropzone\css\stylus\basic.styl" />
     <Content Include="Scripts\plugins\dropzone\css\stylus\dropzone.styl" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -3259,6 +3257,15 @@
     <Content Include="Views\TypeMember\Index.cshtml" />
     <Content Include="Views\WebSiteLink\Edit.cshtml" />
     <Content Include="Views\WebSiteLink\Index.cshtml" />
+    <Content Include="Views\Ordering\Index.cshtml" />
+    <Content Include="Views\Ordering\_ModelPopup.cshtml" />
+    <Content Include="Views\Ordering\_EditOrderingFollowingUSD.cshtml" />
+    <Content Include="Views\Ordering\_EditOrderingFollowingDone.cshtml" />
+    <Content Include="Views\Ordering\_EditOrderingFollowingOrder.cshtml" />
+    <Content Include="Views\Home\OrderPlace.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\OrderHistory.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3270,7 +3277,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\font-awesome\fonts\" />
     <Folder Include="Content\frontend\sass\components\content\persons\" />
-    <Folder Include="Views\Ordering\" />
     <Folder Include="Views\Person\" />
   </ItemGroup>
   <ItemGroup>

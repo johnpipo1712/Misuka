@@ -51,11 +51,11 @@ namespace Misuka.Web.Models
 
     public bool? IsDownPayment { get; set; }
 
-    public bool? IsPaid { get; set; }
+    public bool IsPaid { get; set; }
 
     public bool? IsPayAtHome { get; set; }
 
-    public bool? IsDelivered { get; set; }
+    public bool IsDelivered { get; set; }
 
     public bool? IsDeposit { get; set; }
 
@@ -74,6 +74,10 @@ namespace Misuka.Web.Models
     public DateTime? VndOfDate { get; set; }
 
     public DateTime? CompleteDate { get; set; }
+
+    public double? TransportFee { get; set; }
+
+    public decimal? WeightFee { get; set; }
 
     public string ProductCode { get; set; }
 
@@ -96,5 +100,23 @@ namespace Misuka.Web.Models
     public int Status { get; set; }
 
     public int StatusName { get; set; }
+
+    public decimal PriceAmount { get; set; }
+
+
+    public decimal PriceDiscuss { get; set; }
+
+    public decimal PriceVat { get; set; }
+
+    public decimal PriceTransportFee { get; set; }
+
+    public decimal PriceTotalWage { get; set; }
+
+
+    public decimal RemainingAmount { get; set; }
+
+    public decimal Total { get; set; }
+
+ 
   }
 }

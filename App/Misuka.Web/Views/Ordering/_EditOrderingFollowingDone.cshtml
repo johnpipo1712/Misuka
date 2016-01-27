@@ -1,0 +1,73 @@
+﻿@using Misuka.Infrastructure.MVC
+@model Misuka.Web.Models.OrderingModel
+@{
+    ViewBag.Title = this.LocalResources("PageTitle");
+    Layout = "~/Views/Shared/Admin/_Layout.cshtml";
+}
+
+
+@using (Ajax.BeginForm("EditOrderingFollowingDone", "Ordering", new { }, new AjaxOptions
+{
+    HttpMethod = "Post",
+    OnBegin = "defaultResponse.beginHandler",
+    OnSuccess = "OrderingDoneClient.OnSuccessed",
+    OnFailure = "OrderingDoneClient.OnFailed",
+
+}, "errorPanel", new {id = "OrderingDoneInformationForm"}))
+{
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="info-panel">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @Html.HiddenFor(model => model.OrderingId)
+        <div class=" col-md-12">
+            @Html.LabelFor(model => model.TotalCustomFees)
+            @Html.TextBoxFor(model => model.TotalCustomFees, new {@class = "col-xs-12 ", @autofocus = ""})
+            @Html.ValidationMessageFor(model => model.TotalCustomFees)
+        </div>
+        <div class=" col-md-12">
+            @Html.LabelFor(model => model.TotalDomesticCharges)
+            @Html.TextBoxFor(model => model.TotalDomesticCharges, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.TotalDomesticCharges)
+        </div>
+        <div class=" col-md-12">
+            @Html.LabelFor(model => model.TotalShipAbroad)
+            @Html.TextBoxFor(model => model.TotalShipAbroad, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.TotalShipAbroad)
+        </div>
+        <div class=" col-md-12">
+            @Html.LabelFor(model => model.TotalShipInternal)
+            @Html.TextBoxFor(model => model.TotalShipInternal, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.TotalShipInternal)
+        </div>
+        <div class=" col-md-12">
+            @Html.LabelFor(model => model.TotalVat)
+            @Html.TextBoxFor(model => model.TotalVat, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.TotalVat)
+        </div>
+        <div class=" col-md-12">
+            @Html.LabelFor(model => model.TotalWage)
+            @Html.TextBoxFor(model => model.TotalWage, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.TotalWage)
+        </div>
+        <div class=" col-md-12">
+            @Html.LabelFor(model => model.NoteApproved)
+            @Html.TextAreaFor(model => model.TotalDomesticCharges, new {@class = "col-xs-12 ",rows ="3"})
+            @Html.ValidationMessageFor(model => model.TotalDomesticCharges)
+        </div>
+      
+
+    </div>
+
+    <div class="row padding-top-10">
+        <div class=" col-xs-12">
+            <button class="btn btn-primary btn-sm pull-left " type="submit">@Misuka.Web.Resources.Common.Save</button>
+
+            <a class="btn btn-primary btn-sm pull-left" onclick=" OrderingDoneClient.OnBack() ">@Misuka.Web.Resources.Common.BackTo</a>
+        </div>
+    </div>
+}

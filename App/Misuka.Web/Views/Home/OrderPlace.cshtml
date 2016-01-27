@@ -1,0 +1,101 @@
+﻿@using Misuka.Infrastructure.MVC
+@model Misuka.Web.Models.OrderingModel
+@{
+    ViewBag.Title = this.LocalResources("PageTitle");
+    Layout = "~/Views/Shared/Admin/_Layout.cshtml";
+}
+
+
+@using (Ajax.BeginForm("AddOrder", "Home", new { }, new AjaxOptions
+{
+    HttpMethod = "Post",
+    OnBegin = "defaultResponse.beginHandler",
+    OnSuccess = "OrderingUSDClient.OnSuccessed",
+    OnFailure = "OrderingUSDClient.OnFailed",
+
+}, "errorPanel", new {id = "OrderingUSDInformationForm"}))
+{
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="info-panel">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @Html.HiddenFor(model => model.OrderingId)
+          <div class="col-md-12">
+            @Html.LabelFor(model => model.ExchangeRateId)
+            @Html.TextBoxFor(model => model.ExchangeRateId, new {@class = "col-xs-12 ", @autofocus = ""})
+            @Html.ValidationMessageFor(model => model.ExchangeRateId)
+        </div>
+
+        <div class="col-md-12">
+            @Html.LabelFor(model => model.Link)
+            @Html.TextBoxFor(model => model.Link, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.Link)
+        </div>
+
+        <div class="col-md-12">
+            @Html.LabelFor(model => model.LinkUrl)
+            @Html.TextBoxFor(model => model.LinkUrl, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.LinkUrl)
+        </div>
+       <div class="col-md-12">
+            @Html.LabelFor(model => model.Brand)
+            @Html.TextBoxFor(model => model.Brand, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.Brand)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(model => model.Color)
+            @Html.TextBoxFor(model => model.Color, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.Color)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(model => model.Size)
+            @Html.TextBoxFor(model => model.Size, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.Size)
+        </div>
+
+       <div class="col-md-12">
+            @Html.LabelFor(model => model.TotalDiscuss)
+            @Html.TextBoxFor(model => model.TotalDiscuss, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.TotalDiscuss)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(model => model.Price)
+            @Html.TextBoxFor(model => model.Price, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+          <div class="col-md-12">
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(model => model.Phone)
+            @Html.TextBoxFor(model => model.Phone, new {@class = "col-xs-12 "})
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(model => model.Address)
+            @Html.TextAreaFor(model => model.Address, new {@class = "col-xs-12",rows="3"})
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+        <div class="col-md-12">
+            @Html.LabelFor(model => model.Note)
+            @Html.TextAreaFor(model => model.Note, new {@class = "col-xs-12",rows="3"})
+            @Html.ValidationMessageFor(model => model.Note)
+        </div>
+    </div>
+
+    <div class="row padding-top-10">
+        <div class=" col-xs-12">
+            <button class="btn btn-primary btn-sm pull-left " type="submit">@Misuka.Web.Resources.Common.Save</button>
+
+            <a class="btn btn-primary btn-sm pull-left" onclick=" OrderingUSDClient.OnBack() ">@Misuka.Web.Resources.Common.BackTo</a>
+        </div>
+    </div>
+}
+
+

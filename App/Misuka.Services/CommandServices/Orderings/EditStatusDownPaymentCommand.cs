@@ -7,13 +7,11 @@ namespace Misuka.Services.CommandServices.Orderings
 {
   public class EditStatusDownPaymentCommand
   {
-    public EditStatusDownPaymentCommand(Guid orderingId, bool isDownPayment)
+    public EditStatusDownPaymentCommand(Guid orderingId)
     {
       OrderingId = orderingId;
-      IsDownPayment = isDownPayment;
     }
     public Guid OrderingId { get; set; }
-    public bool IsDownPayment { get; set; }
   
   }
 }

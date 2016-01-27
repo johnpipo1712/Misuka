@@ -18,13 +18,13 @@ namespace Misuka.Web.Controllers
 {
     public class OrderingController: Controller
     {
-      private readonly IOrderingReportService _sliderReportService;
-      private readonly IOrderingCommandService _sliderCommandService;
+      private readonly IOrderingReportService _orderingReportService;
+      private readonly IOrderingCommandService _orderingCommandService;
       
-      public OrderingController(IOrderingCommandService sliderCommandService, IOrderingReportService sliderReportService)
+      public OrderingController(IOrderingCommandService orderingCommandService, IOrderingReportService orderingReportService)
       {
-        _sliderReportService = sliderReportService;
-        _sliderCommandService = sliderCommandService;
+        _orderingReportService = orderingReportService;
+        _orderingCommandService = orderingCommandService;
       }
       //
       // GET: /Ordering/
@@ -36,7 +36,7 @@ namespace Misuka.Web.Controllers
       public ActionResult GetOrderings(JqGridRequest request, string keyword)
       {
         var searchCriteria = new OrderingSearchCriteria();
-        var result = _sliderReportService.OrderingRetailOrders(searchCriteria, request.RecordsCount, request.PageIndex);
+        var result = _orderingReportService.OrderingRetailOrders(searchCriteria, request.RecordsCount, request.PageIndex);
         var jsonData = new
         {
           total = (result.Count + request.RecordsCount - 1) / request.RecordsCount,
@@ -50,10 +50,10 @@ namespace Misuka.Web.Controllers
       [HttpGet]
       public ActionResult Edit(Guid? id)
       {
-        var Ordering = new OrderingModel();
+        var ordering = new OrderingModel();
         if (id != null)
-          Ordering = Mapper.Map<OrderingDTO, OrderingModel>(_sliderReportService.GetById((Guid)id));
-        return View("Edit", Ordering);
+          ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
+        return View("_Edit", ordering);
       }
 
       [HttpPost]
@@ -71,12 +71,79 @@ namespace Misuka.Web.Controllers
         }
         catch (Exception ex)
         {
-          ModelState.AddModelError("Edit_slider", ex.Message);
+          ModelState.AddModelError("Edit_ordering", ex.Message);
         }
         return ModelState.JsonValidation();
       }
 
+      [HttpGet]
+      public ActionResult EditOrderingFollowingDone(Guid? id)
+      {
+        var ordering = new OrderingModel();
+        if (id != null)
+          ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
+        return View("_EditOrderingFollowingDone", ordering);
+      }
+      [HttpGet]
+      public ActionResult EditOrderingFollowingOrder(Guid? id)
+      {
+        var ordering = new OrderingModel();
+        if (id != null)
+          ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
+        return View("_EditOrderingFollowingOrder", ordering);
+      }
+      [HttpGet]
+      public ActionResult EditOrderingFollowingUSD(Guid? id)
+      {
+        var ordering = new OrderingModel();
+        if (id != null)
+          ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
+        return View("_EditOrderingFollowingUSD", ordering);
+      }
 
+      [HttpPost]
+      public ActionResult EditOrderingFollowingDone(OrderingModel model)
+      {
+        _orderingCommandService.EditOrderingFollowingDone(new EditOrderingFollowingDoneCommand(model.OrderingId, (bool)model.IsPaid, (bool)model.IsDelivered));
+        return ModelState.JsonValidation(new { Success = true, model.OrderingId });
+
+      }
+      [HttpPost]
+      public ActionResult EditOrderingFollowingOrder(OrderingModel model)
+      {
+        _orderingCommandService.EditOrderingFollowingOrder(new EditOrderingFollowingOrderCommand(model.OrderingId,model.NoteApproved,model.TotalCustomFees,model.TotalDomesticCharges,model.TotalShipInternal,model.TotalShipInternal,model.TotalVat,model.TotalWage));
+        return ModelState.JsonValidation(new { Success = true, model.OrderingId });
+
+      }
+      [HttpPost]
+      public ActionResult EditOrderingFollowingUSD(OrderingModel model)
+      {
+        _orderingCommandService.EditOrderingFollowingUSD(new EditOrderingFollowingUSDCommand(model.OrderingId, (double)model.TransportFee, (decimal)model.WeightFee));
+        return ModelState.JsonValidation(new { Success = true, model.OrderingId });
+
+      }
+      [HttpPost]
+      public ActionResult EditOrderingFollowingVN(OrderingModel model)
+      {
+        _orderingCommandService.EditOrderingFollowingVN(new EditOrderingFollowingVNCommand(model.OrderingId));
+        return ModelState.JsonValidation(new { Success = true, model.OrderingId });
+       
+      }
+      [HttpPost]
+      public ActionResult EditStatusDownPayment(OrderingModel model)
+      {
+        _orderingCommandService.EditStatusDownPayment(new EditStatusDownPaymentCommand(model.OrderingId));
+        return ModelState.JsonValidation(new { Success = true, model.OrderingId });
+
+      }
+      [HttpPost]
+      public ActionResult EditStatusReject(OrderingModel model)
+      {
+        _orderingCommandService.EditStatusReject(new EditStatusRejectCommand(model.OrderingId));
+        return ModelState.JsonValidation(new { Success = true, model.OrderingId });
+
+      }
+     
      
       #region Save
 
@@ -85,12 +152,12 @@ namespace Misuka.Web.Controllers
         //if (model.OrderingId == Guid.Empty)
         //{
         //  var createCommand = new AddOrderingCommand(model.Name,model.Description,model.ImageURL);
-        //  model.OrderingId = _sliderCommandService.AddOrdering(createCommand);
+        //  model.OrderingId = _orderingCommandService.AddOrdering(createCommand);
         //}
         //else
         //{
         //  var updateCommand = new EditOrderingCommand(model.OrderingId, model.Name, model.Description, model.ImageURL);
-        //  _sliderCommandService.EditOrdering(updateCommand);
+        //  _orderingCommandService.EditOrdering(updateCommand);
         //}
       }
 

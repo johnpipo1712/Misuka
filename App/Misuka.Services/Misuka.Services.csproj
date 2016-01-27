@@ -117,6 +117,7 @@
     <Compile Include="CommandServices\Orderings\EditOrderingFollowingVNCommand.cs" />
     <Compile Include="CommandServices\Orderings\EditStatusDownPaymentCommand.cs" />
     <Compile Include="CommandServices\Orderings\EditStatusRejectCommand.cs" />
+    <Compile Include="CommandServices\Orderings\UpdateTotalOrderDownPaymentDbCommand.cs" />
     <Compile Include="CommandServices\PersonCommandService.cs" />
     <Compile Include="CommandServices\Persons\RegisterCommand.cs" />
     <Compile Include="CommandServices\Persons\ChangePasswordCommand.cs" />

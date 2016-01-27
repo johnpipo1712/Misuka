@@ -102,6 +102,113 @@ namespace Misuka.Domain.DTO
 
     public string Size { get; set; }
 
+    public decimal PriceAmount
+    {
+      get
+      {
+        if (Price == null)
+          Price = 0;
+        if (Quantity == null)
+          Quantity = 0;
+        return (decimal)(Price * Quantity);
+      }
+    }
+
+    public decimal PriceDiscuss
+    {
+      get
+      {
+        if (Price == null)
+          Price = 0;
+        if (Quantity == null)
+          Quantity = 0;
+        if (TotalDiscuss == null)
+          TotalDiscuss = 0;
+        return PriceAmount * (decimal)TotalDiscuss / 100;
+      }
+    }
+    public decimal PriceVat
+    {
+      get
+      {
+        if (Price == null)
+          Price = 0;
+        if (Quantity == null)
+          Quantity = 0;
+        if (TotalVat == null)
+          TotalVat = 0;
+        return PriceAmount * (decimal)TotalVat / 100;
+      }
+    }
+    public decimal PriceTransportFee
+    {
+      get
+      {
+        if (Price == null)
+          Price = 0;
+        if (Quantity == null)
+          Quantity = 0;
+        if (TransportFee == null)
+          TransportFee = 0;
+        return PriceAmount*(decimal)TransportFee/100;
+      }
+    }
+    public decimal PriceTotalWage
+    {
+      get
+      {
+        if (Price == null)
+          Price = 0;
+        if (Quantity == null)
+          Quantity = 0;
+        if (TotalWage == null)
+          TotalWage = 0;
+        return PriceAmount *(decimal) TotalWage/100;
+      }
+    }
+
+    public decimal RemainingAmount
+    {
+      get
+      {
+        if (TotalDownPayment == null)
+          TotalDownPayment = 0;
+        return Total - (decimal)TotalDownPayment;
+      }
+    }
+    public decimal Total
+    {
+      get
+      {
+
+       
+        if (TotalShipAbroad == null)
+          TotalShipAbroad = 0;
+        if (TotalShipInternal == null)
+          TotalShipInternal = 0;
+        if (TotalDomesticCharges == null)
+          TotalDomesticCharges = 0;
+        if (TotalCustomFees == null)
+          TotalCustomFees = 0;
+        if (TotalDownPayment == null)
+          TotalDownPayment = 0;
+        if (WeightFee == null)
+          WeightFee = 0;
+        var total =  PriceAmount
+                    + PriceVat
+                    + PriceTotalWage
+                    + PriceTransportFee
+                    + (decimal) TotalCustomFees
+                    + (decimal) TotalShipInternal
+                    + (decimal) TotalShipAbroad
+                    + (decimal) TotalDomesticCharges
+                    + (decimal) TotalCustomFees
+                    + (decimal) WeightFee
+                    - PriceDiscuss
+                    - TotalDownPayment;
+        return (decimal)total;
+      }
+    }
     public string StatusName
     {
       get

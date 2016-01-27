@@ -7,8 +7,8 @@ namespace Misuka.Services.CommandServices.Orderings
 {
   public class EditOrderingFollowingOrderCommand
   {
-    public EditOrderingFollowingOrderCommand(Guid orderingId, string noteApproved, decimal totalCustomFees, decimal totalDomesticCharges
-       , decimal totalShipInternal, decimal totalShipAbroad,double totalVat, double totalWage)
+    public EditOrderingFollowingOrderCommand(Guid orderingId, string noteApproved, decimal? totalCustomFees, decimal? totalDomesticCharges
+       , decimal? totalShipInternal, decimal? totalShipAbroad,double? totalVat, double? totalWage)
     {
       OrderingId = orderingId;
       TotalCustomFees = totalCustomFees;
@@ -23,17 +23,17 @@ namespace Misuka.Services.CommandServices.Orderings
 
     public string NoteApproved { get; set; }
 
-    public decimal TotalCustomFees { get; set; }
+    public decimal? TotalCustomFees { get; set; }
 
-    public decimal TotalDomesticCharges { get; set; }
+    public decimal? TotalDomesticCharges { get; set; }
 
-    public decimal TotalShipInternal { get; set; }
+    public decimal? TotalShipInternal { get; set; }
 
-    public decimal TotalShipAbroad { get; set; }
+    public decimal? TotalShipAbroad { get; set; }
 
-    public double TotalVat { get; set; }
+    public double? TotalVat { get; set; }
 
-    public double TotalWage { get; set; }
+    public double? TotalWage { get; set; }
 
  
   }
