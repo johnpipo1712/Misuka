@@ -1,10 +1,11 @@
-﻿var OrderingDoneClient = new function () {
-
+﻿var OrderClient = new function () {
+    
     this.OnSuccessed = function (response) {
         if (!response.IsError && response.Data.Success) {
             Feedback.ShowInfoWithFadeOut(messages.DATA_SAVED_SUCCESS);
-            $('#modalPopup').modal('hide');
-            $("#modalBody").empty();
+            if ($('#OrderId').val() == '0') {
+                $('#OrderId').val(response.Data.OrderId);
+            }
         }
     };
 

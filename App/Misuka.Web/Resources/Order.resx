@@ -136,13 +136,13 @@
     <value>Tỷ giá đổi VNĐ</value>
   </data>
   <data name="IsDelivered" xml:space="preserve">
-    <value />
+    <value>Đã hoàn tất chuyển hàng</value>
   </data>
   <data name="IsDeposit" xml:space="preserve">
     <value />
   </data>
   <data name="IsPaid" xml:space="preserve">
-    <value />
+    <value>Đã hoàn tất chuyển hàng</value>
   </data>
   <data name="IsPayAtHome" xml:space="preserve">
     <value />

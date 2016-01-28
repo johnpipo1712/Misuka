@@ -5,44 +5,53 @@
     Layout = "~/Views/Shared/Admin/_Layout.cshtml";
 }
 
+<div class="modal-header">
+                <button type="button" class="close dimdiss" data-dimdiss="modal"><span aria-hidden="true">×</span><span class="sr-only">@Misuka.Web.Resources.Common.Close</span></button>
+              <h4 class="modal-title">@Model.OrderingCode</h4>
+              </div>
+<div class="modal-body">
+    @using (Ajax.BeginForm("EditOrderingFollowingOrder", "Ordering", new {}, new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnBegin = "defaultResponse.beginHandler",
+        OnSuccess = "OrderingOrderClient.OnSuccessed",
+        OnFailure = "OrderingOrderClient.OnFailed",
 
-@using (Ajax.BeginForm("EditOrderingFollowingUSD", "Ordering", new { }, new AjaxOptions
-{
-    HttpMethod = "Post",
-    OnBegin = "defaultResponse.beginHandler",
-    OnSuccess = "OrderingUSDClient.OnSuccessed",
-    OnFailure = "OrderingUSDClient.OnFailed",
+    }, "errorPanel", new {id = "OrderingOrderInformationForm"}))
+    {
 
-}, "errorPanel", new {id = "OrderingUSDInformationForm"}))
-{
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="info-panel">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="info-panel">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        @Html.HiddenFor(model => model.OrderingId)
-        <div class="col-md-12">
-            @Html.LabelFor(model => model.TransportFee)
-            @Html.TextBoxFor(model => model.TransportFee, new {@class = "col-xs-12 ", @autofocus = ""})
-            @Html.ValidationMessageFor(model => model.TransportFee)
+        <div class="row">
+            @Html.HiddenFor(model => model.OrderingId)
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.TransportFee)
+                @Html.TextBoxFor(model => model.TransportFee, new {@class = "col-xs-12 percent", @autofocus = ""})
+                @Html.ValidationMessageFor(model => model.TransportFee)
+            </div>
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.WeightFee)
+                @Html.TextBoxFor(model => model.WeightFee, new {@class = "col-xs-12 money"})
+                @Html.ValidationMessageFor(model => model.WeightFee)
+            </div>
+
         </div>
-        <div class="col-md-12">
-            @Html.LabelFor(model => model.WeightFee)
-            @Html.TextBoxFor(model => model.WeightFee, new {@class = "col-xs-12 "})
-            @Html.ValidationMessageFor(model => model.WeightFee)
+
+        <div class="modal-footer  margin-top-10">
+            <button type="button" class="btn btn-white dimdiss" data-dimdiss="modal">@Misuka.Web.Resources.Common.Close</button>
+            <button type="submit" class="btn btn-primary">@Misuka.Web.Resources.Common.Save</button>
+
         </div>
+    }
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        OrderClient.LoadMonney();
+        OrderClient.HidePermission();
 
-    </div>
-
-    <div class="row padding-top-10">
-        <div class=" col-xs-12">
-            <button class="btn btn-primary btn-sm pull-left " type="submit">@Misuka.Web.Resources.Common.Save</button>
-
-            <a class="btn btn-primary btn-sm pull-left" onclick=" OrderingUSDClient.OnBack() ">@Misuka.Web.Resources.Common.BackTo</a>
-        </div>
-    </div>
-}
-
+    });
+</script>

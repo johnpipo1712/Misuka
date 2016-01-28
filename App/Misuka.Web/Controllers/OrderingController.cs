@@ -53,7 +53,7 @@ namespace Misuka.Web.Controllers
         var ordering = new OrderingModel();
         if (id != null)
           ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
-        return View("_Edit", ordering);
+        return PartialView("_Edit", ordering);
       }
 
       [HttpPost]
@@ -82,7 +82,7 @@ namespace Misuka.Web.Controllers
         var ordering = new OrderingModel();
         if (id != null)
           ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
-        return View("_EditOrderingFollowingDone", ordering);
+        return PartialView("_EditOrderingFollowingDone", ordering);
       }
       [HttpGet]
       public ActionResult EditOrderingFollowingOrder(Guid? id)
@@ -90,7 +90,7 @@ namespace Misuka.Web.Controllers
         var ordering = new OrderingModel();
         if (id != null)
           ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
-        return View("_EditOrderingFollowingOrder", ordering);
+        return PartialView("_EditOrderingFollowingOrder", ordering);
       }
       [HttpGet]
       public ActionResult EditOrderingFollowingUSD(Guid? id)
@@ -98,7 +98,7 @@ namespace Misuka.Web.Controllers
         var ordering = new OrderingModel();
         if (id != null)
           ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
-        return View("_EditOrderingFollowingUSD", ordering);
+        return PartialView("_EditOrderingFollowingUSD", ordering);
       }
 
       [HttpPost]

@@ -123,6 +123,9 @@
   <data name="BackTo" xml:space="preserve">
     <value>Trở về</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Tăt</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Xóa</value>
   </data>
