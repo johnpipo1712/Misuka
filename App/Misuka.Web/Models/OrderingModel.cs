@@ -13,7 +13,7 @@ namespace Misuka.Web.Models
 
     public Guid? PersonId { get; set; }
 
-    public Guid? ExchangeRateId { get; set; }
+    public Guid ExchangeRateId { get; set; }
 
     public string Phone { get; set; }
 

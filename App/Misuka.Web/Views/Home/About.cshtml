@@ -1,4 +1,8 @@
-﻿@model Misuka.Web.Models.ContentMenuModel
+﻿@model Misuka.Web.Models.HomeModel
 
 
-
+ <div class="c-content-box c-size-md c-bg-white">
+      <div class="container">
+           @Html.Raw(Model.ContentMenu.Description)
+      </div>
+</div>

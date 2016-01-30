@@ -54,6 +54,8 @@ namespace Misuka.Web.Controllers
             Session["UserName"] = model.UserName;
             Session["Name"] = loggingUser.FullName;
             Session["Person"] = loggingUser.PersonId;
+            return ModelState.JsonValidation(new { Success = true });
+    
           }
         }
 

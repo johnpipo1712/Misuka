@@ -8,8 +8,8 @@ namespace Misuka.Web.Models
 {
   public class HomeModel
   {
-    List<SliderDTO> Sliders { get; set; }
-    ContentMenuDTO ContentMenu { get; set; }
-    List<WebSiteLinkDTO> WebSiteLink { get; set; }
+    public List<SliderDTO> Sliders { get; set; }
+    public ContentMenuDTO ContentMenu { get; set; }
+    public List<WebSiteLinkDTO> WebSiteLink { get; set; }
   }
 }

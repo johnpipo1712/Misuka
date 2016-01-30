@@ -232,6 +232,7 @@
     <Compile Include="Controllers\WebSiteLinkController.cs" />
     <Compile Include="Models\ContentMenuModel.cs" />
     <Compile Include="Models\ExchangeRateModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\LogOnModel.cs" />
     <Compile Include="Models\OrderingDetailModel.cs" />
     <Compile Include="Models\OrderingModel.cs" />
@@ -2584,6 +2585,11 @@
     <Content Include="Scripts\jquery-1.11.1.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\pages\Ordering\addorder.js" />
+    <Content Include="Scripts\pages\Ordering\orderingdone.js" />
+    <Content Include="Scripts\pages\Ordering\orderinghistory.js" />
+    <Content Include="Scripts\pages\Ordering\orderingorder.js" />
+    <Content Include="Scripts\pages\Ordering\orderingusd.js" />
     <Content Include="Views\ContentMenu\App_LocalResources\Edit.cshtml.resx" />
     <Content Include="Views\ContentMenu\App_LocalResources\Index.cshtml.resx" />
     <Content Include="Views\ExchangeRate\App_LocalResources\Edit.cshtml.resx" />
