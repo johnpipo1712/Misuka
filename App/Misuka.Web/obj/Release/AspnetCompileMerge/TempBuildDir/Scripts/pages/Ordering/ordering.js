@@ -74,14 +74,16 @@
                 {
                     name: 'Action', cellattr: function () { return ' title=""'; }, formatter: function (cellvalue, options, rowObject) {
                         var html = '';
-                        html += '<a data-toggle="tooltip" data-placement="left" title="Order" onclick="OrderClient.ShowOrder(\'' + options.rowId + '\')" href="javascript:;"><img src="/Content/img/common/grid/edit_command.gif" class="edit_command"/></a>';
-                        html += '<a data-toggle="tooltip" data-placement="left" title="USD" onclick="OrderClient.ShowUSD(\'' + options.rowId + '\')" href="javascript:;"><img src="/Content/img/common/grid/edit_command.gif" class="edit_command"/></a>';
-                        html += '<a data-toggle="tooltip" data-placement="left" title="Done" onclick="OrderClient.ShowDone(\'' + options.rowId + '\')" href="javascript:;"><img src="/Content/img/common/grid/edit_command.gif" class="edit_command"/></a>';
+                        html += '<a data-toggle="tooltip" data-placement="left" title="Order" onclick="OrderClient.ShowOrder(\'' + options.rowId + '\')" href="javascript:;"><img src="/Content/img/common/grid/report.png" class="edit_command"/></a>';
+
+                        html += '<a data-toggle="tooltip" data-placement="left" title="USD" onclick="OrderClient.ShowUSD(\'' + options.rowId + '\')" href="javascript:;"><img src="/Content/img/common/grid/report.png" class="edit_command"/></a>';
+
+                        html += '<a data-toggle="tooltip" data-placement="left" title="Done" onclick="OrderClient.ShowDone(\'' + options.rowId + '\')" href="javascript:;"><img src="/Content/img/common/grid/report.png" class="edit_command"/></a>';
 
                         return html;
 
                     },
-                    align: 'left', width: 120, fixed: true
+                    align: 'left', width: 90, fixed: true
                 }
             ],
             pager: jQuery('#pager'),

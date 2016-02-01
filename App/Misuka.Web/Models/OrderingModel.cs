@@ -11,28 +11,28 @@ namespace Misuka.Web.Models
     [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
     public Guid OrderingId { get; set; }
 
-    [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
+    [Display(Name = "OrderingCode", ResourceType = typeof(Resources.Order))]
     public string OrderingCode { get; set; }
 
-    [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
+    [Display(Name = "PersonId", ResourceType = typeof(Resources.Order))]
     public Guid? PersonId { get; set; }
 
-    [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
+    [Display(Name = "ExchangeRateId", ResourceType = typeof(Resources.Order))]
     public Guid ExchangeRateId { get; set; }
 
-    [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
+    [Display(Name = "Phone", ResourceType = typeof(Resources.Order))]
     public string Phone { get; set; }
 
-    [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
+    [Display(Name = "Address", ResourceType = typeof(Resources.Order))]
     public string Address { get; set; }
 
-    [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
+    [Display(Name = "Note", ResourceType = typeof(Resources.Order))]
     public string Note { get; set; }
 
-    [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
+    [Display(Name = "NoteCustomer", ResourceType = typeof(Resources.Order))]
     public string NoteCustomer { get; set; }
 
-    [Display(Name = "OrderingId", ResourceType = typeof(Resources.Order))]
+    [Display(Name = "NoteApproved", ResourceType = typeof(Resources.Order))]
     public string NoteApproved { get; set; }
 
     [Display(Name = "TotalCustomFees", ResourceType = typeof(Resources.Order))]
