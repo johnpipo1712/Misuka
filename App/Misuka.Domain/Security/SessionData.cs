@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Misuka.Domain.Context;
 using Misuka.Domain.Entity;
 using Misuka.Infrastructure.Configuration;
+using Misuka.Infrastructure.EntityFramework.Factories;
+using Misuka.Infrastructure.EntityFramework.UnitOfWork;
 
 namespace Misuka.Domain.Security
 {
@@ -67,17 +71,24 @@ namespace Misuka.Domain.Security
 
     internal SessionData(User loggingUser)
     {
+      IRepositoryProvider repositoryProvider = new RepositoryProvider(new RepositoryFactories());
+  
       UserId = loggingUser.PersonId;
       Username = loggingUser.UserName;
-      //if (loggingUser.PersonInfo != null)
-      //{
-      //  FirstName = loggingUser.PersonInfo.FirstName;
-      //  LastName = loggingUser.PersonInfo.LastName;
-      //  MiddleName = loggingUser.PersonInfo.MiddleName;
-      //  Email = loggingUser.PersonInfo.Email;
-      //  ImageUrl = loggingUser.PersonInfo.ImageUrl;
-      //  ImageCoverUrl = loggingUser.PersonInfo.ImageCoverUrl;
-      //}
+
+      var unitofWork = new UnitOfWork(new MisukaDBContext(), repositoryProvider);
+      var personInfo = unitofWork.RepositoryAsync<Person>()
+         .Query(m => m.PersonId == loggingUser.PersonId)
+         .Select()
+         .FirstOrDefault();
+
+      if (personInfo != null)
+      {
+        FirstName = personInfo.FullName;
+        Email = personInfo.Email;
+        ImageUrl = personInfo.ImageUrl;
+        ImageCoverUrl = personInfo.ImageCoverUrl;
+      }
 
       IsAuthenticated = true;
       Saved = false;

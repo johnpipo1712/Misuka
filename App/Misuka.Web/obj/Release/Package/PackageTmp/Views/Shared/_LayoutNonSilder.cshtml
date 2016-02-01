@@ -1,0 +1,180 @@
+﻿
+<!DOCTYPE html>
+<!--
+Theme: JANGO - Ultimate Multipurpose HTML Theme Built With Twitter Bootstrap 3.3.5
+Version: 1.0.0
+Author: Themehats
+Site: http://www.themehats.com
+Contact: support@themehats.com
+Follow: www.twitter.com/themehats
+-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+  <meta charset="utf-8" />
+  <title>Misuka - Nhận mua hàng từ nước ngoài về việt nam</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <link rel="apple-touch-icon" sizes="57x57" href="~/Content/img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="~/Content/img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="~/Content/img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="~/Content/img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="~/Content/img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="~/Content/img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="~/Content/img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="~/Content/img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="~/Content/img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="~/Content/img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="~/Content/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/favicon-16x16.png">
+  <link rel="manifest" href="~/Content/img/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="~/Content/img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
+  <link href="~/Content/frontend/assets/plugins/socicon/socicon.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/bootstrap-social/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/animate/animate.min.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <!-- END GLOBAL MANDATORY STYLES -->
+  <!-- BEGIN: BASE PLUGINS  -->
+  <link href="~/Content/frontend/assets/plugins/revo-slider/css/settings.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+  <!-- END: BASE PLUGINS -->
+  <!-- BEGIN THEME STYLES -->
+  <link href="~/Content/frontend/assets/base/css/plugins.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/base/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+  <link href="~/Content/frontend/assets/base/css/themes/default.css" rel="stylesheet" id="style_theme" type="text/css" />
+  <link href="~/Content/frontend/assets/base/css/custom.css" rel="stylesheet" type="text/css" />
+  <link href="~/Content/css/common.css" rel="stylesheet" type="text/css" />
+  <!-- END THEME STYLES -->
+  <link href="~/Content/css/bootbox/bootbox.css" rel="stylesheet" type="text/css" />
+  <link href="~/Scripts/plugins/pnotify/pnotify.custom.css" rel="stylesheet" type="text/css" />
+  <link href="~/Scripts/plugins/waitMe/waitMe.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+         <link href="/Scripts/kendo/kendo.silver.min.css" rel="stylesheet">
+    <link href="/Scripts/kendo/kendo.common.min.css" rel="stylesheet">
+  @RenderSection("CSS", false)
+
+</head>
+<body class="c-layout-header-fixed c-layout-header-fullscreen c-layout-header-topbar">
+  <!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
+  <!-- BEGIN: HEADER -->
+  @Html.Partial("_HeaderNonSilder")
+  <!-- END: HEADER -->
+  <!-- END: LAYOUT/HEADERS/HEADER-1 -->
+  <!-- BEGIN: CONTENT/USER/FORGET-PASSWORD-FORM -->
+  @Html.Partial("_ModelForgotPassword")
+  <!-- END: CONTENT/USER/FORGET-PASSWORD-FORM -->
+  <!-- BEGIN: CONTENT/USER/SIGNUP-FORM -->
+  @Html.Partial("_ModelRegister")
+  <!-- END: CONTENT/USER/SIGNUP-FORM -->
+  <!-- BEGIN: CONTENT/USER/LOGIN-FORM -->
+  @Html.Partial("_ModelLogin")
+  <!-- END: CONTENT/USER/LOGIN-FORM -->
+  <!-- BEGIN: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+  <!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+  <!-- BEGIN: PAGE CONTAINER -->
+    <div class="c-layout-page">
+          @Html.Partial("_Breadcrumb")
+        <!-- BEGIN: PAGE CONTENT -->
+        @RenderBody()
+        <!-- END: PAGE CONTENT -->
+    </div>
+  <!-- END: PAGE CONTAINER -->
+  <!-- BEGIN: LAYOUT/FOOTERS/FOOTER-5 -->
+  @Html.Partial("_Footer")
+  <!-- END: LAYOUT/FOOTERS/FOOTER-5 -->
+  <!-- BEGIN: LAYOUT/FOOTERS/GO2TOP -->
+  <div class="c-layout-go2top">
+    <i class="icon-arrow-up"></i>
+  </div>
+  <!-- END: LAYOUT/FOOTERS/GO2TOP -->
+  <!-- BEGIN: LAYOUT/BASE/BOTTOM -->
+  <!-- BEGIN: CORE PLUGINS -->
+  <!--[if lt IE 9]>
+    <script src="../~/Content/frontend/assets/global/plugins/excanvas.min.js"></script>
+    <![endif]-->
+ <script src="~/Scripts/jquery-1.11.1.js"></script>
+
+
+  <script src="~/Content/frontend/assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="~/Content/frontend/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <!-- END: CORE PLUGINS -->
+  <!-- BEGIN: LAYOUT PLUGINS -->
+  <script src="~/Content/frontend/assets/plugins/revo-slider/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+  <script src="~/Content/frontend/assets/plugins/revo-slider/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+  <script src="~/Content/frontend/assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js" type="text/javascript"></script>
+  <script src="~/Content/frontend/assets/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="~/Content/frontend/assets/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+  <script src="~/Content/frontend/assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+  <script src="~/Content/frontend/assets/plugins/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    @Scripts.Render("~/bundles/jquery-common")
+      <script scr="~/Scripts/plugins/bootbox/bootbox.js" type="text/javascript"></script>
+    <script src="/Scripts/kendo/kendo.all.min.js"></script>
+  <script scr="~/Scripts/ckeditor/ckeditor.js" type="text/javascript"></script>
+  <script src="~/Scripts/language/date-en-US.js" type="text/javascript"></script>
+    <script src="~/Scripts/language/texts.en-US.js" type="text/javascript"></script>
+      <script src="~/Scripts/pages/Home/home.js" type="text/javascript"></script>
+  <!-- END: LAYOUT PLUGINS -->
+  <!-- BEGIN: THEME SCRIPTS -->
+  <script src="~/Content/frontend/assets/base/js/components.js" type="text/javascript"></script>
+    <script src="~/Content/frontend/assets/base/js/app.js" type="text/javascript"></script>
+      @Styles.Render("~/Content/css")
+  @RenderSection("Scripts", false)
+  <script>
+    $(document).ready(function () {
+      App.init(); // init core
+
+      // init main slider
+      var slider = $('.c-layout-revo-slider .tp-banner');
+      var cont = $('.c-layout-revo-slider .tp-banner-container');
+      var api = slider.show().revolution({
+        delay: 15000,
+        startwidth: 1170,
+        startheight: 620,
+        navigationType: "hide",
+        navigationArrows: "solo",
+        touchenabled: "on",
+        onHoverStop: "on",
+        keyboardNavigation: "off",
+        navigationStyle: "circle",
+        navigationHAlign: "center",
+        navigationVAlign: "bottom",
+        spinner: "spinner2",
+        fullScreen: "on",
+        fullScreenAlignForce: "on",
+        fullScreenOffsetContainer: (App.getViewPort().width < App.getBreakpoint('md') ? '.c-layout-header' : ''),
+        shadow: 0,
+        fullWidth: "off",
+        forceFullWidth: "off",
+        hideTimerBar: "on",
+        hideThumbsOnMobile: "on",
+        hideNavDelayOnMobile: 1500,
+        hideBulletsOnMobile: "on",
+        hideArrowsOnMobile: "on",
+        hideThumbsUnderResolution: 0
+      });
+      $(document).ready(function () {
+          common.setNavigationMenuFrontEnd();
+      });
+    });
+  </script>
+  <!-- END: THEME SCRIPTS -->
+  <!-- END: LAYOUT/BASE/BOTTOM -->
+</body>
+</html>

@@ -72,7 +72,9 @@ namespace Misuka.Services.CommandServices
       ThrowError.Against<ArgumentException>(string.IsNullOrEmpty(command.Password), String.Format(ErrorMessage.IsRequired, "Mật khẩu"));
       var user = securityUtility.GetUserByUsername(command.UserName);
       ThrowError.Against<ArgumentException>(user != null, String.Format(ErrorMessage.Exists, "Tên đăng nhập"));
-      ThrowError.Against<ArgumentException>(!securityUtility.IsPasswordValid(command.Password), String.Format(ErrorMessage.IsPassword));
+      ThrowError.Against<ArgumentException>(_personService.Query(t=>t.Email == command.Email).Select().Any(), String.Format(ErrorMessage.Exists, "Email"));
+    
+      // ThrowError.Against<ArgumentException>(!securityUtility.IsPasswordValid(command.Password), String.Format(ErrorMessage.IsPassword));
 
       var person = new Person()
       {

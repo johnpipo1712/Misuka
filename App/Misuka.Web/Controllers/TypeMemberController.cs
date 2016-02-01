@@ -16,6 +16,7 @@ using Misuka.Web.Models;
 
 namespace Misuka.Web.Controllers
 {
+   [Authorize]
     public class TypeMemberController : Controller
     {
       private readonly ITypeMemberReportService _typeMemberReportService;

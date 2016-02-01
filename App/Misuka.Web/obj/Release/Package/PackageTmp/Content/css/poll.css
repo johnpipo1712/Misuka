@@ -1,0 +1,435 @@
+
+.opoll_header{
+	display:inline-block;
+	min-width:80px;
+	max-width:160px;
+	text-align:center;
+}
+.dpoll_header{
+	display:inline-block;
+	min-width:50px;
+	max-width:160px;
+	text-align:center;
+}
+
+.col-purple{
+ /*color: #9954bb !important;*/
+ color: #8333AB !important;
+}
+.col-red{
+ color: red !important;
+}
+.col-green{
+ color: green !important;
+}
+.col-yellow{
+ color: yellow !important;
+}
+.col-green-strong{
+ color: green !important;
+ font-weight:bold;
+}
+.swipe{
+	color:orange;
+	display:none;
+}
+
+.name-col{
+  max-width:300px;
+}
+
+table .info,
+.poll_table .info {
+  color: #333333;
+  white-space: nowrap;
+}
+
+
+.poll_table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.poll_table > thead > tr > th,
+.poll_table > tbody > tr > th,
+.poll_table > tfoot > tr > th,
+.poll_table > thead > tr > td,
+.poll_table > tbody > tr > td,
+.poll_table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 2px solid #F8F8FF !important;
+}
+.poll_table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #F8F8FF !important;
+  font-weight:normal;
+  text-align:center;
+  color:#000000;
+  cursor:default;
+  word-wrap:break-word;
+}
+.poll_table > tfoot > tr > td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.poll_table > tbody> tr > td {
+  vertical-align: middle;
+  text-align: center;
+}
+.poll_table > tbody> tr > td:first-child {
+  text-align: left;
+}
+.poll_table > caption + thead > tr:first-child > th,
+.poll_table > colgroup + thead > tr:first-child > th,
+.poll_table > thead:first-child > tr:first-child > th,
+.poll_table > caption + thead > tr:first-child > td,
+.poll_table > colgroup + thead > tr:first-child > td,
+.poll_table > thead:first-child > tr:first-child > td {
+  border-top: 2px solid #F8F8FF !important;
+}
+.poll_table > tbody + tbody {
+  border-top: 2px solid #F8F8FF !important;
+}
+.poll_table .poll_table {
+  background-color: #F8F8FF;
+}
+.poll_table-condensed > thead > tr > th,
+.poll_table-condensed > tbody > tr > th,
+.poll_table-condensed > tfoot > tr > th,
+.poll_table-condensed > thead > tr > td,
+.poll_table-condensed > tbody > tr > td,
+.poll_table-condensed > tfoot > tr > td {
+  padding: 5px;
+}
+.poll_table-bordered {
+  border: 2px solid #F8F8FF;
+  border-color: #F8F8FF;
+}
+.poll_table-bordered > thead > tr > th,
+.poll_table-bordered > tbody > tr > th,
+.poll_table-bordered > tfoot > tr > th,
+.poll_table-bordered > thead > tr > td,
+.poll_table-bordered > tbody > tr > td,
+.poll_table-bordered > tfoot > tr > td {
+  border: 2px solid #F8F8FF;
+}
+.poll_table-bordered > thead > tr > th,
+.poll_table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
+}
+.poll_table-striped > tbody > tr:nth-child(odd) > td,
+.poll_table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+.poll_table-hover > tbody > tr:hover > td,
+.poll_table-hover > tbody > tr:hover > th {
+  background-color: #f5f5f5;
+}
+poll_table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: poll_table-column;
+}
+poll_table td[class*="col-"],
+poll_table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: poll_table-cell;
+}
+.poll_table > thead > tr > td.active,
+.poll_table > tbody > tr > td.active,
+.poll_table > tfoot > tr > td.active,
+.poll_table > thead > tr > th.active,
+.poll_table > tbody > tr > th.active,
+.poll_table > tfoot > tr > th.active,
+.poll_table > thead > tr.active > td,
+.poll_table > tbody > tr.active > td,
+.poll_table > tfoot > tr.active > td,
+.poll_table > thead > tr.active > th,
+.poll_table > tbody > tr.active > th,
+.poll_table > tfoot > tr.active > th {
+  /*background-color: #f5f5f5;*/
+  background-color: #E4E4E4;
+}
+.poll_table-hover > tbody > tr > td.active:hover,
+.poll_table-hover > tbody > tr > th.active:hover,
+.poll_table-hover > tbody > tr.active:hover > td,
+.poll_table-hover > tbody > tr.active:hover > th {
+  background-color: #e8e8e8;
+}
+.poll_table > thead > tr > td.success,
+.poll_table > tbody > tr > td.success,
+.poll_table > tfoot > tr > td.success,
+.poll_table > thead > tr > th.success,
+.poll_table > tbody > tr > th.success,
+.poll_table > tfoot > tr > th.success,
+.poll_table > thead > tr.success > td,
+.poll_table > tbody > tr.success > td,
+.poll_table > tfoot > tr.success > td,
+.poll_table > thead > tr.success > th,
+.poll_table > tbody > tr.success > th,
+.poll_table > tfoot > tr.success > th {
+  /*background-color: #dff0d8;*/
+  background-color: #CCEAC0;
+  
+}
+.poll_table-hover > tbody > tr:hover > td.success,
+.poll_table-hover > tbody > tr > th.success:hover,
+.poll_table-hover > tbody > tr.success:hover > td,
+.poll_table-hover > tbody > tr.success:hover > th {
+  background-color: #B8EBA4;
+}
+.poll_table > thead > tr > td.info,
+.poll_table > tbody > tr > td.info,
+.poll_table > tfoot > tr > td.info,
+.poll_table > thead > tr > th.info,
+.poll_table > tbody > tr > th.info,
+.poll_table > tfoot > tr > th.info,
+.poll_table > thead > tr.info > td,
+.poll_table > tbody > tr.info > td,
+.poll_table > tfoot > tr.info > td,
+.poll_table > thead > tr.info > th,
+.poll_table > tbody > tr.info > th,
+.poll_table > tfoot > tr.info > th {
+  /*background-color: #C8E4FF;*/
+  background-color: #C8E4FF;
+}
+.poll_table-hover > tbody > tr:hover> td.info,
+.poll_table-hover > tbody > tr> th.info:hover,
+.poll_table-hover > tbody > tr.info:hover > td,
+.poll_table-hover > tbody > tr.info:hover > th {
+  background-color: #ADD7FF;
+}
+.poll_table > thead > tr > td.warning,
+.poll_table > tbody > tr > td.warning,
+.poll_table > tfoot > tr > td.warning,
+.poll_table > thead > tr > th.warning,
+.poll_table > tbody > tr > th.warning,
+.poll_table > tfoot > tr > th.warning,
+.poll_table > thead > tr.warning > td,
+.poll_table > tbody > tr.warning > td,
+.poll_table > tfoot > tr.warning > td,
+.poll_table > thead > tr.warning > th,
+.poll_table > tbody > tr.warning > th,
+.poll_table > tfoot > tr.warning > th {
+  background-color: #FFF9D6;
+}
+.poll_table-hover > tbody > tr:hover > td.warning,
+.poll_table-hover > tbody > tr > th.warning:hover,
+.poll_table-hover > tbody > tr.warning:hover > td,
+.poll_table-hover > tbody > tr.warning:hover > th {
+  background-color: #FCF5CC;
+}
+.poll_table > thead > tr > td.part_info,
+.poll_table > tbody > tr > td.part_info,
+.poll_table > tfoot > tr > td.part_info,
+.poll_table > thead > tr > th.part_info,
+.poll_table > tbody > tr > th.part_info,
+.poll_table > tfoot > tr > th.part_info,
+.poll_table > thead > tr.part_info > td,
+.poll_table > tbody > tr.part_info > td,
+.poll_table > tfoot > tr.part_info > td,
+.poll_table > thead > tr.part_info > th,
+.poll_table > tbody > tr.part_info > th,
+.poll_table > tfoot > tr.part_info > th {
+  background-color: #9954bb;
+  color: #F8F8FF;
+  text-align:left;
+  cursor:pointer;
+}
+.poll_table-hover > tbody > tr:hover > td.part_info,
+.poll_table-hover > tbody > tr > th.part_info:hover,
+.poll_table-hover > tbody > tr.part_info:hover > td,
+.poll_table-hover > tbody > tr.part_info:hover > th {
+  background-color: #9954bb;
+}
+.poll_table > thead > tr > td.first_info,
+.poll_table > tbody > tr > td.first_info,
+.poll_table > tfoot > tr > td.first_info,
+.poll_table > thead > tr > th.first_info,
+.poll_table > tbody > tr > th.first_info,
+.poll_table > tfoot > tr > th.first_info,
+.poll_table > thead > tr.first_info > td,
+.poll_table > tbody > tr.first_info > td,
+.poll_table > tfoot > tr.first_info > td,
+.poll_table > thead > tr.first_info > th,
+.poll_table > tbody > tr.first_info > th,
+.poll_table > tfoot > tr.first_info > th {
+  /*background-color: #D37AFF;*/
+  background-color: #9954bb;
+  color: #F8F8FF;
+  text-align:left;
+}
+.poll_table-hover > tbody > tr:hover > td.first_info,
+.poll_table-hover > tbody > tr > th.first_info:hover,
+.poll_table-hover > tbody > tr.first_info:hover > td,
+.poll_table-hover > tbody > tr.first_info:hover > th {
+  background-color: #D37AFF;
+}
+.poll_table > thead > tr > td.finalized_info,
+.poll_table > tbody > tr > td.finalized_info,
+.poll_table > tfoot > tr > td.finalized_info,
+.poll_table > thead > tr > th.finalized_info,
+.poll_table > tbody > tr > th.finalized_info,
+.poll_table > tfoot > tr > th.finalized_info,
+.poll_table > thead > tr.finalized_info > td,
+.poll_table > tbody > tr.finalized_info > td,
+.poll_table > tfoot > tr.finalized_info > td,
+.poll_table > thead > tr.finalized_info > th,
+.poll_table > tbody > tr.finalized_info > th,
+.poll_table > tfoot > tr.finalized_info > th {
+  background-color: #9954bb;
+  color: #F8F8FF;
+  text-align:left;
+  padding:8px;
+  line-height: 25px;
+}
+.poll_table > thead > tr > td.edit,
+.poll_table > tbody > tr > td.edit,
+.poll_table > tfoot > tr > td.edit,
+.poll_table > thead > tr > th.edit,
+.poll_table > tbody > tr > th.edit,
+.poll_table > tfoot > tr > th.edit,
+.poll_table > thead > tr.edit > td,
+.poll_table > tbody > tr.edit > td,
+.poll_table > tfoot > tr.edit > td,
+.poll_table > thead > tr.edit > th,
+.poll_table > tbody > tr.edit > th,
+.poll_table > tfoot > tr.edit > th {
+  background-color: #C2C2C2 !important;
+  color: #545454 !important;
+  -moz-transition: all 1s; 
+  -webkit-transition: all 1s;  
+  -ms-transition: all 1s;  
+  -o-transition: all 1s;  
+  transition: all 1s; 
+  /*text-align:left;*/
+}
+.poll_table-hover > tbody > tr:hover > td.edit,
+.poll_table-hover > tbody > tr > th.edit:hover,
+.poll_table-hover > tbody > tr.edit:hover > td,
+.poll_table-hover > tbody > tr.edit:hover > th {
+  background-color: #C2C2C2 !important;
+  color: #545454 !important;
+  -moz-transition: all 1s; 
+  -webkit-transition: all 1s;  
+  -ms-transition: all 1s;  
+  -o-transition: all 1s;  
+  transition: all 1s; 
+}
+.poll_table > thead > tr > td.final,
+.poll_table > tbody > tr > td.final,
+.poll_table > tfoot > tr > td.final,
+.poll_table > thead > tr > th.final,
+.poll_table > tbody > tr > th.final,
+.poll_table > tfoot > tr > th.final,
+.poll_table > thead > tr.final > td,
+.poll_table > tbody > tr.final > td,
+.poll_table > tfoot > tr.final > td,
+.poll_table > thead > tr.final > th,
+.poll_table > tbody > tr.final > th,
+.poll_table > tfoot > tr.final > th {
+  background-color: #C2C2C2 !important;
+  color: #545454 !important;
+}
+.poll_table-hover > tbody > tr:hover > td.final,
+.poll_table-hover > tbody > tr > th.final:hover,
+.poll_table-hover > tbody > tr.final:hover > td,
+.poll_table-hover > tbody > tr.final:hover > th {
+  background-color: #C2C2C2 !important;
+  color: #545454 !important;
+}
+.poll_table > thead > tr > td.danger,
+.poll_table > tbody > tr > td.danger,
+.poll_table > tfoot > tr > td.danger,
+.poll_table > thead > tr > th.danger,
+.poll_table > tbody > tr > th.danger,
+.poll_table > tfoot > tr > th.danger,
+.poll_table > thead > tr.danger > td,
+.poll_table > tbody > tr.danger > td,
+.poll_table > tfoot > tr.danger > td,
+.poll_table > thead > tr.danger > th,
+.poll_table > tbody > tr.danger > th,
+.poll_table > tfoot > tr.danger > th {
+  /* background-color: #f2dede; */
+  background-color: #EDCBCB;
+}
+.poll_table-hover > tbody > tr:hover> td.danger,
+.poll_table-hover > tbody > tr > th.danger:hover,
+.poll_table-hover > tbody > tr.danger:hover > td,
+.poll_table-hover > tbody > tr.danger:hover > th {
+  background-color: #EDB7B7;
+}
+.poll_table > thead > tr > td.question,
+.poll_table > tbody > tr > td.question,
+.poll_table > tfoot > tr > td.question,
+.poll_table > thead > tr > th.question,
+.poll_table > tbody > tr > th.question,
+.poll_table > tfoot > tr > th.question,
+.poll_table > thead > tr.question > td,
+.poll_table > tbody > tr.question > td,
+.poll_table > tfoot > tr.question > td,
+.poll_table > thead > tr.question > th,
+.poll_table > tbody > tr.question > th,
+.poll_table > tfoot > tr.question > th {
+  background-color: #DAC8E3;
+}
+.poll_table-hover > tbody > tr:hover> td.question,
+.poll_table-hover > tbody > tr > th.question:hover,
+.poll_table-hover > tbody > tr.question:hover > td,
+.poll_table-hover > tbody > tr.question:hover > th {
+  background-color: #CDB6D9;
+}
+@media (max-width: 767px) {
+  .poll_table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 2px solid #F8F8FF;
+	/*border-right:2px solid #000;*/
+    -webkit-overflow-scrolling: touch;
+  }
+  .poll_table-responsive > .poll_table {
+    margin-bottom: 0;
+  }
+  .poll_table-responsive > .poll_table > thead > tr > th,
+  .poll_table-responsive > .poll_table > tbody > tr > th,
+  .poll_table-responsive > .poll_table > tfoot > tr > th,
+  .poll_table-responsive > .poll_table > thead > tr > td,
+  .poll_table-responsive > .poll_table > tbody > tr > td,
+  .poll_table-responsive > .poll_table > tfoot > tr > td {
+    /*white-space: nowrap;*/
+  }
+  .poll_table-responsive > .poll_table-bordered {
+    border: 2px solid #F8F8FF;
+  }
+  .poll_table-responsive > .poll_table-bordered > thead > tr > th:first-child,
+  .poll_table-responsive > .poll_table-bordered > tbody > tr > th:first-child,
+  .poll_table-responsive > .poll_table-bordered > tfoot > tr > th:first-child,
+  .poll_table-responsive > .poll_table-bordered > thead > tr > td:first-child,
+  .poll_table-responsive > .poll_table-bordered > tbody > tr > td:first-child,
+  .poll_table-responsive > .poll_table-bordered > tfoot > tr > td:first-child {
+    border: 2px solid #F8F8FF;
+  }
+  .poll_table-responsive > .poll_table-bordered > thead > tr > th:last-child,
+  .poll_table-responsive > .poll_table-bordered > tbody > tr > th:last-child,
+  .poll_table-responsive > .poll_table-bordered > tfoot > tr > th:last-child,
+  .poll_table-responsive > .poll_table-bordered > thead > tr > td:last-child,
+  .poll_table-responsive > .poll_table-bordered > tbody > tr > td:last-child,
+  .poll_table-responsive > .poll_table-bordered > tfoot > tr > td:last-child {
+    border: 2px solid #F8F8FF;
+  }
+  .poll_table-responsive > .poll_table-bordered > tbody > tr:last-child > th,
+  .poll_table-responsive > .poll_table-bordered > tfoot > tr:last-child > th,
+  .poll_table-responsive > .poll_table-bordered > tbody > tr:last-child > td,
+  .poll_table-responsive > .poll_table-bordered > tfoot > tr:last-child > td {
+    border: 2px solid #F8F8FF;
+	border-color: #F8F8FF;
+  }
+}
+
+

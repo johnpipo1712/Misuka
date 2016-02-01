@@ -46,8 +46,8 @@ namespace Misuka.Services.CommandServices
         ProductCode = command.ProductCode,
         Quantity = command.Quantity,
         Size = command.Size,
-        OrderingDetailCode = orderingDetailCode
-
+        OrderingDetailCode = orderingDetailCode,
+        OrderingId = command.OrderingId
       };
       _orderingDetailService.Insert(orderingDetail);
       _unitOfWork.SaveChanges();

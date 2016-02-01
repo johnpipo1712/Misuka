@@ -28,12 +28,15 @@ namespace Misuka.Web.Controllers
       }
       //
       // GET: /Ordering/
+       [Authorize]
        public ActionResult Index()
       {
-         return View("Index");
+         return View();
       }
+
+       [Authorize]
       [AcceptVerbs(HttpVerbs.Get)]
-      public ActionResult GetOrderings(JqGridRequest request, string keyword)
+       public ActionResult GetOrders(JqGridRequest request, string keyword)
       {
         var searchCriteria = new OrderingSearchCriteria();
         var result = _orderingReportService.OrderingRetailOrders(searchCriteria, request.RecordsCount, request.PageIndex);
@@ -47,6 +50,7 @@ namespace Misuka.Web.Controllers
         return Json(jsonData, JsonRequestBehavior.AllowGet);
       }
 
+       [Authorize]
       [HttpGet]
       public ActionResult Edit(Guid? id)
       {
@@ -56,6 +60,8 @@ namespace Misuka.Web.Controllers
         return PartialView("_Edit", ordering);
       }
 
+
+       [Authorize]
       [HttpPost]
       public ActionResult Edit(OrderingModel model)
       {
@@ -76,6 +82,7 @@ namespace Misuka.Web.Controllers
         return ModelState.JsonValidation();
       }
 
+       [Authorize]
       [HttpGet]
       public ActionResult EditOrderingFollowingDone(Guid? id)
       {
@@ -84,6 +91,8 @@ namespace Misuka.Web.Controllers
           ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
         return PartialView("_EditOrderingFollowingDone", ordering);
       }
+
+       [Authorize]
       [HttpGet]
       public ActionResult EditOrderingFollowingOrder(Guid? id)
       {
@@ -92,6 +101,8 @@ namespace Misuka.Web.Controllers
           ordering = Mapper.Map<OrderingDTO, OrderingModel>(_orderingReportService.GetById((Guid)id));
         return PartialView("_EditOrderingFollowingOrder", ordering);
       }
+
+       [Authorize]
       [HttpGet]
       public ActionResult EditOrderingFollowingUSD(Guid? id)
       {
@@ -101,6 +112,7 @@ namespace Misuka.Web.Controllers
         return PartialView("_EditOrderingFollowingUSD", ordering);
       }
 
+       [Authorize]
       [HttpPost]
       public ActionResult EditOrderingFollowingDone(OrderingModel model)
       {
@@ -108,6 +120,8 @@ namespace Misuka.Web.Controllers
         return ModelState.JsonValidation(new { Success = true, model.OrderingId });
 
       }
+
+       [Authorize]
       [HttpPost]
       public ActionResult EditOrderingFollowingOrder(OrderingModel model)
       {
@@ -115,6 +129,9 @@ namespace Misuka.Web.Controllers
         return ModelState.JsonValidation(new { Success = true, model.OrderingId });
 
       }
+
+
+       [Authorize]
       [HttpPost]
       public ActionResult EditOrderingFollowingUSD(OrderingModel model)
       {
@@ -122,6 +139,8 @@ namespace Misuka.Web.Controllers
         return ModelState.JsonValidation(new { Success = true, model.OrderingId });
 
       }
+
+       [Authorize]
       [HttpPost]
       public ActionResult EditOrderingFollowingVN(OrderingModel model)
       {
@@ -129,6 +148,8 @@ namespace Misuka.Web.Controllers
         return ModelState.JsonValidation(new { Success = true, model.OrderingId });
        
       }
+
+
       [HttpPost]
       public ActionResult EditStatusDownPayment(OrderingModel model)
       {

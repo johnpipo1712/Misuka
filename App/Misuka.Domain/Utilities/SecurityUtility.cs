@@ -228,6 +228,7 @@ namespace Misuka.Domain.Utilities
 
     }
 
+    
     private User GetUserWithoutDomain(string username,int type)
     {
       IRepositoryProvider repositoryProvider = new RepositoryProvider(new RepositoryFactories());
@@ -237,7 +238,7 @@ namespace Misuka.Domain.Utilities
          .Select()
          .FirstOrDefault();
 
-      return new User();
+      return user;
     }
     private User GetUserWithDomain(string username, string domain, int type)
     {
@@ -251,7 +252,7 @@ namespace Misuka.Domain.Utilities
          .Select()
          .FirstOrDefault();
 
-      return new User();
+      return user;
     }
     private User GetUserWithoutDomain(string username)
     {
@@ -262,7 +263,7 @@ namespace Misuka.Domain.Utilities
          .Select()
          .FirstOrDefault();
 
-      return new User();
+      return user;
     }
     private User GetUserWithDomain(string username, string domain)
     {
@@ -276,7 +277,7 @@ namespace Misuka.Domain.Utilities
          .Select()
          .FirstOrDefault();
 
-      return new User();
+      return user;
     }
 
     public void UpdateUserInformation(User loggingUser)

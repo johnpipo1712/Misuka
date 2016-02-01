@@ -40,7 +40,7 @@ namespace Misuka.Services.ReportServices.KeyCurrent
     public KeyGenerationDTO Execute()
     {
       var item = new KeyGenerationDTO();
-      ADO.ExecuteDataReader(CommandType.StoredProcedure, _sql, dataReader =>
+      ADO.ExecuteDataReader(CommandType.Text, _sql, dataReader =>
       {
         using (var reader = new SafeDataReader(dataReader))
         {

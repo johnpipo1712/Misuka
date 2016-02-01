@@ -1,0 +1,127 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.MenuHelperModel
+@using System.Web.Mvc.Html
+@using Microsoft.Ajax.Utilities
+@using MvcSiteMapProvider.Web.Html.Models
+@{
+    var userSession = new Misuka.Domain.Security.UserSession();
+    var permissions = userSession.GetPermission();
+
+}
+@foreach (var node in Model.Nodes.Where(t => t.Controller == "isUser"))
+{
+    foreach (var item in node.Children)
+    {
+    <li class="c-menu-type-classic">
+
+        @if (item.Children.Count > 0)
+        {
+            <a href="@item.Url" class="c-link dropdown-toggle">@item.Title</a>
+                      
+            <ul class="dropdown-menu c-menu-type-classic c-pull-left">
+
+                @foreach (var itemTwo in item.Children)
+                {
+                    if (itemTwo.Children.Count > 0)
+                    {
+                    <li class="dropdown-submenu">
+                        <a href="@itemTwo.Url" class="c-link dropdown-toggle">@itemTwo.Title</a>
+                        <ul class="dropdown-menu c-pull-left">
+                            @foreach (var itemThree in itemTwo.Children)
+                            {
+                                <li><a href="@itemThree.Url">@itemThree.Title</a></li>
+                            }
+
+                        </ul>
+                    </li>
+                    }
+                    else
+                    {
+                    <li>
+                        <a href="@itemTwo.Url" class="c-link">
+                            @itemTwo.Title
+                        </a>
+                    </li>
+                    }
+                }
+
+            </ul>
+                 
+        }
+        else
+        {
+            <a href="@item.Url" class="c-link">
+                @item.Title
+            </a>
+        }
+
+
+
+    </li>
+    }
+}
+
+
+
+
+<li class="c-menu-type-classic">
+    @if (permissions.Count > 0)
+    {
+        foreach (var node in Model.Nodes.Where(t => t.Controller == "isAdmin"))
+        {
+            if (node.Title != "Not")
+            {
+                <a class="c-link dropdown-toggle" href="#">
+                    @node.Title
+                </a>
+
+            }
+            <ul class="dropdown-menu c-menu-type-classic c-pull-left">
+            @foreach (var item in node.Children)
+            {
+                if (userSession.CheckPermission(item.Description))
+                {
+                    if (item.Children.Count > 0)
+                    {
+                        <li class="dropdown-submenu"><a href="#">@item.Title</a>
+                            <ul class="dropdown-menu c-pull-left">
+                                @foreach (var itemTwo in item.Children)
+                                {
+                                    if (userSession.CheckPermission(itemTwo.Description))
+                                    {
+                                        if (itemTwo.Children.Count > 0)
+                                        {
+                                            <li class="dropdown-submenu">
+                                                <a href="#">@itemTwo.Title</a>
+                                                <ul class="dropdown-menu c-pull-left">
+                                                    @foreach (var itemThree in itemTwo.Children)
+                                                    {
+                                                        if (userSession.CheckPermission(itemThree.Description))
+                                                        {
+                                                            <li><a href="@itemThree.Url"><i class="fa fa-circle-o"></i>@itemThree.Title</a></li>
+                                                        }
+                                                    }
+
+                                                </ul>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li><a href="@itemTwo.Url">@itemTwo.Title</a></li>
+                                        }
+                                    }
+                                }
+
+                            </ul>
+
+                        </li>
+                    }
+                    else
+                    {
+                        <li><a href="@item.Url">@item.Title</a></li>
+                    }
+                }
+            }
+        </ul>
+        }
+    }
+</li>

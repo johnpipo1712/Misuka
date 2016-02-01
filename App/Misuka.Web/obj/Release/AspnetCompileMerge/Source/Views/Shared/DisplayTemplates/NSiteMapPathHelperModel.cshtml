@@ -1,0 +1,28 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.SiteMapPathHelperModel
+@using System.Web.Mvc.Html
+@using System.Linq
+@using MvcSiteMapProvider.Web.Html.Models
+
+@foreach (var node in Model) {
+    if (node.IsCurrentNode && node.SourceMetadata["HtmlHelper"].ToString() != "MvcSiteMapProvider.Web.Html.MenuHelper")
+    { 
+         <li class="c-state_active"> @node.Title  </li>
+         
+    }
+    else if (node.IsClickable)
+    {
+        if (string.IsNullOrEmpty(node.Description))
+        {
+              <li> <a href="@node.Url">@node.Title</a> </li>  <li>/</li>  
+        }
+        else
+        {
+            if (node.Title != "Not")
+            {
+              <li><a href="@node.Url" title="@node.Description">@node.Title</a> </li>   <li>/</li>
+            }
+        }
+    } else {
+      <li class="c-state_active"> @node.Title< </li>
+    }
+}

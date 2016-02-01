@@ -222,6 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ContentMenuController.cs" />
+    <Compile Include="Controllers\DropDownListController.cs" />
     <Compile Include="Controllers\ExchangeRateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderingController.cs" />
@@ -2590,6 +2591,8 @@
     <Content Include="Scripts\pages\Ordering\orderinghistory.js" />
     <Content Include="Scripts\pages\Ordering\orderingorder.js" />
     <Content Include="Scripts\pages\Ordering\orderingusd.js" />
+    <Content Include="Scripts\plugins\pnotify\pnotify.custom.min.css" />
+    <Content Include="Scripts\plugins\pnotify\pnotify.custom.min.js" />
     <Content Include="Views\ContentMenu\App_LocalResources\Edit.cshtml.resx" />
     <Content Include="Views\ContentMenu\App_LocalResources\Index.cshtml.resx" />
     <Content Include="Views\ExchangeRate\App_LocalResources\Edit.cshtml.resx" />
@@ -2598,6 +2601,8 @@
     <Content Include="Views\TypeMember\App_LocalResources\Index.cshtml.resx" />
     <Content Include="Views\WebSiteLink\App_LocalResources\Edit.cshtml.resx" />
     <Content Include="Views\WebSiteLink\App_LocalResources\Index.cshtml.resx" />
+    <Content Include="Views\Ordering\App_LocalResources\Edit.cshtml.resx" />
+    <Content Include="Views\Ordering\App_LocalResources\Index.cshtml.resx" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -3005,7 +3010,7 @@
     <Content Include="Scripts\magnific-popup\magnific-popup.css" />
     <Content Include="Scripts\magnific-popup\magnific-popup.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\pages\ContentMemu\contentmenu.js" />
+    <Content Include="Scripts\pages\ContentMenu\contentmenu.js" />
     <Content Include="Scripts\pages\ExchangeRate\exchangerate.js" />
     <Content Include="Scripts\pages\Home\home.js" />
     <Content Include="Scripts\pages\Ordering\ordering.js" />
@@ -3265,13 +3270,16 @@
     <Content Include="Views\WebSiteLink\Index.cshtml" />
     <Content Include="Views\Ordering\Index.cshtml" />
     <Content Include="Views\Ordering\_ModelPopup.cshtml" />
-    <Content Include="Views\Ordering\_EditOrderingFollowingUSD.cshtml" />
     <Content Include="Views\Ordering\_EditOrderingFollowingDone.cshtml" />
     <Content Include="Views\Ordering\_EditOrderingFollowingOrder.cshtml" />
+    <None Include="Views\Ordering\_EditOrderingFollowingUSD.cshtml" />
     <Content Include="Views\Home\OrderPlace.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\OrderHistory.cshtml" />
+    <Content Include="Views\Shared\_LayoutNonSilder.cshtml" />
+    <Content Include="Views\Shared\_HeaderNonSilder.cshtml" />
+    <Content Include="Views\Shared\_Breadcrumb.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3283,6 +3291,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\font-awesome\fonts\" />
     <Folder Include="Content\frontend\sass\components\content\persons\" />
+    <Folder Include="Views\DropDownList\" />
     <Folder Include="Views\Person\" />
   </ItemGroup>
   <ItemGroup>

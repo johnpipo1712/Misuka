@@ -16,6 +16,7 @@ using Misuka.Web.Models;
 
 namespace Misuka.Web.Controllers
 {
+     [Authorize]
     public class ExchangeRateController : Controller
     {
       private readonly IExchangeRateReportService _exchangeRateReportService;

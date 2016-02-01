@@ -23,7 +23,6 @@ namespace Misuka.Domain.Entity
     public int? Gender { get; set; }
     public DateTime? DateOfBirth { get; set; }
     public string Comment { get; set; }
-    public virtual User LogginUser { get; set; }
     public string ImageUrl { get; set; }
     public string ImageCoverUrl { get; set; }
     public DateTime? JoinedDate { get; set; }
@@ -33,7 +32,7 @@ namespace Misuka.Domain.Entity
     public string NickChat { get; set; }
     public DateTime? ContractDate { get; set; }
     public Double? RealAnnualLeave { get; set; }
-    public Guid TypeMemberId { get; set; }
+    public Guid? TypeMemberId { get; set; }
   }
 
   public class PersonMap : EntityTypeConfiguration<Person>

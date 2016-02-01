@@ -29,39 +29,72 @@ namespace Misuka.Web.Controllers
       _personReportService = personReportService;
       _personCommandService = personCommandService;
     }
+
+    [HttpGet]
+    public ActionResult Login()
+    {
+      return View();
+    }
+
     [HttpPost]
     public ActionResult LogOn(LogOnModel model, string returnUrl)
     {
-      if (ModelState.IsValid)
-      {
-        if (CustomMembershipProvider.ValidateUser(model.UserName, model.Password,model.Type))
+    
+        try
         {
-
-          if (model.Type == (int) TypeUserEnum.Admin)
+          if (CustomMembershipProvider.ValidateUser(model.UserName, model.Password, model.Type))
           {
-            FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-            if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-            {
-              return Redirect(returnUrl);
-            }
 
-            return RedirectToAction("Index", "ContentMenu");
+            if (model.Type == (int) TypeUserEnum.Admin)
+            {
+              FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+              if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                  && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+              {
+                return Redirect(returnUrl);
+              }
+
+              return RedirectToAction("Index", "ContentMenu");
+            }
+            else
+            {
+              var loggingUser = _personReportService.GetUserByUserName(model.UserName);
+              Session["UserName"] = model.UserName;
+              Session["Name"] = loggingUser.FullName;
+              Session["Person"] = loggingUser.PersonId;
+              return ModelState.JsonValidation(new {Success = true});
+
+            }
           }
           else
           {
-            var loggingUser = _personReportService.GetUserByUserName(model.UserName);
-            Session["UserName"] = model.UserName;
-            Session["Name"] = loggingUser.FullName;
-            Session["Person"] = loggingUser.PersonId;
-            return ModelState.JsonValidation(new { Success = true });
-    
+            if (model.Type == (int) TypeUserEnum.Admin)
+            {
+
+              ModelState.AddModelError("Error","Tên đăng nhập hoặc mật khẩu sai" );
+              return View(model);
+            }
+            else
+            {
+              return ModelState.JsonValidation(new { Success = true, Error = "Tên đăng nhập hoặc mật khẩu sai" });
+            }
+          }
+        }
+        catch (Exception ex)
+        {
+          if (model.Type == (int)TypeUserEnum.Admin)
+          {
+
+            ModelState.AddModelError("Error", ex.Message);
+            return View("Login",model);
+          }
+          else
+          {
+            return ModelState.JsonValidation(new { Success = true, Error = ex.Message });
           }
         }
 
-        ModelState.AddModelError("", "The user name or password provided is incorrect.");
-      }
-
+     
       // If we got this far, something failed, redisplay form
       return View(model);
     }
@@ -91,11 +124,20 @@ namespace Misuka.Web.Controllers
     [HttpPost]
     public ActionResult Register(RegisterModel model)
     {
-      // Attempt to register the user
-      _personCommandService.Register(new RegisterCommand(model.FullName, model.Password, model.UserName, model.Email, (int)TypeUserEnum.Member));
-        
-      // If we got this far, something failed, redisplay form
-      return RedirectToAction("Home","Index");
+      try
+      {
+        // Attempt to register the user
+        _personCommandService.Register(new RegisterCommand(model.FullName, model.Password, model.UserName, model.Email, (int)TypeUserEnum.Member));
+
+        // If we got this far, something failed, redisplay form
+        return ModelState.JsonValidation(new { Success = true,Error ="" });
+      }
+      catch (Exception ex)
+      {
+
+        return ModelState.JsonValidation(new { Success = false, Error = ex.Message });
+      }
+    
     }
   }
 }

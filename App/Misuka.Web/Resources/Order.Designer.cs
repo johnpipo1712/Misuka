@@ -133,7 +133,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Đã hoàn tất chuyển hàng.
+        ///   Looks up a localized string similar to Đã hoàn tất thanh toán.
         /// </summary>
         public static string IsPaid {
             get {
@@ -214,7 +214,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Tổng tiền.
         /// </summary>
         public static string TotalAmount {
             get {
@@ -223,7 +223,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Số lương sản phầm.
         /// </summary>
         public static string TotalCount {
             get {
@@ -241,7 +241,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Phần trăm giảm giá trên web.
         /// </summary>
         public static string TotalDiscuss {
             get {
@@ -259,7 +259,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Số tiền đặt cộc.
         /// </summary>
         public static string TotalDownPayment {
             get {
@@ -268,7 +268,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Tổng số tiền thanh toán.
         /// </summary>
         public static string TotalPrice {
             get {
@@ -277,7 +277,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Tổng số lương sản phẩm.
         /// </summary>
         public static string TotalQuantity {
             get {
@@ -286,7 +286,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Phí ship hải quản.
         /// </summary>
         public static string TotalShipAbroad {
             get {
@@ -295,7 +295,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Phí ship nội bộ.
         /// </summary>
         public static string TotalShipInternal {
             get {
@@ -304,7 +304,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Vat.
         /// </summary>
         public static string TotalVat {
             get {
@@ -313,7 +313,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Tiền công.
         /// </summary>
         public static string TotalWage {
             get {
@@ -322,7 +322,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Loại đơn hàng.
         /// </summary>
         public static string Type {
             get {
@@ -331,7 +331,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Ngày hàng về mỹ.
         /// </summary>
         public static string UsdOfDate {
             get {
@@ -340,7 +340,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Ngày hàng về việt nam.
         /// </summary>
         public static string VndOfDate {
             get {

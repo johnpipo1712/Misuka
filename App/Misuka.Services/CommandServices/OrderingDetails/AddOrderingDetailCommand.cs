@@ -10,8 +10,9 @@ namespace Misuka.Services.CommandServices.OrderingDetails
   {
     public AddOrderingDetailCommand( string productCode, string name
       , string brand, decimal price, long quantity, string note, string link
-      , string linkUrl, string color, string size)
+      , string linkUrl, string color, string size, Guid orderingId)
     {
+      OrderingId = orderingId;
       ProductCode = productCode;
       Name = name;
       Brand = brand;
@@ -43,5 +44,7 @@ namespace Misuka.Services.CommandServices.OrderingDetails
     public string Color { get; set; }
 
     public string Size { get; set; }
+
+    public Guid OrderingId { get; set; }
   }
 }

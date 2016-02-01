@@ -16,6 +16,8 @@ using Misuka.Web.Models;
 
 namespace Misuka.Web.Controllers
 {
+
+   [Authorize]
     public class WebSiteLinkController: Controller
     {
       private readonly IWebSiteLinkReportService _webSiteLinkReportService;

@@ -64,7 +64,7 @@ namespace Misuka.Services.ReportServices.TypeMembers
       {
         TypeMemberId = reader.GetGuid("TypeMemberId"),
         Name = reader.GetString("Name"),
-        PercentDownPayment = reader.GetDouble("Name"),
+        PercentDownPayment = reader.GetDouble("PercentDownPayment"),
         ScoresFrom = reader.GetNullableInt64("ScoresFrom"),
         ScoresTo = reader.GetNullableInt64("ScoresTo")
       };

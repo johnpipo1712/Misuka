@@ -16,6 +16,7 @@ using Misuka.Web.Models;
 
 namespace Misuka.Web.Controllers
 {
+    [Authorize]
     public class ContentMenuController : Controller
     {
       private readonly IContentMenuReportService _contentMenuReportService;
