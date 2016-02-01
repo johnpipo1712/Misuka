@@ -123,7 +123,7 @@
   <data name="FullName" xml:space="preserve">
     <value>Tên đầy đủ</value>
   </data>
-  <data name="PesonId" xml:space="preserve">
+  <data name="PersonId" xml:space="preserve">
     <value>Id</value>
   </data>
   <data name="TypeMemberId" xml:space="preserve">

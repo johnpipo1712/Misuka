@@ -12,6 +12,8 @@ namespace Misuka.Domain.DTO
 
     public string OrderingDetailCode { get; set; }
 
+    public Guid OrderingId { get; set; }
+
     public string ProductCode { get; set; }
 
     public string Name { get; set; }

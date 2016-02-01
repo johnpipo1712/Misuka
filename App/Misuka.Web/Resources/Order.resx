@@ -121,16 +121,16 @@
     <value>Địa chỉ giao hàng</value>
   </data>
   <data name="ApprovedDate" xml:space="preserve">
-    <value />
+    <value>Ngày xử lý đơn hàng</value>
   </data>
   <data name="CompleteDate" xml:space="preserve">
-    <value />
+    <value>Ngày hoàn tất đơn hàng</value>
   </data>
   <data name="CreatedBy" xml:space="preserve">
-    <value />
+    <value>Người tạo</value>
   </data>
   <data name="CreatedDate" xml:space="preserve">
-    <value />
+    <value>Ngày đặt hàng</value>
   </data>
   <data name="ExchangeRateId" xml:space="preserve">
     <value>Tỷ giá đổi VNĐ</value>
@@ -139,13 +139,16 @@
     <value>Đã hoàn tất chuyển hàng</value>
   </data>
   <data name="IsDeposit" xml:space="preserve">
-    <value />
+    <value>Hủy đơn hàng</value>
+  </data>
+  <data name="IsDownPayment" xml:space="preserve">
+    <value>Cộc tiền</value>
   </data>
   <data name="IsPaid" xml:space="preserve">
     <value>Đã hoàn tất thanh toán</value>
   </data>
   <data name="IsPayAtHome" xml:space="preserve">
-    <value />
+    <value>Chuyển về tận nhà</value>
   </data>
   <data name="Note" xml:space="preserve">
     <value>Ghi chú</value>
@@ -168,6 +171,30 @@
   <data name="Phone" xml:space="preserve">
     <value>Số điện thoại</value>
   </data>
+  <data name="PriceAmount" xml:space="preserve">
+    <value>Phí sản phẩm</value>
+  </data>
+  <data name="PriceDiscuss" xml:space="preserve">
+    <value>Phí giảm</value>
+  </data>
+  <data name="PriceTotalWage" xml:space="preserve">
+    <value>Phí tiền công</value>
+  </data>
+  <data name="PriceTransportFee" xml:space="preserve">
+    <value>Phí vận chuyển</value>
+  </data>
+  <data name="PriceVat" xml:space="preserve">
+    <value>Phí vat</value>
+  </data>
+  <data name="RemainingAmount" xml:space="preserve">
+    <value>Số tiền còn lại</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Tổng tiền</value>
+  </data>
   <data name="TotalAmount" xml:space="preserve">
     <value>Tổng tiền</value>
   </data>
@@ -175,13 +202,13 @@
     <value>Số lương sản phầm</value>
   </data>
   <data name="TotalCustomFees" xml:space="preserve">
-    <value />
+    <value>Phí</value>
   </data>
   <data name="TotalDiscuss" xml:space="preserve">
     <value>Phần trăm giảm giá trên web</value>
   </data>
   <data name="TotalDomesticCharges" xml:space="preserve">
-    <value />
+    <value>Phí trong nước</value>
   </data>
   <data name="TotalDownPayment" xml:space="preserve">
     <value>Số tiền đặt cộc</value>
@@ -199,10 +226,13 @@
     <value>Phí ship nội bộ</value>
   </data>
   <data name="TotalVat" xml:space="preserve">
-    <value>Vat</value>
+    <value>Phí Vat</value>
   </data>
   <data name="TotalWage" xml:space="preserve">
     <value>Tiền công</value>
+  </data>
+  <data name="TransportFee" xml:space="preserve">
+    <value>Phí vận chuyển</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Loại đơn hàng</value>
@@ -212,5 +242,8 @@
   </data>
   <data name="VndOfDate" xml:space="preserve">
     <value>Ngày hàng về việt nam</value>
+  </data>
+  <data name="WeightFee" xml:space="preserve">
+    <value>Phí cân nặng</value>
   </data>
 </root>

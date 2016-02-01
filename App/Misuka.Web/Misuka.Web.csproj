@@ -2137,6 +2137,7 @@
     <Content Include="Content\img\common\grid\preview.png" />
     <Content Include="Content\img\common\grid\recycleBin_command.jpg" />
     <Content Include="Content\img\common\grid\reject_command.png" />
+    <Content Include="Content\img\common\grid\report.png" />
     <Content Include="Content\img\common\grid\save_command.gif" />
     <Content Include="Content\img\common\grid\security.png" />
     <Content Include="Content\img\common\grid\toolbox_shadow.png" />

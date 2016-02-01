@@ -70,7 +70,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Ngày xử lý đơn hàng.
         /// </summary>
         public static string ApprovedDate {
             get {
@@ -79,7 +79,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Ngày hoàn tất đơn hàng.
         /// </summary>
         public static string CompleteDate {
             get {
@@ -88,7 +88,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Người tạo.
         /// </summary>
         public static string CreatedBy {
             get {
@@ -97,7 +97,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Ngày đặt hàng.
         /// </summary>
         public static string CreatedDate {
             get {
@@ -124,11 +124,20 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Hủy đơn hàng.
         /// </summary>
         public static string IsDeposit {
             get {
                 return ResourceManager.GetString("IsDeposit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cộc tiền.
+        /// </summary>
+        public static string IsDownPayment {
+            get {
+                return ResourceManager.GetString("IsDownPayment", resourceCulture);
             }
         }
         
@@ -142,7 +151,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Chuyển về tận nhà.
         /// </summary>
         public static string IsPayAtHome {
             get {
@@ -214,6 +223,78 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Phí sản phẩm.
+        /// </summary>
+        public static string PriceAmount {
+            get {
+                return ResourceManager.GetString("PriceAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí giảm.
+        /// </summary>
+        public static string PriceDiscuss {
+            get {
+                return ResourceManager.GetString("PriceDiscuss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí tiền công.
+        /// </summary>
+        public static string PriceTotalWage {
+            get {
+                return ResourceManager.GetString("PriceTotalWage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí vận chuyển.
+        /// </summary>
+        public static string PriceTransportFee {
+            get {
+                return ResourceManager.GetString("PriceTransportFee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí vat.
+        /// </summary>
+        public static string PriceVat {
+            get {
+                return ResourceManager.GetString("PriceVat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Số tiền còn lại.
+        /// </summary>
+        public static string RemainingAmount {
+            get {
+                return ResourceManager.GetString("RemainingAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trạng thái.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tổng tiền.
+        /// </summary>
+        public static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tổng tiền.
         /// </summary>
         public static string TotalAmount {
@@ -232,7 +313,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Phí.
         /// </summary>
         public static string TotalCustomFees {
             get {
@@ -250,7 +331,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Phí trong nước.
         /// </summary>
         public static string TotalDomesticCharges {
             get {
@@ -304,7 +385,7 @@ namespace Misuka.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vat.
+        ///   Looks up a localized string similar to Phí Vat.
         /// </summary>
         public static string TotalVat {
             get {
@@ -318,6 +399,15 @@ namespace Misuka.Web.Resources {
         public static string TotalWage {
             get {
                 return ResourceManager.GetString("TotalWage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí vận chuyển.
+        /// </summary>
+        public static string TransportFee {
+            get {
+                return ResourceManager.GetString("TransportFee", resourceCulture);
             }
         }
         
@@ -345,6 +435,15 @@ namespace Misuka.Web.Resources {
         public static string VndOfDate {
             get {
                 return ResourceManager.GetString("VndOfDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phí cân nặng.
+        /// </summary>
+        public static string WeightFee {
+            get {
+                return ResourceManager.GetString("WeightFee", resourceCulture);
             }
         }
     }

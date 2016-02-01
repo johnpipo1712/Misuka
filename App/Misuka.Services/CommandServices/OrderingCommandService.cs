@@ -107,6 +107,7 @@ namespace Misuka.Services.CommandServices
       var order = _orderingService.Find(command.OrderingId);
       order.TransportFee = command.TransportFee;
       order.WeightFee = command.WeightFee;
+      order.UsdOfDate = DateTime.Now;
       order.Status = (int)StatusOrderingEnum.ComeUsd;
       _orderingService.Update(order);
       _unitOfWork.SaveChanges();
@@ -115,6 +116,7 @@ namespace Misuka.Services.CommandServices
     {
       var order = _orderingService.Find(command.OrderingId);
       order.Status = (int)StatusOrderingEnum.ComeVn;
+      order.VndOfDate = DateTime.Now;
       _orderingService.Update(order);
       _unitOfWork.SaveChanges();
     }

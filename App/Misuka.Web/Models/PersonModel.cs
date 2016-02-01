@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using Misuka.Domain.DTO;
@@ -8,9 +9,12 @@ namespace Misuka.Web.Models
 {
   public class PersonModel
   {
+    [Display(Name = "PersonId", ResourceType = typeof(Resources.Person))]
     public Guid PersonId { get; set; }
+    [Display(Name = "FullName", ResourceType = typeof(Resources.Person))]
     public string FullName { get; set; }
     public string SocialSecurityNo { get; set; }
+    [Display(Name = "EmployeeNo", ResourceType = typeof(Resources.Person))]
     public string EmployeeNo { get; set; }
     public string Email { get; set; }
     public string Address { get; set; }
@@ -36,6 +40,7 @@ namespace Misuka.Web.Models
     public string SocialLaborNo { get; set; }
     public string TaxNo { get; set; }
     public string NickChat { get; set; }
+    [Display(Name = "TypeMemberId", ResourceType = typeof(Resources.Person))]
     public Guid TypeMemberId { get; set; }
     public string TypeMemberName { get; set; }
   }

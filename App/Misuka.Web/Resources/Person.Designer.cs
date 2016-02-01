@@ -81,9 +81,9 @@ namespace Misuka.Web.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
-        public static string PesonId {
+        public static string PersonId {
             get {
-                return ResourceManager.GetString("PesonId", resourceCulture);
+                return ResourceManager.GetString("PersonId", resourceCulture);
             }
         }
         
